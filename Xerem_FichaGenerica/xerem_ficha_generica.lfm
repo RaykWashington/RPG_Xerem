@@ -11,18 +11,25 @@
 			horzTextAlign: center;
 		}
 	</style>
-	
-  	<layout left= "20" top= "40" width = "400">
-  		<label align = "left" text= "Campo1"/>
-		<edit align = "left" textPrompt = "valor1 (int ou dados)" field = "valor1"/>
-		<edit align = "left" textPrompt = "valor2 (int)" type= "number" field = "valor2"/>
-		<button align = "right" text= "Botão 1">
-			<event name= "onClick">
-				local rolagem = Firecast.interpretarRolagem(sheet.valor1);
-				rolagem = rolagem:concatenar(sheet.valor2);
-				local mesa = Firecast.getMesaDe(sheet);
-				mesa.chat:rolarDados(rolagem, " Rolagem de Campo 1");
-			</event>
-		</button>
-  	</layout>
+
+	<tabControl align = "client">
+		<tab title="Aba 1">
+			<layout left= "20" top= "40" width = "400">
+				<label align = "left" text= "Campo1"/>
+				<edit align = "left" textPrompt = "valor1 (int ou dados)" field = "valor1"/>
+				<edit align = "left" textPrompt = "valor2 (int)" type= "number" field = "valor2"/>
+				<button align = "right" text= "Botão 1">
+					<event name= "onClick">
+						local rolagem = Firecast.interpretarRolagem(sheet.valor1);
+						rolagem = rolagem:concatenar(sheet.valor2);
+						local mesa = Firecast.getMesaDe(sheet);
+						mesa.chat:rolarDados(rolagem, " Rolagem de Campo 1");
+					</event>
+				</button>
+			</layout>
+		</tab>
+		<tab title= "Aba 2">
+			<import file="anotacoes.xml"/>
+		</tab>
+	</tabControl>
 </form>

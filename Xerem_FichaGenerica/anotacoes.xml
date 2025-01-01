@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <rectangle align='client' cornerType = 'round' color = "grey" xradius = "0.5" yradius = "0.5">
+        <flowLayout align='client' autoHeight='true' orientation='horizontal'>
+            <label text = "anotacoes" />
+            <textEditor align='client' width= "500" height = "800" />
+            <layout align='client' height="100" margins= "{left = 5, right = 5}">
+                <import file='botao_rolagem.xml'/>
+            </layout>
+        </flowLayout>
+    </rectangle>    
