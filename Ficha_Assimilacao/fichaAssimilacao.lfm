@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form formType="sheetTemplate" dataType="fichaAssimilacaoRPG" 
+      title="Ficha Assimilação RPG" name="frmAssimilacaoRpg">
+	
+			
+			<label text= "NOME:" g= "col" g-width = "2"/>
+			<edit g="col" g-width= "10"/>
+			<label text= "Geração:" g= "col" g-width = "2"/>
+			<edit g="col" g-width= "10"/>
+			<label text= "Evento Marcante:" g= "col" g-width = "2"/>
+			<edit g="col" g-width= "10"/>
+			<label text= "Posição Social:" g= "col" g-width = "2"/>
+			<edit g="col" g-width= "10"/>
+			
+			-- PROPOSITOS
+			
+			<layout g= "col" g-width= "6" g-min-height = "600">
+				<label horzTextAlign= "center" text= "PROPOSITOS" g= "col" g-width="12"/>
+				<label text= "Individuais:" g= "row" g-min-height="60"/>
+				<edit g="row" g-min-height="60"/>
+				<label text= "Relacionais:" g= "row" g-min-height="60"/>
+				<edit g="row" g-min-height="60"/>
+			</layout>
+			
+			-- DETERMINACAO
+			<layout g= "col" g-width= "6" g-min-height = "600">
+				<label horzTextAlign= "leading" text= "Determinacao" g= "col" g-width= "6"/>
+				<edit g="col" g-width= "6"/>
+				
+				
+				<layout g="col" g-width= "1"/>
+				<checkBox field = "dterm1" g= "col" g-width= "1"/>
+				<checkBox field = "dterm2" g= "col" g-width= "1"/>
+				<checkBox field = "dterm3" g= "col" g-width= "1"/>
+				<checkBox field = "dterm4" g= "col" g-width= "1"/>
+				<checkBox field = "dterm5" g= "col" g-width= "1"/>
+				<checkBox field = "dterm6" g= "col" g-width= "1"/>
+				<checkBox field = "dterm7" g= "col" g-width= "1"/>
+				<checkBox field = "dterm8" g= "col" g-width= "1"/>
+				<checkBox field = "dterm9" g= "col" g-width= "1"/>
+				<checkBox field = "dterm10" g= "col" g-width= "1"/>
+				<layout g="col" g-width= "1"/>
+				
+			-- ASSIMILACAO
+				<layout g="col" g-width= "1"/>
+				<checkBox field = "assim1" g= "col" g-width= "1"/>
+				<checkBox field = "assim2" g= "col" g-width= "1"/>
+				<checkBox field = "assim3" g= "col" g-width= "1"/>
+				<checkBox field = "assim4" g= "col" g-width= "1"/>
+				<checkBox field = "assim5" g= "col" g-width= "1"/>
+				<checkBox field = "assim6" g= "col" g-width= "1"/>
+				<checkBox field = "assim7" g= "col" g-width= "1"/>
+				<checkBox field = "assim8" g= "col" g-width= "1"/>
+				<checkBox field = "assim9" g= "col" g-width= "1"/>
+				<checkBox field = "assim10" g= "col" g-width= "1"/>
+				<layout g="col" g-width= "1"/>
+				
+				<edit g="col" g-width= "6"/>
+				<label horzTextAlign= "leading" text= "Determinacao" g= "col" g-width= "6"/>
+				
+			</layout>
+			
+</form>
