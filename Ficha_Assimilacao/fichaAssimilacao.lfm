@@ -125,7 +125,7 @@
 			<edit g= "col" g-width = "4" field = "ofic"/>
 			<radioButton g= "col" g-width = "4"  text = "Esportivas" groupName = "conhecPrat" field = "prat" fieldValue = "Esp"/>
 			<radioButton g= "col" g-width = "4"  text = "Ferramentas" groupName = "conhecPrat" field = "prat" fieldValue = "Ferr"/>
-			<radioButton g= "col" g-width = "4"  text = "Oficios" groupName = "conhecPrat" field = "prat" fieioButtonldValue = "Ofic"/>
+			<radioButton g= "col" g-width = "4"  text = "Oficios" groupName = "conhecPrat" field = "prat" fieldValue = "Ofic"/>
 			
 			<edit g= "col" g-width = "4" field = "arm"/>
 			<edit g= "col" g-width = "4" field = "veic"/>

@@ -885,7 +885,6 @@ local function constructNew_frmAssimilacaoRpg()
     obj._e_event0 = obj.button1:addEventListener("onClick",
         function (event)
             lancar_dados("teste", "caceta");
-            					showMessage(self.tunico.fieldValue)
         end);
 
     function obj:_releaseEvents()
