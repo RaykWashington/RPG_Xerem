@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form formType="sheetTemplate" dataType="fichaAssimilacaoRPG" 
       title="Ficha Assimilação RPG" name="frmAssimilacaoRpg">
+	  
+	  
+	<style>
+        form { g-padding-top: 8; g-cnt-line-spacing: 4; theme: dark;}    
+        rectangle { color: gray; g-padding-top: 16; g-padding-bottom: 16; }             
+        label { horzTextAlign: trailing; }      
+        edit, label { height: 30; }     
+    </style>
 	
-			
-			<label text= "NOME:" g= "col" g-width = "2"/>
-			<edit g="col" g-width= "10"/>
+	--script botao rascunho
+	<script><![CDATA[
+		local function lancar_dados(instinto, conhecPrat)
+			instinto = "3d6";
+			conhecPrat = "2d10";
+			local rolagem = Firecast.interpretarRolagem(instinto):concatenar(conhecPrat)
+			local mesa = Firecast.getMesaDe(sheet);
+			mesa.chat:rolarDados(rolagem, "Teste de dados");
+			end;
+		]]>
+	</script>
+	
+	<layout g= "col" g-width = "12" g-max-width = "800" g-min-height = "900" g-horz-align = "center">
+			-- INFOS
+	
+			<label text= "NOME:" g= "col" g-width = "2" g-min-height = "60 "/>
+			<edit g="col" g-width= "10" g-min-height = "60"/>
 			<label text= "Geração:" g= "col" g-width = "2"/>
 			<edit g="col" g-width= "10"/>
 			<label text= "Evento Marcante:" g= "col" g-width = "2"/>
@@ -14,16 +36,16 @@
 			
 			-- PROPOSITOS
 			
-			<layout g= "col" g-width= "6" g-min-height = "600">
+			<layout g= "col" g-width= "6" g-min-height = "200" g-margin-top = "10">
 				<label horzTextAlign= "center" text= "PROPOSITOS" g= "col" g-width="12"/>
-				<label text= "Individuais:" g= "row" g-min-height="60"/>
+				<label text= "Individuais:" horzTextAlign= "leading" g= "row" g-min-height="30"/>
 				<edit g="row" g-min-height="60"/>
-				<label text= "Relacionais:" g= "row" g-min-height="60"/>
+				<label text= "Relacionais:"  horzTextAlign= "leading" g= "row" g-min-height="30"/>
 				<edit g="row" g-min-height="60"/>
 			</layout>
 			
 			-- DETERMINACAO
-			<layout g= "col" g-width= "6" g-min-height = "600">
+			<layout g= "col" g-width= "6" g-min-height = "200"  g-margin-top = "10">
 				<label horzTextAlign= "leading" text= "Determinacao" g= "col" g-width= "6"/>
 				<edit g="col" g-width= "6"/>
 				
@@ -42,7 +64,7 @@
 				<layout g="col" g-width= "1"/>
 				
 			-- ASSIMILACAO
-				<layout g="col" g-width= "1"/>
+				<layout g="col" g-width= "1" />
 				<checkBox field = "assim1" g= "col" g-width= "1"/>
 				<checkBox field = "assim2" g= "col" g-width= "1"/>
 				<checkBox field = "assim3" g= "col" g-width= "1"/>
@@ -56,8 +78,93 @@
 				<layout g="col" g-width= "1"/>
 				
 				<edit g="col" g-width= "6"/>
-				<label horzTextAlign= "leading" text= "Determinacao" g= "col" g-width= "6"/>
+				<label horzTextAlign= "leading" text= "Assimilação" g= "col" g-width= "6"/>
 				
 			</layout>
 			
+		-- PERICIAS
+		
+		<layout g= "col" g-width= "6" g-min-height = "600" g-max-width = "400">
+		
+			-- instintos
+			<label horzTextAlign= "center" text= "INSTINTOS" g= "col" g-width="12"/>
+			<edit g= "col" g-width = "4" field = "reac"/>
+			<edit g= "col" g-width = "4" field = "perc"/>
+			<edit g= "col" g-width = "4" field = "sag"/>
+			<radioButton g= "col" g-width = "4"  text = "Reação" groupName = "Instintos" field = "inst" fieldValue = "Reac"/>
+			<radioButton g= "col" g-width = "4"  text = "Percepção" groupName = "Instintos" field = "inst" fieldValue = "Perc"/>
+			<radioButton g= "col" g-width = "4"  text = "Sagacidade" groupName = "Instintos" field = "inst" fieldValue = "Sag"/>
+			
+			<edit g= "col" g-width = "4" field = "pot"/>
+			<edit g= "col" g-width = "4" field = "infl"/>
+			<edit g= "col" g-width = "4" field = "reso"/>
+			<radioButton g= "col" g-width = "4"  text = "Potência" groupName = "Instintos" field = "inst" fieldValue = "Pot"/>
+			<radioButton g= "col" g-width = "4"  text = "Influencia" groupName = "Instintos" field = "inst" fieldValue = "Infl"/>
+			<radioButton g= "col" g-width = "4"  text = "Resolução" groupName = "Instintos" field = "inst" fieldValue = "Reso"/>
+			
+			-- Conhecimentos
+			<label horzTextAlign= "center" text= "CONHECIMENTOS" g= "col" g-width="12"/>
+			<edit g= "col" g-width = "4" field = "agra"/>
+			<edit g= "col" g-width = "4" field = "biol"/>
+			<edit g= "col" g-width = "4" field = "exat"/>
+			<radioButton g= "col" g-width = "4"  text = "Agrário" groupName = "conhecPrat" field = "conhec" fieldValue = "Agra"/>
+			<radioButton g= "col" g-width = "4"  text = "Biológico" groupName = "conhecPrat" field = "conhec" fieldValue = "Biol"/>
+			<radioButton g= "col" g-width = "4"  text = "Exatos" groupName = "conhecPrat" field = "conhec" fieldValue = "Exat"/>
+			
+			<edit g= "col" g-width = "4" field = "med"/>
+			<edit g= "col" g-width = "4" field = "soc"/>
+			<edit g= "col" g-width = "4" field = "art"/>
+			<radioButton g= "col" g-width = "4"  text = "Medicina" groupName = "conhecPrat" field = "conhec" fieldValue = "Med"/>
+			<radioButton g= "col" g-width = "4"  text = "Social" groupName = "conhecPrat" field = "conhec" fieldValue = "Soc"/>
+			<radioButton g= "col" g-width = "4"  text = "Artistico" groupName = "conhecPrat" field = "conhec" fieldValue = "Art"/>
+			
+			-- Praticas
+			<label horzTextAlign= "center" text= "PRÁTICAS" g= "col" g-width="12"/>
+			<edit g= "col" g-width = "4" field = "esp"/>
+			<edit g= "col" g-width = "4" field = "ferr"/>
+			<edit g= "col" g-width = "4" field = "ofic"/>
+			<radioButton g= "col" g-width = "4"  text = "Esportivas" groupName = "conhecPrat" field = "prat" fieldValue = "Esp"/>
+			<radioButton g= "col" g-width = "4"  text = "Ferramentas" groupName = "conhecPrat" field = "prat" fieldValue = "Ferr"/>
+			<radioButton g= "col" g-width = "4"  text = "Oficios" groupName = "conhecPrat" field = "prat" fieioButtonldValue = "Ofic"/>
+			
+			<edit g= "col" g-width = "4" field = "arm"/>
+			<edit g= "col" g-width = "4" field = "veic"/>
+			<edit g= "col" g-width = "4" field = "inf"/>
+			<radioButton g= "col" g-width = "4"  text = "Armas" groupName = "conhecPrat" field = "prat" fieldValue = "Arm"/>
+			<radioButton g= "col" g-width = "4"  text = "Veículos" groupName = "conhecPrat" field = "prat" fieldValue = "Veic"/>
+			<radioButton name = "tunico" g= "col" g-width = "4"  text = "Infiltração" groupName = "conhecPrat" field = "prat" fieldValue = "inf"/>
+			
+			<label g="row" g-min-height = "30" horzTextAlign= "center" text = "jogada: " />
+			<button g= "row" g-min-height = "60" text= "rolar">
+				<event name= "onClick">
+					lancar_dados("teste", "caceta");
+				</event>
+			</button>
+		</layout>
+		
+		
+		<layout g="col" g-width = "6" g-min-height ="500">
+			-- SAUDE
+			<label horzTextAlign= "center" text= "SAÚDE" g= "col" g-width="12"/>
+			<label text= "5 - Infectado Saudavel" g="col" g-width = "6"/>
+			<label text= "4 - Infectado Saudavel" g="col" g-width = "6"/>
+			<edit g="col" g-width = "6"/>
+			<edit g="col" g-width = "6"/>
+			
+			<label text= "3 - Infectado -1 sucesso ou adaptacao" g="col" g-width = "6"/>
+			<label text= "2 - Infectado -1 sucesso" g="col" g-width = "6"/>
+			<edit g="col" g-width = "6"/>
+			<edit g="col" g-width = "6"/>
+			
+			<label text= "1 - Infectado -2 sucessos" g="col" g-width = "6"/>
+			<label text= "o - Infectado Morto" g="col" g-width = "6"/>
+			<edit g="col" g-width = "6"/>
+			<edit g="col" g-width = "6"/>
+			
+			
+		
+			<label horzTextAlign= "center" text= "CARACTERÍSTICAS E EQUIPAMENTOS" g= "col" g-width="12"/>
+			<edit g= "col" g-width = "12" field = "equip" g-min-height = "300"/>
+		</layout>
+	</layout>
 </form>
