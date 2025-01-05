@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<group>
+		<!-- CAMPO INSTINTOS E PERICIAS -->
+		<template name = "periciaCampo">
+			<layout g= "col" g-width= "$(largura)" margins= "{bottom = 4}">
+				<edit name= "ed$(titulo)" field = "$(tipo).$(titulo)" g= "col" g-width = "12"/> 
+				<radioButton name= "btn$(titulo)" text= "$(texto)" groupName = "$(grupo)" g= "col" g-width = "12"> 
+				<event name= "onClick">
+						<![CDATA[
+						if sheet.$(tipo).$(titulo) ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
+							sheet.val$(tipo) = sheet.$(tipo).$(titulo); -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
+							sheet.current$(tipo) = "$(texto)"; -- "sheet.currentInstinto = 'Percepção", pra exibir na jogada de
+						else
+							sheet.val$(tipo) = 0;
+							sheet.current$(tipo) = ""
+						end;
+						]]>
+					</event>
+				</radioButton>
+			</layout>
+		</template>
+
+		<!--CHECKBOX ATRIBUTO-->
+		<template name="atributoCheckbox">
+			<checkBox field = "$(campo)" g= "col" g-width= "$(largura)"/>
+			<!--por enquanto é a mesma merda, mas vou por uns trem a mais-->
+		</template>
+	</group>
