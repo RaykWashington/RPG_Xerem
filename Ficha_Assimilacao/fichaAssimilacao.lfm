@@ -49,6 +49,7 @@
 
 
 	<!-- CABEÇALHO SUPERIOR-->
+	<scrollBox align='client' height='800'>
 	<layout g= "row" g-width = "12" g-min-height = "700" g-min-width= "500">
 		<rectangle g= "container" color = "black">
 		-- INFOS
@@ -184,4 +185,5 @@
 		</layout>
 	</rectangle>
 	</layout>
+	</scrollBox>
 </form>

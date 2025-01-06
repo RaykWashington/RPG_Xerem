@@ -66,8 +66,14 @@ local function constructNew_frmAssimilacaoRpg()
 	
 
 
+    obj.scrollBox1 = GUI.fromHandle(_obj_newObject("scrollBox"));
+    obj.scrollBox1:setParent(obj);
+    obj.scrollBox1:setAlign("client");
+    obj.scrollBox1:setHeight(800);
+    obj.scrollBox1:setName("scrollBox1");
+
     obj.layout1 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout1:setParent(obj);
+    obj.layout1:setParent(obj.scrollBox1);
     obj.layout1.grid.role = "row";
     obj.layout1.grid.width = 12;
     obj.layout1.grid["min-height"] = 700;
@@ -1337,6 +1343,7 @@ local function constructNew_frmAssimilacaoRpg()
         if self.layout24 ~= nil then self.layout24:destroy(); self.layout24 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
         if self.btnOficios ~= nil then self.btnOficios:destroy(); self.btnOficios = nil; end;
+        if self.scrollBox1 ~= nil then self.scrollBox1:destroy(); self.scrollBox1 = nil; end;
         if self.checkBox7 ~= nil then self.checkBox7:destroy(); self.checkBox7 = nil; end;
         if self.edOficios ~= nil then self.edOficios:destroy(); self.edOficios = nil; end;
         if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
