@@ -35,6 +35,54 @@ local function constructNew_frmAssimilacaoRpg()
     obj:setTheme("dark");
 
 
+    
+
+
+
+    -- depois fazer isso como funcoes pra facilitar o troco e a descida nas rolagens
+    dadoEsp6 = {
+        [1] ="";
+        [2] ="";
+        [3] = "🐺";
+        [4] = "🐺🦌";
+        [5] = "🐺🦌";
+        [6] = "🐞";
+    }
+    
+    dadoEsp10 = {
+        [1] ="";
+        [2] ="";
+        [3] = "🐺";
+        [4] = "🐺🦌";
+        [5] = "🐺🦌";
+        [6] = "🐞";
+        [7] = "🐞🐞";
+        [8] = "🐞🦌";
+        [9] = "🐞🦌🐺";
+        [10] = "🐞🐞🐺";
+    }
+
+       dadoEsp12 = {
+        [1] ="";
+        [2] ="";
+        [3] = "🐺";
+        [4] = "🐺🦌";
+        [5] = "🐺🦌";
+        [6] = "🐞";
+        [7] = "🐞🐞";
+        [8] = "🐞🦌";
+        [9] = "🐞🦌🐺";
+        [10] = "🐞🐞🐺";
+    }
+
+    
+
+
+
+
+
+
+
 		
 
 
@@ -46,6 +94,12 @@ local function constructNew_frmAssimilacaoRpg()
 
 			if sheet.agirPorInstinto == true and instinto ~= 0 then -- se for agir por instinto e tiver algum valor no instinto atual
 				mesa.chat:rolarDados(instinto.."d6", sheet.nomePersonagem .. " Agindo Por Instinto: " .. sheet.currentInstinto);
+				local rolespecial = "D6 aleatorio: \n"
+				for i=1, instinto, 1 do
+					rolespecial =  rolespecial .. dadoEsp6[math.random(6)] .. "\n";
+				end;
+				mesa.chat:asyncSendStd(rolespecial);
+
 			else
 				if instinto and pericia ~= 0 then
 					instinto = instinto .. "d6";
@@ -56,6 +110,7 @@ local function constructNew_frmAssimilacaoRpg()
 					-- tratando o resultado --
 					-- aqui o lance vai ser pegar essa table, e pra cada resultado comparar com uma tabela de valores dos dados especiais do Assimilacao --
 					-- mesa.chat:write(rollObject);
+					
 				end;
 			end;
 		end;
@@ -1021,7 +1076,12 @@ local function constructNew_frmAssimilacaoRpg()
     obj.textEditor3:setHorzTextAlign("leading");
     obj.textEditor3:setName("textEditor3");
 
-    obj._e_event0 = obj.btnReacao:addEventListener("onClick",
+    obj._e_event0 = obj.edReacao:addEventListener("onChange",
+        function ()
+            sheet.valInstinto = sheet.Instinto.Reacao;
+        end);
+
+    obj._e_event1 = obj.btnReacao:addEventListener("onClick",
         function (event)
             if sheet.Instinto.Reacao ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valInstinto = sheet.Instinto.Reacao; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1032,7 +1092,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event1 = obj.btnPercepcao:addEventListener("onClick",
+    obj._e_event2 = obj.edPercepcao:addEventListener("onChange",
+        function ()
+            sheet.valInstinto = sheet.Instinto.Percepcao;
+        end);
+
+    obj._e_event3 = obj.btnPercepcao:addEventListener("onClick",
         function (event)
             if sheet.Instinto.Percepcao ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valInstinto = sheet.Instinto.Percepcao; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1043,7 +1108,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event2 = obj.btnSagacidade:addEventListener("onClick",
+    obj._e_event4 = obj.edSagacidade:addEventListener("onChange",
+        function ()
+            sheet.valInstinto = sheet.Instinto.Sagacidade;
+        end);
+
+    obj._e_event5 = obj.btnSagacidade:addEventListener("onClick",
         function (event)
             if sheet.Instinto.Sagacidade ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valInstinto = sheet.Instinto.Sagacidade; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1054,7 +1124,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event3 = obj.btnPotencia:addEventListener("onClick",
+    obj._e_event6 = obj.edPotencia:addEventListener("onChange",
+        function ()
+            sheet.valInstinto = sheet.Instinto.Potencia;
+        end);
+
+    obj._e_event7 = obj.btnPotencia:addEventListener("onClick",
         function (event)
             if sheet.Instinto.Potencia ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valInstinto = sheet.Instinto.Potencia; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1065,7 +1140,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event4 = obj.btnInfluencia:addEventListener("onClick",
+    obj._e_event8 = obj.edInfluencia:addEventListener("onChange",
+        function ()
+            sheet.valInstinto = sheet.Instinto.Influencia;
+        end);
+
+    obj._e_event9 = obj.btnInfluencia:addEventListener("onClick",
         function (event)
             if sheet.Instinto.Influencia ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valInstinto = sheet.Instinto.Influencia; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1076,7 +1156,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event5 = obj.btnResolucao:addEventListener("onClick",
+    obj._e_event10 = obj.edResolucao:addEventListener("onChange",
+        function ()
+            sheet.valInstinto = sheet.Instinto.Resolucao;
+        end);
+
+    obj._e_event11 = obj.btnResolucao:addEventListener("onClick",
         function (event)
             if sheet.Instinto.Resolucao ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valInstinto = sheet.Instinto.Resolucao; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1087,7 +1172,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event6 = obj.btnAgrario:addEventListener("onClick",
+    obj._e_event12 = obj.edAgrario:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Agrario;
+        end);
+
+    obj._e_event13 = obj.btnAgrario:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Agrario ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Agrario; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1098,7 +1188,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event7 = obj.btnBiologico:addEventListener("onClick",
+    obj._e_event14 = obj.edBiologico:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Biologico;
+        end);
+
+    obj._e_event15 = obj.btnBiologico:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Biologico ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Biologico; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1109,7 +1204,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event8 = obj.btnExato:addEventListener("onClick",
+    obj._e_event16 = obj.edExato:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Exato;
+        end);
+
+    obj._e_event17 = obj.btnExato:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Exato ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Exato; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1120,7 +1220,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event9 = obj.btnMedicina:addEventListener("onClick",
+    obj._e_event18 = obj.edMedicina:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Medicina;
+        end);
+
+    obj._e_event19 = obj.btnMedicina:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Medicina ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Medicina; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1131,7 +1236,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event10 = obj.btnSocial:addEventListener("onClick",
+    obj._e_event20 = obj.edSocial:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Social;
+        end);
+
+    obj._e_event21 = obj.btnSocial:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Social ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Social; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1142,7 +1252,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event11 = obj.btnArtistico:addEventListener("onClick",
+    obj._e_event22 = obj.edArtistico:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Artistico;
+        end);
+
+    obj._e_event23 = obj.btnArtistico:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Artistico ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Artistico; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1153,7 +1268,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event12 = obj.btnEsportivas:addEventListener("onClick",
+    obj._e_event24 = obj.edEsportivas:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Esportivas;
+        end);
+
+    obj._e_event25 = obj.btnEsportivas:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Esportivas ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Esportivas; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1164,7 +1284,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event13 = obj.btnFerramentas:addEventListener("onClick",
+    obj._e_event26 = obj.edFerramentas:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Ferramentas;
+        end);
+
+    obj._e_event27 = obj.btnFerramentas:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Ferramentas ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Ferramentas; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1175,7 +1300,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event14 = obj.btnOficios:addEventListener("onClick",
+    obj._e_event28 = obj.edOficios:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Oficios;
+        end);
+
+    obj._e_event29 = obj.btnOficios:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Oficios ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Oficios; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1186,7 +1316,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event15 = obj.btnArmas:addEventListener("onClick",
+    obj._e_event30 = obj.edArmas:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Armas;
+        end);
+
+    obj._e_event31 = obj.btnArmas:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Armas ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Armas; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1197,7 +1332,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event16 = obj.btnVeiculos:addEventListener("onClick",
+    obj._e_event32 = obj.edVeiculos:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Veiculos;
+        end);
+
+    obj._e_event33 = obj.btnVeiculos:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Veiculos ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Veiculos; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1208,7 +1348,12 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event17 = obj.btnInfiltracao:addEventListener("onClick",
+    obj._e_event34 = obj.edInfiltracao:addEventListener("onChange",
+        function ()
+            sheet.valConhecPrat = sheet.ConhecPrat.Infiltracao;
+        end);
+
+    obj._e_event35 = obj.btnInfiltracao:addEventListener("onClick",
         function (event)
             if sheet.ConhecPrat.Infiltracao ~= nil then -- a ideia era resetar o valor do campo, nao esta funcionando
             							sheet.valConhecPrat = sheet.ConhecPrat.Infiltracao; -- "sheet.valInstinto = sheet.Instinto.Percepcao" por exemplo. pega o valor do edit
@@ -1219,12 +1364,32 @@ local function constructNew_frmAssimilacaoRpg()
             						end;
         end);
 
-    obj._e_event18 = obj.button1:addEventListener("onClick",
+    obj._e_event36 = obj.button1:addEventListener("onClick",
         function (event)
             lancar_dados();
+            				local msgDado = tostring(dadoEsp10[math.random(10)]);
+            				--Firecast.getMesaDe(sheet).chat:write(msgDado);
         end);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event36);
+        __o_rrpgObjs.removeEventListenerById(self._e_event35);
+        __o_rrpgObjs.removeEventListenerById(self._e_event34);
+        __o_rrpgObjs.removeEventListenerById(self._e_event33);
+        __o_rrpgObjs.removeEventListenerById(self._e_event32);
+        __o_rrpgObjs.removeEventListenerById(self._e_event31);
+        __o_rrpgObjs.removeEventListenerById(self._e_event30);
+        __o_rrpgObjs.removeEventListenerById(self._e_event29);
+        __o_rrpgObjs.removeEventListenerById(self._e_event28);
+        __o_rrpgObjs.removeEventListenerById(self._e_event27);
+        __o_rrpgObjs.removeEventListenerById(self._e_event26);
+        __o_rrpgObjs.removeEventListenerById(self._e_event25);
+        __o_rrpgObjs.removeEventListenerById(self._e_event24);
+        __o_rrpgObjs.removeEventListenerById(self._e_event23);
+        __o_rrpgObjs.removeEventListenerById(self._e_event22);
+        __o_rrpgObjs.removeEventListenerById(self._e_event21);
+        __o_rrpgObjs.removeEventListenerById(self._e_event20);
+        __o_rrpgObjs.removeEventListenerById(self._e_event19);
         __o_rrpgObjs.removeEventListenerById(self._e_event18);
         __o_rrpgObjs.removeEventListenerById(self._e_event17);
         __o_rrpgObjs.removeEventListenerById(self._e_event16);

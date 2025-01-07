@@ -2,6 +2,7 @@
 <form formType="sheetTemplate" dataType="fichaAssimilacaoRPG" 
       title="Ficha Assimilação RPG" name="frmAssimilacaoRpg">
 	  <import file= "templates.xml"/>
+	  <import file= "dados.xml"/>
 	  
 	<!-- DEFINIÇÃO DE ESTILOS-->
 	<style>
@@ -31,6 +32,12 @@
 
 			if sheet.agirPorInstinto == true and instinto ~= 0 then -- se for agir por instinto e tiver algum valor no instinto atual
 				mesa.chat:rolarDados(instinto.."d6", sheet.nomePersonagem .. " Agindo Por Instinto: " .. sheet.currentInstinto);
+				local rolespecial = "D6 aleatorio: \n" -- ainda não tem relação com o resultado dos dados, tenho que lembrar como opera com ipairs pra fazer isso.
+				for i=1, instinto, 1 do
+					rolespecial =  rolespecial .. dadoEsp6[math.random(6)] .. "\n";
+				end;
+				mesa.chat:asyncSendStd(rolespecial);
+
 			else
 				if instinto and pericia ~= 0 then
 					instinto = instinto .. "d6";
@@ -41,6 +48,7 @@
 					-- tratando o resultado --
 					-- aqui o lance vai ser pegar essa table, e pra cada resultado comparar com uma tabela de valores dos dados especiais do Assimilacao --
 					-- mesa.chat:write(rollObject);
+					
 				end;
 			end;
 		end;
@@ -155,6 +163,8 @@
 		<button g= "row" g-min-height = "60" text= "rolar">
 			<event name= "onClick">
 				lancar_dados();
+				local msgDado = tostring(dadoEsp10[math.random(10)]);
+				--Firecast.getMesaDe(sheet).chat:write(msgDado);
 			</event>
 		</button>
 	</layout>
