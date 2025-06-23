@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+    <template name= "tituloBox" >
+        <rectangle color= "grey" xradius= '0' yradius= '0' g="$(g)" g-width= '$(largura)' g-cnt-vert-align='center' g-max-height='23' g-margin-bottom='5' g-margin-top='-5' g-margin-left = '-5' g-margin-right = '-5'>
+            <label text= '$(titulo)' horzTextAlign="leading"  fontSize= "15" fontStyle= "bold" g="col" fontColor= "black"  g-dyn-width-txt= 'true'/>
+        </rectangle>
+    </template>
+
+    <template name= 'info'>
+        <layout g='col' g-width= '$(largura)'>
+        <edit field= 'info_$(nomeInfo)' g='col' g-width='12' transparent= "true"/>
+        <horzLine  strokeColor='gray' g="col" g-width= '12'/>
+        <label text= '$(nomeInfo)' g='col' g-width='12' horzTextAlign="leading"/>
+        </layout>
+    </template>
+
+     <template name= 'infoDrop'>
+        <layout g='col' g-width= '$(largura)'>
+        <comboBox  items='$(items)' field= 'info_$(nomeInfo)' g='col' g-width='12' transparent= "true"/>
+        <horzLine  strokeColor='gray' g="col" g-width= '12'/>
+        <label text= '$(nomeInfo)' g='col' g-width='12' horzTextAlign= "leading"/>
+        </layout>
+    </template>
+
+    <template name= 'campo'>
+        <layout g='col' g-width= '$(largura)'  g-auto-height='true' g-cnt-horz-align= 'middle' g-min-width="35" >
+        <rectangle corners= 'topLeft topRight bottomRight bottomLeft' g='col' g-width='12' g-auto-height='true' xradius= '10' yradius= '10' cornerType="bevel" g-min-height="40">
+            <edit field = 'cam_$(nomeCampo)' transparent= 'true' horzTextAlign= 'center' vertTextAlign= 'center' g='col' g-width='12' fontSize= '15'/>
+        </rectangle>
+        <label  text= '$(nomeCampo)' vertTextAlign= "trailing" horzTextAlign= 'center' g= 'col' g-width= '12' fontSize= '$(tamanhoFonte)' textTrimming="none" wordWrap="true"/>
+        </layout>
+    </template>
+
+    <template name= 'campoBotao'>
+        <layout g='col' g-width= '$(largura)'  g-auto-height='true' g-cnt-horz-align= 'middle' g-cnt-vert-align="bottom">
+            <rectangle corners= 'topLeft topRight bottomRight bottomLeft' g='col' g-width='12' g-auto-height='true' g-min-width= '30' >
+                <edit field = 'cam_$(nomeCampo)'  horzTextAlign= 'center' vertTextAlign= 'center' transparent= 'true' g='col' g-width='12' fontSize= '20'/>
+            </rectangle>
+            <button  text= '$(nomeCampo)' horzTextAlign= 'center' g= 'col' g-width= '12' fontSize= '$(tamanhoFonte)'/>
+        </layout>
+    </template>
+
+    <template name= 'atributo'>
+        <layout g='col' g-width= '$(largura)' g-auto-height= 'true' g-cnt-horz-align= 'middle' g-cnt-vert-align= 'bottom' >
+            <layout g='col' g-width= '6' g-auto-height= 'true'>
+                <rectangle corners= 'topLeft topRight bottomRight bottomLeft' g='col' g-width='12' g-auto-height='true' g-min-height="50" g-cnt-vert-align="bottom" strokeColor='$(linhaCor)'>
+                    <edit field = 'atr_$(ATR)'  horzTextAlign= 'center' vertTextAlign= 'trailing' transparent= 'true' g='col' g-width='12' fontSize= '20'/>
+                </rectangle>
+                <button text= '$(ATR)' horzTextAlign= 'center' g= 'col' g-width= '12'/>
+            </layout>
+
+            <layout g='col' g-width= '6' g-auto-height= 'true'>
+                <rectangle corners= 'topLeft topRight bottomRight bottomLeft' g='col' g-width='12' g-auto-height='true' g-min-height= '40' g-cnt-vert-align="bottom" strokeColor="#545454">
+                    <edit field = 'atr_max_$(ATR)'  horzTextAlign= 'center'  vertTextAlign= 'trailing' transparent= 'true' g='col' g-width='12' fontSize= '15'/>
+                </rectangle>
+                <label text= 'MAX' horzTextAlign= 'center' vertTextAlign= 'trailing' g= 'col' g-width= '12' fontSize= '10'/>
+            </layout>
+        </layout>
+    </template>
+
+    <template name= 'pericia'>
+        <layout g='row' g-width='12' g-auto-height='true' >
+            <edit transparent= 'true' field= '$(nomePer)' g='col' g-width='6' horzTextAlign= 'leading'/>
+            <comboBox transparent= 'true' field= 'cha_$(nomePer)' items='{"FIS", "VEL", "FOR", "AGI", "DES", "MAE", "INT", "ARC", "PER"}' g='col' g-width='2' horzTextAlign= 'center'/>
+            <edit transparent= 'true' field= 'valAtr_$(nomePer)' g='col' g-width='1' horzTextAlign= 'center'/>
+            <edit transparent= 'true' field= 'nivel_$(nomePer)'  g='col' g-width='1' horzTextAlign= 'center'/>
+            <edit transparent= 'true' field= 'outro_$(nomePer)' g='col' g-width='1' horzTextAlign= 'center'/>
+            <button g='col' g-width='1'/>
+            <horzLine g='row'/>
+        </layout>
+    </template>
+</group>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="Geral" align="client" theme="dark">
+    <scrollBox  align= 'client'>
+        <checkBox top='20' left='10' field='teste'/>  
+        <!--TEMPLATES-->
+        
+        <template name= 'espiral'>
+            <layout g='col' g-width='12' g-auto-height='true' g-padding-top= '8' g-cnt-gutter="5" g-padding-bottom= '15'>
+                <rectangle align='client' corners= 'topRight bottomRight bottomLeft topLeft' strokeColor='$(linhaCor)' g-cnt-gutter= "5" cornerType= 'bevel'/>
+                <layout g='col' g-width='8' g-auto-height='true'>
+                    <layout g='col' g-width='12' g-auto-height='true'>
+                        <label horzTextAlign='center' text= "$(numPista1)" g='col' g-width= '4'/>
+                        <checkBox g='col' g-width='2'/>
+                        <checkBox g='col' g-width='2'/>
+                        <checkBox g='col' g-width='2'/>
+                        <checkBox g='col' g-width='2'/>
+                    </layout>
+                    <layout g='col' g-width='12' g-auto-height='true'>
+                        <label horzTextAlign='center' text= "$(numPista2)" g='col' g-width= '4'/>
+                        <checkBox g='col' g-width='2'/>
+                        <checkBox g='col' g-width='2'/>
+                        <checkBox g='col' g-width='2'/>
+                        <checkBox g='col' g-width='2'/>
+                    </layout>
+                </layout>
+                <layout g="col" g-width= '4' g-auto-height='true' g-vert-align="center" g-cnt-gutter= "5">
+                    <checkBox g='col' g-width='4'/>
+                    <checkBox g='col' g-width='4'/>
+                    <layout g="col" g-width="4"/>
+                </layout>
+            </layout>
+        </template>
+
+        <template name= 'armaMelee'>
+            <layout g='col' g-width='3' g-auto-height= 'true'>
+                <button text='🎲' g='col' g-width='12'/>
+            </layout>
+            <layout g='col' g-width='6' g-auto-height= 'true' g-cnt-vert-align="between">
+                <info nomeInfo= 'Arma1' largura='12'/>
+                <info nomeInfo= 'Notas1' largura='12'/>
+            </layout>
+            <layout g='col' g-width='3' g-auto-height= 'true'>
+                <campo nomeCampo='ACO' largura='6' tamanhoFonte='10'/>
+                <campo nomeCampo='PODER + FORÇA' largura='6' tamanhoFonte='10'/>
+            </layout>
+        </template>
+
+        <!-- INFO-->
+        <layout g='container' g-horz-align= 'center' g-cnt-gutter= '10' g-min-width="400">
+            <rectangle g='col' g-width='12' g-auto-height = 'true' g-margin-bottom= "10" g-padding-bottom="40" g-padding-left="20" g-padding-right="20" g-cnt-horz-align="around">
+                
+                <info nomeInfo= 'NOME'  largura= '2'/>
+                <info nomeInfo= 'JOGADOR'  largura= '2'/>
+                <infoDrop nomeInfo= 'ARQUÉTIPO'  items= "{'Dotado', 'Habilidoso', 'Intelectial','Poderoso'}" largura= '4'/>
+                <info nomeInfo= 'RELIGIÃO' largura= '4'/>
+                <infoDrop nomeInfo= 'RAÇA'  items= "{'Humano', 'Anão', 'Gobber','Iosano', 'Nyss', 'Trolloide'}" largura= '2'/>
+                <info nomeInfo = 'IDADE' largura='1'/>
+                <info nomeInfo = 'ALTURA' largura='1'/>
+                <info nomeInfo= 'CARREIRAS' largura= '4'/>
+                <info nomeInfo= 'NÍVEL' largura= '2'/>
+                <info nomeInfo= 'XP' largura= '2'/>
+
+            </rectangle>
+
+            <!--Atributos-->
+            <rectangle g='col' g-width='3' g-auto-height = 'true'>
+                <tituloBox titulo = "ATRIBUTOS"  g='col' largura= '12'/>
+                <layout g='col' g-width= '12' g-auto-height= 'true' g-max-height= '160' >
+                    <layout g='col' g-width= '6' g-auto-height= 'true'>
+                        <layout g='col' g-width='12'/>
+                        <atributo largura= '12' ATR= 'FIS' linhaCor="#374857"/>
+                        <layout g='col' g-width='12'/>
+
+                    </layout>
+                    <layout g='col' g-width= '6' g-auto-height= 'true'>
+                        <atributo largura= '12' ATR= 'VEL' linhaCor="#545454"/>
+                        <atributo largura= '12' ATR= 'FOR' linhaCor="#545454"/>
+                    </layout>
+                </layout>
+
+                <horzLine g='row' g-margin-bottom= "10" g-margin-top= "10"/>
+
+                <layout g='col' g-width= '12' g-auto-height= 'true' g-max-height= '160'>
+                    <layout g='col' g-width= '6' g-auto-height= 'true'>
+                        <layout g='col' g-width='12'/>
+                        <atributo largura= '12' ATR= 'AGI' linhaCor="#57373f"/>
+                        <layout g='col' g-width='12'/>
+
+                    </layout>
+                    <layout g='col' g-width= '6' g-auto-height= 'true'>
+                        <atributo largura= '12' ATR= 'DES' linhaCor="#545454"/>
+                        <atributo largura= '12' ATR= 'MAE' linhaCor="#545454"/>
+                    </layout>
+                </layout>
+
+                <horzLine g='row' g-margin-bottom= "10"  g-margin-top= "10"/>
+
+                <layout g='col' g-width= '12' g-auto-height= 'true' g-max-height= '160' >
+                    <layout g='col' g-width= '6' g-auto-height= 'true'>
+                        <layout g='col' g-width='12'/>
+                        <atributo largura= '12' ATR= 'INT' linhaCor="#475737"/>
+                        <layout g='col' g-width='12'/>
+
+                    </layout>
+                    <layout g='col' g-width= '6' g-auto-height= 'true'>
+                        <atributo largura= '12' ATR= 'ARC' linhaCor="#545454"/>
+                        <atributo largura= '12' ATR= 'PER' linhaCor="#545454"/>
+                    </layout>
+                </layout>
+
+                <horzLine g='row' g-margin-bottom= "10"  g-margin-top= "10"/> 
+
+                <layout g='col' g-width='4'/>
+                <campoBotao nomeCampo= 'VONTADE' largura= '4' tamanhoFonte='15'/> 
+                <layout g='col' g-width='4'/> 
+            </rectangle>
+
+            <!--combate-->
+            <layout g='col' g-width= '5' g-auto-height= 'true' g-cnt-gutter= '5' g-cnt-vert-align= 'center'>
+                <rectangle g='col' g-width='12' g-auto-height= 'true' g-margin-bottom='5'>
+                    <tituloBox titulo = "CORPO-A-CORPO" g='row' largura='12'/>
+                    <layout g='col' g-width='2' g-auto-height= 'true'>
+                        <button text='⚔️' g='col' g-width='12'  g-min-height='60' fontSize='25'/>
+                    </layout>
+                    <layout g='col' g-width='6' g-auto-height= 'true'>
+                        <info nomeInfo= 'Arma1' largura='12'/>
+                        <info nomeInfo= 'Notas1' largura='12'/>
+                    </layout>
+                    <layout g='col' g-width='4' g-auto-height= 'true'>
+                        <campo nomeCampo='ACO' largura='6' tamanhoFonte='10'/>
+                        <campo nomeCampo='POD+FOR' largura='6' tamanhoFonte='10'/>
+                    </layout>
+                    
+                </rectangle>
+                <rectangle g='col' g-width='12' g-auto-height= 'true' g-margin-bottom= '10'>
+                    <tituloBox titulo = "ATAQUE À DISTÂNCIA" g='row' largura='12'/>
+                    <layout g='col' g-width='2' g-auto-height= 'true'>
+                        <button text='🏹' g='col' g-width='12' g-min-height='60' fontSize='25'/>
+                    </layout>
+                    <layout g='col' g-width='5' g-auto-height= 'true'>
+                        <info nomeInfo= 'Arma1' largura='12'/>
+                        <info nomeInfo= 'Notas1' largura='12'/>
+                    </layout>
+                    <layout g='col' g-width='5' g-auto-height= 'true'>
+                        <campo nomeCampo='ALC' largura='4' tamanhoFonte='10'/>
+                        <campo nomeCampo='ADI' largura='4' tamanhoFonte='10'/>
+                        <campo nomeCampo='POD' largura='4' tamanhoFonte='10'/>
+                    </layout>
+                </rectangle>
+                <rectangle g='col' g-width='12' g-auto-height= 'true' g-cnt-horz-align= 'right' g-margin-bottom='5'>
+                    <tituloBox titulo = "DEFESA" g='row' largura='12'/>
+                    <campo nomeCampo =" VEL + AGI + PER" largura='2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "MOD. EQUIP +" largura= '2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "OUTRO" largura= '2' tamanhoFonte='10'/>
+                     <label text="=" g="col" g-width= '1' horzTextAlign="center" />
+                    <campoBotao nomeCampo= "DEFESA" largura= '3' tamanhoFonte='10'/>
+                </rectangle>
+                <rectangle g='col' g-width='12' g-auto-height= 'true' g-cnt-horz-align= 'right' g-margin-bottom='5' g-cnt-gutter='5'>
+                    <tituloBox titulo = "ARMADURA" g='row' largura='12'/>
+                    <campo nomeCampo ="FIS +" largura='2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "MOD. ARM +" largura= '2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "MOD. ESCUDO +" largura= '2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "OUTRO " largura= '2' tamanhoFonte='10'/>
+                    <label text="=" g="col" g-width= '1' horzTextAlign="center" />
+                    <campoBotao nomeCampo= "ARMADURA" largura= '3' tamanhoFonte='10'/>
+                </rectangle>
+                <rectangle g='col' g-width='12' g-auto-height= 'true' g-cnt-horz-align= 'right' g-margin-bottom='5'>
+                    <tituloBox titulo = "INICIATIVA" g='row' largura='12'/>
+                    <campo nomeCampo =" VEL + MAE + PER" largura='3' tamanhoFonte='10'/>
+                    <campo nomeCampo= "MOD.EQUIP" largura= '2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "OUTRO" largura= '2' tamanhoFonte='10'/>
+                    <label text="=" g="col" g-width= '1' horzTextAlign="center" />
+                    <campoBotao nomeCampo= "INICIATIVA" largura= '3' tamanhoFonte='10'/>
+                </rectangle>
+                <rectangle g='col' g-width='12' g-auto-height= 'true'  g-cnt-horz-align= 'right'>
+                    <tituloBox titulo = "ALCANCE DE COMANDO" g='ROW' largura='12' />
+                    <campo nomeCampo ="INT" largura='2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "COMANDAR" largura= '2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "OUTRO" largura= '2' tamanhoFonte='10'/>
+                    <label text="=" g="col" g-width= '1' horzTextAlign="center" />
+                    <campoBotao nomeCampo= "ARMADURA" largura= '3' tamanhoFonte='10'/>
+                </rectangle>
+            </layout>
+
+            <!--Pericias-->
+            <layout g='col' g-width= '4' g-auto-height= 'true' >
+                <rectangle g='col' g-width='12' g-auto-height= 'true' g-max-height="400">
+                    <tituloBox titulo= "PERÍCIAS" g="row" largura="12"/>
+                    <scrollBox g="col" g-width="12" g-min-height="300">
+                        <layout g="col" g-width="6"/>
+                        <label  horzTextAlign= 'center' text= 'Chave' g='col' g-width= '2'/>
+                        <label  horzTextAlign= 'center' text= 'ATR' g='col' g-width= '1'/>
+                        <label horzTextAlign= 'center'  text= 'NIV' g='col' g-width= '1'/>
+                        <label horzTextAlign= 'center'  text= 'out' g='col' g-width= '1'/>
+                        <label horzTextAlign= 'center'  text= 'Total' g='col' g-width= '1'/>
+                        <pericia nomePer= 'Arma de Mão' chaAtri="DES" perNiv= ' '/>
+                        <pericia nomePer= 'Arma Grande'  perNiv= ' '/>
+                        <pericia nomePer= 'Pistola'  perNiv= ' '/>
+                        <pericia nomePer= 'Fuzil' perNiv= ' '/>
+                        <pericia nomePer= 'Detecção' perNiv= ' '/>
+                        <pericia nomePer= 'Esgueirar' perNiv= ' '/>
+                        <pericia nomePer= 'Comandar (social)' perNiv= ' '/>
+                        
+                    </scrollBox>
+                </rectangle>
+
+            <!--Espiral vital-->
+                <rectangle g='col' g-width='12' g-auto-height= 'true'>
+                    <tituloBox titulo = "ESPIRAL VITAL" g='col' largura='12'/>
+                    <layout g='col' g-width= '2' g-auto-height='true' g-vert-tile='true' g-cnt-vert-align= 'center' g-cnt-line-spacing= '50'>
+                        <label horzTextAlign='center' text= "Físico" g='col' g-width= '12'/>
+                        <label horzTextAlign='center' text= "Agilidade" g='col' g-width= '12'/>
+                        <label horzTextAlign='center' text= "Intelecto" g='col' g-width= '12'/>
+                    </layout>
+                    <layout g='col' g-width= '7' g-auto-height='true' g-cnt-line-spacing= '5'>
+                        <espiral numPista1='1' numPista2= '2' linhaCor='#374457'/>
+                        <espiral numPista1='3' numPista2= '4' linhaCor= '#57373f'/>
+                        <espiral numPista1='5' numPista2= '6' linhaCor= '#475737'/>
+                    </layout>
+                    <layout g='col' g-width= '3' g-auto-height='true' g-vert-tile='true' g-cnt-vert-align= 'center' g-cnt-line-spacing= '50'>
+                        <label horzTextAlign='leading' text= "- 2 FOR" g='col' g-width= '12'/>
+                        <label horzTextAlign='leading' text= "-2 nas jogadas de ataque" g='col' g-width= '12' textTrimming="none"/>
+                        <label horzTextAlign='leading' text= "-2 DEF e não pode soltar magias" g='col' g-width= '12' textTrimming="none"/>
+                    </layout>
+                </rectangle>
+            </layout>
+        </layout>
+    </scrollBox>
+</form>

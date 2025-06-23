@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name='frmItemArmaRanged' g-auto-height='true'>
+    <import file="styles.xml"/>
+
+    <style>
+        edit {transparent: true;}
+        rectangle {g-max-height: 35;}
+    </style>
+    
+    <button text='-' g='col' g-width='1' onClick='NDB.deleteNode(sheet);'/>
+    <edit field= '$(nomeArma)' g='col' g-width='3'/>
+    <edit field= 'notas_$(nomeArma)' g='col' g-width='3'/>
+    <rectangle g='col' g-width='1' g-auto-height='true'>
+        <edit field= 'ACL_$(nomeArma)' g='col' g-width='12' type='number' horzTextAlign='center'/>
+    </rectangle>
+    <rectangle g='col' g-width='1' g-auto-height='true'>
+        <edit field= 'ADI_$(nomeArma)' g='col' g-width='12' type='number' horzTextAlign='center'/>
+    </rectangle>
+        <rectangle g='col' g-width='1' g-auto-height='true'>
+        <edit field= 'POD_$(nomeArma)' g='col' g-width='12' type='number' horzTextAlign='center'/>
+    </rectangle>
+        <rectangle g='col' g-width='1' g-auto-height='true'>
+        <edit field= 'MUN_$(nomeArma)' g='col' g-width='12' type='number' horzTextAlign='center'/>
+    </rectangle>
+    <checkBox g='col' g-width='1'/>
+    <horzLine g='row' g-width='12'/>
+</form>

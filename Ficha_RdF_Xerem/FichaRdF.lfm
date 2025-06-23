@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form formType="sheetTemplate" dataType="rdfRPG" title="Reinos De Ferro (auto)" name="frmReinosRPG" cacheMode="time">
+      <import file='styles.xml'/>
+      <import file="templates.xml"/>
+      
+      <tabControl align='client'>
+            <tab title = "Geral">
+                  <import file="Geral.xml"/>
+            </tab>
+            <tab title= "Habilidades">
+                  <import file="Habilidades.xml"/>
+            </tab>
+      </tabControl>
+</form>

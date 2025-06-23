@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+    <style>
+        rectangle {
+            corners :topRight bottomRight bottomLeft;
+            cornerType: round;
+            xradius: 15;
+            yradius: 15;
+            strokeColor:#343434;
+            strokeSize: 2;
+            color: #1f1e1e;
+            g-padding-top: 5;
+            g-padding-left: 8;
+            g-padding-right: 8;
+            g-padding-bottom: 5;
+            }
+        label.boxTitle {g-padding-left: 8;}
+        form { g-padding-top: 8; g-cnt-line-spacing: 4;}
+        edit, label, comboBox { height: 25;}
+        horzLine {strokeColor: grey;}
+        checkBox {scale: 1.2; g-vert-align: middle;}
+    </style>
