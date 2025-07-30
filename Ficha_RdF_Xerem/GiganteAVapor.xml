@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="GiganteAVapor" align="client" theme="dark">
+
+    <template name = "gridCheckbox">
+        <layout g='col' g-width='12' g-cnt-gutter='2' g-auto-height='true' g-padding-left= '20' g-padding-right= '20' g-cnt-horz-align='center'>
+            <label g='col' g-width='2' text='1' horzTextAlign='center'/>
+            <label g='col' g-width='2' text='2' horzTextAlign='center'/>
+            <label g='col' g-width='2' text='3' horzTextAlign='center'/>
+            <label g='col' g-width='2' text='4' horzTextAlign='center'/>
+            <label g='col' g-width='2' text='5' horzTextAlign='center'/>
+            <label g='col' g-width='2' text='6' horzTextAlign='center'/>
+
+            <!-- for i = 1, quantidade, 1 do -->
+            <checkBox g='col' g-width='2'/>
+            <!--end;-->
+        </layout>
+    </template>
+
+    <template name='dano'>
+        <layout g='col' g-width='12'  g-auto-height='true' g-padding-bottom='20'>
+            <!-- for i = 1, quantidade, 1 do -->
+            <edit transparent='true' g='col' g-width= '4'/>
+            <edit transparent='true' g='col' g-width= '8'/>
+            <horzLine g='col' g-width='12'/>
+            <!--end;-->
+        </layout>
+    </template>
+
+    <scrollBox  align= 'client'>
+        <layout g='col' g-width='12' g-horz-align= 'center' g-cnt-gutter= '10' g-min-height="800" g-padding-top='30'>
+            <layout g='col' g-width='3' g-auto-height= 'true' g-cnt-horz-align='center'>
+                <!--INFORMACOES-->
+                <rectangle g='col' g-width='12' g-min-height= '100' g-auto-height='true' g-padding-bottom='50'>
+                    <info largura= '12' nomeInfo='NOME DO GIGANTE'/>
+                    <info largura= '6' nomeInfo='CHASSI'/>
+                    <info largura= '6' nomeInfo='CLASSE DO CHASSI'/>
+                    <info largura= '3' nomeInfo='ALTURA'/>
+                    <info largura= '3' nomeInfo='PESO'/>
+                    <info largura= '3' nomeInfo='MAX.COMB'/>
+                    <info largura= '3' nomeInfo='GASTO.COMB'/>
+                    
+                </rectangle>
+
+                <!--ATRIBUTOS-->
+                <rectangle g='col' g-width='12' g-min-height= '100' g-auto-height='true'>
+                    <tituloBox titulo = 'ATRIBUTOS' largura='12' g='col'/>
+                    <campoBotao largura='3' nomeCampo='Fis' />
+                    <campoBotao largura='3' nomeCampo='Vel' />
+                    <campoBotao largura='3' nomeCampo='For' />
+                    <campoBotao largura='3' nomeCampo='Agi' />
+                    <campoBotao largura='3' nomeCampo='Des' />
+                    <campoBotao largura='3' nomeCampo='Mae' />
+                    <campoBotao largura='3' nomeCampo='Int' />
+                    <campoBotao largura='3' nomeCampo='Per' />
+                </rectangle>
+
+                <!--TABELA DE DANO-->
+                <rectangle g='col' g-width='8' g-min-height= '100' g-auto-height='true' g-padding-bottom='20'>
+                    <tituloBox titulo = 'TABELA DE DANO' largura='12' g='col'/>
+                    <gridCheckbox quantidade='36'/>
+                </rectangle>
+            </layout>
+            <layout g='col' g-width='4' g-auto-height= 'true'>
+                <rectangle g='col' g-width='12' g-min-height= '100' g-auto-height='true'>
+                    <tituloBox titulo = 'CORPO-A-CORPO' largura='12' g='col'/>
+                    <armaMelee/>
+                    <armaMelee/>
+                </rectangle>
+                 <rectangle g='col' g-width='12' g-min-height= '100' g-auto-height='true'>
+                    <tituloBox titulo = 'ATAQUE A DISTANCIA' largura='12' g='col'/>
+                    <armaRanged/>
+                    <armaRanged/>
+                </rectangle>
+                <rectangle g='col' g-width='12' g-auto-height= 'true' g-cnt-horz-align= 'right' g-margin-bottom='5'>
+                    <tituloBox titulo = "DEFESA" g='row' largura='12'/>
+                    <campo nomeCampo =" VEL + AGI + PER" largura='2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "MOD. EQUIP +" largura= '2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "OUTRO" largura= '2' tamanhoFonte='10'/>
+                     <label text="=" g="col" g-width= '1' horzTextAlign="center" />
+                    <campoBotao nomeCampo= "DEFESA" largura= '3' tamanhoFonte='10'/>
+                </rectangle>
+                <rectangle g='col' g-width='12' g-auto-height= 'true' g-cnt-horz-align= 'right' g-margin-bottom='5' g-cnt-gutter='5'>
+                    <tituloBox titulo = "ARMADURA" g='row' largura='12'/>
+                    <campo nomeCampo ="FIS +" largura='2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "MOD. ARM +" largura= '2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "MOD. ESCUDO +" largura= '2' tamanhoFonte='10'/>
+                    <campo nomeCampo= "OUTRO " largura= '2' tamanhoFonte='10'/>
+                    <label text="=" g="col" g-width= '1' horzTextAlign="center" />
+                    <campoBotao nomeCampo= "ARMADURA" largura= '3' tamanhoFonte='10'/>
+                </rectangle>
+                
+            </layout>
+            <layout g='col' g-width='3' g-auto-height= 'true'>
+                <rectangle g='col' g-width='12' g-min-height= '100' g-auto-height='true'>
+                    <tituloBox titulo = 'APRIMORAMENTOS' largura='12' g='col'/>
+                    <label g='col' g-width='4' text= 'UPGRADE' />
+                    <label g='col' g-width='8' text= 'DESCRIÇÃO' />
+                    <scrollBox g='col' g-width='12' g-min-height= '200'>
+                        <dano quantidade='10'/>
+                    </scrollBox>
+                </rectangle>
+                <rectangle g='col' g-width='12' g-min-height= '100' g-auto-height='true'>
+                    <tituloBox titulo = 'EQUIPAMENTO' largura='12' g='col'/>
+                     <label g='col' g-width='4' text= 'EQUIPAMENTO' />
+                    <label g='col' g-width='8' text= 'DESCRIÇÃO' />
+                    <scrollBox g='col' g-width='12' g-min-height= '200'>
+                        <dano quantidade='10'/>
+                    </scrollBox>
+                </rectangle>
+                <rectangle g='col' g-width='12' g-min-height= '100' g-auto-height='true'>
+                    <tituloBox titulo = 'DANO CATASTRÓFICO' largura='12' g='col'/>
+                    <label g='col' g-width='4' text= 'AREA' />
+                    <label g='col' g-width='8' text= 'DESCRIÇÃO' />
+                    <dano quantidade='10'/>
+                </rectangle>
+            </layout>
+        </layout>
+    </scrollBox>
+
+</form>

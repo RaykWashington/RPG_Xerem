@@ -2,13 +2,24 @@
 <form formType="sheetTemplate" dataType="rdfRPG" title="Reinos De Ferro (auto)" name="frmReinosRPG" cacheMode="time">
       <import file='styles.xml'/>
       <import file="templates.xml"/>
+      <import file="Definicoes.xml"/>
+      <import file="Funcoes.xml"/>
       
       <tabControl align='client'>
             <tab title = "Geral">
                   <import file="Geral.xml"/>
             </tab>
+            <tab title= "Equipamentos">
+                  <import file="Equipamentos.xml"/>
+            </tab>
             <tab title= "Habilidades">
                   <import file="Habilidades.xml"/>
+            </tab>
+            <tab title= "Gigante-a-Vapor">
+                  <import file="GiganteAVapor.xml"/>
+            </tab>
+            <tab title= "Anotacoees">
+                  <import file="Anotacoes.xml"/>
             </tab>
       </tabControl>
 </form>

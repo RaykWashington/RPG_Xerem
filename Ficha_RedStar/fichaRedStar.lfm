@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form formType="sheetTemplate" dataType="fichaRedStar" 
+      title="Ficha Red Star" name="frmFichaRedStar">
+      <import file='styles.xml'/>
+      <import file='Templates.xml'/>
+      <import file='Definicoes.xml'/>
+      
+      <tabControl align='client'>
+            <tab title='Geral'>
+                  <import file='Geral.xml'/>
+            </tab> 
+             <tab title='Equipamento'>
+                  <import file='Equipamento.xml'/>
+            </tab> 
+      </tabControl>
+
+</form>

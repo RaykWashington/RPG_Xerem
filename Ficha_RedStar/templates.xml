@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+    
+    <script>
+        local function rolarTeste(texto, dados, habilidade, dificuldade)
+            local mesa =  Firecast.getMesaDe(sheet)
+            local sucessos = 0;
+            local rolagem = Firecast.interpretarRolagem( dados .. ("d10"));
+
+          
+            local dif = 10 - tonumber(habilidade)
+            if string.sub(dificuldade,1,1) == "+" then
+                    dif = dif + tonumber(string.sub(dificuldade,2))
+                elseif string.sub(dificuldade,1,1) == "-" then
+                    dif = dif - tonumber(string.sub(dificuldade,2))
+                else
+                    dif = dif + tonumber(string.sub(dificuldade,2))
+            end;
+
+            local promessa = mesa.chat:asyncRoll(rolagem)
+            local n, rollObject = await(promessa);
+          
+           
+
+            for i=1, #rollObject.ops, 1 do
+                local operacao = rollObject.ops[i];
+                for j = 1, #operacao.resultados, 1 do
+                    if operacao.resultados[j] >= dif then
+                        sucessos = sucessos + 1;
+                    end
+                end
+            end
+
+            mesa.chat:asyncSendStd(sucessos .. ' sucessos no teste de '..texto .. ' , dificuldade ' ..  dif);
+            
+            
+        end
+    </script>
+
+    <template name='titulo2'>
+        <layout g-width = '12' g-cnt-vert-align='center'  g-margin-bottom='20'  g-margin-top='20'>
+            <horzLine  g='col' g-width='12'/>
+            <label g='col' g-width='12' fontSize='20' text= '$(titulo)' horzTextAlign='center' g-margin-top='5'/>
+        </layout>
+    </template>
+
+    <template name='info'>
+        <layout g='col' g-width='$(largura)' g-auto-height='true' g-margin-bottom='5'>    
+            <edit  g='col' g-width='12' horzTextAlign='Leading' transparent='true' field='info_$(infoNome)' type="$(tipo or 'text')" fontSize='20'/>
+            <horzLine  g='col' g-width='12'/>
+            <label g='col' g-width='12' horzTextAlign='Leading' text='$(infoNome)' vertTextAlign='trailing'/>
+        </layout>
+    </template>
+
+    <template name='marca'>
+        <radioButton g='col' g-width='1' groupName='$(grupo)' field='val$(grupo)' fieldValue='$(valor)'/>
+    </template>
+
+    <template name='caracteristica'>
+        <layout g='col' g-width='12' g-auto-height='true' g-margin-bottom='5' g-cnt-horz-align='center'>
+            <label g='col' g-width='3' horzTextAlign='Leading' text ='$(texto)' vertTextAlign='trailing'/>
+            <marca grupo= '$(car)' valor = '1'/>
+            <marca grupo= '$(car)' valor = '2'/>
+            <marca grupo= '$(car)' valor = '3'/>
+            <marca grupo= '$(car)' valor = '4'/>
+            <marca grupo= '$(car)' valor = '5'/>
+            <marca grupo= '$(car)' valor = '6'/>
+            <marca grupo= '$(car)' valor = '7'/>
+            <marca grupo= '$(car)' valor = '8'/>
+        </layout>
+    </template>
+
+    <template name='habilidade'>
+        <layout g='col' g-width='12' g-auto-height='true' g-margin-bottom='5' g-cnt-horz-align='center' >
+            <label g='col' g-width='12' text='$(texto)' horzTextAlign='center' />
+            <marca grupo= '$(hab)' valor = '1'/>
+            <marca grupo= '$(hab)' valor = '2'/>
+            <marca grupo= '$(hab)' valor = '3'/>
+            <marca grupo= '$(hab)' valor = '4'/>
+            <marca grupo= '$(hab)' valor = '5'/>
+            <marca grupo= '$(hab)' valor = '6'/>
+            <marca grupo= '$(hab)' valor = '7'/>
+            <marca grupo= '$(hab)' valor = '8'/>
+
+            <button g='col' g-width='2' text='🎲'>
+                <event name='onClick'>
+                    Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
+                        function(selected, seletedIndex, selectedText)
+                            if selected then
+                                local car = (caracteristicas[selectedText]);
+                                local carVal = 1
+
+                                if car == 'valfor' then
+                                    carVal = sheet.valfor
+                                end
+                                if car == 'valcon' then
+                                    carVal = sheet.valcon
+                                end
+                                if car == 'valdes' then
+                                    carVal = sheet.valdes
+                                end
+                                if car == 'valper' then
+                                    carVal = sheet.valper
+                                end
+                                if car == 'valint' then
+                                    carVal = sheet.valint
+                                end
+                                if car == 'valfdv' then
+                                    carVal = sheet.valfdv
+                                end
+                                
+                                Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
+                                    function(dif)
+                                        rolarTeste('$(texto)', carVal or 1, sheet.val$(hab) , dif);
+                                    end
+                                );
+                            else
+                                showMessage('Cancelando!')
+                            end;  
+                        end);
+                </event>
+            </button>
+        </layout>
+    </template>
+
+    <template name= 'atributos'>
+        <layout g-width='12' g-gutter = '10'>
+            <label g='col' g-width = '10' horzTextAlign='leading' text= '$(atributo)'/>
+            <label g='col' g-width = '2' horzTextAlign='center' text= '$(valor)'/>
+            <!--for i = 1, quantidade, 1 do-->
+            <edit g='col' g-width='10'/>
+            <edit g='col' g-width='2' type='number'/>
+            <horzLine g='col' g-width='10'/>
+            <horzLine g='col' g-width='2'/>
+            <!--end;-->
+        </layout>
+    </template>
+
+
+
+</group>

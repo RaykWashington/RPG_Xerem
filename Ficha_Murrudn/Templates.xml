@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+    <template name='info'>
+        <layout g='col' g-width='$(largura)' g-auto-height='true' g-margin-bottom='5'>
+            <edit  g='col' g-width='12' horzTextAlign='Leading' transparent='true' field='info_$(infoNome)' type="$(tipo or 'text')" fontSize='20'/>
+            <horzLine  g='col' g-width='12'/>
+            <label g='col' g-width='12' horzTextAlign='Leading' text='$(infoNome)' />
+        </layout>
+    </template>
+
+    <template name='titulo1'>
+        <label text= '$(titulo)' g='col' g-width='12' fontSize='25' g-margin-bottom='30' g-margin-top='30' fontColor='white'  horzTextAlign='center'/>
+    </template>
+
+    <template name='atributo'>
+        <layout g='col' g-width='$(largura or 12)' g-auto-height='true' g-cnt-horz-align='center'>
+            <image src='img/$(imagem)' g='col' g-width='12' g-max-width='$(imgSize or 50)' g-margin-bottom='5'/>
+            <edit g='col' g-width='8' field='atr_$(nomeAtr or 0)' horzTextAlign='center' fontSize='20' g-margin-bottom='5' type='number'/>
+            <button name='$(nomeAtr)' g='col' g-width='8' text='$(nomeAtr)' horzTextAlign='center' textTrimming='none' onClick='rolarTesteAtr(sheet.atr_$(nomeAtr), self.$(nomeAtr).text)'/>
+        </layout>
+    </template>
+
+    <template name='marcador'>
+        <layout g='col' g-width='$(largura or 12)' g-auto-height='true' g-cnt-horz-align='center' g-cnt-vert-align='top'>
+            <image src='img/$(imagem)' g='col' g-width='12' g-max-width='$(imgSize or 50)' g-margin-bottom='5'/>
+            <label g='col' g-width='8' field='mar_$(nomeMar or 0)' horzTextAlign='center' fontSize='20' g-margin-bottom='10'/>
+            <button name='$(nomeMar)' g='col' g-width='8' text='$(nomeMar)' horzTextAlign='center' textTrimming='none' onClick='rolarTesteAtr(sheet.mar_$(nomeMar), self.$(nomeMar).text)'/>
+        </layout>
+    </template>
+</group>

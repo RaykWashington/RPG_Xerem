@@ -5,6 +5,7 @@
 	  <import file= "dados.xml"/>
 	  
 	<!-- DEFINIÇÃO DE ESTILOS-->
+
 	<style>
 		label.Titulo2 {
 			margins: {top= 10}; 
@@ -28,7 +29,7 @@
 		local function lancar_dados()
 			local mesa = Firecast.getMesaDe(sheet);
 			local instinto = sheet.valInstinto;
-			local pericia = sheet.valConhecPrat;
+			local aptidao = sheet.valConhecPrat;
 
 			if sheet.agirPorInstinto == true and instinto ~= 0 then -- se for agir por instinto e tiver algum valor no instinto atual
 				mesa.chat:rolarDados(instinto.."d6", sheet.nomePersonagem .. " Agindo Por Instinto: " .. sheet.currentInstinto);
@@ -39,12 +40,12 @@
 				mesa.chat:asyncSendStd(rolespecial);
 
 			else
-				if instinto and pericia ~= 0 then
+				if instinto and aptidao ~= 0 then
 					instinto = instinto .. "d6";
-					pericia = pericia .. "d10";
-					local rolagem = Firecast.interpretarRolagem(instinto):concatenar(pericia);
+					aptidao = aptidao .. "d10";
+					local rolagem = Firecast.interpretarRolagem(instinto):concatenar(aptidao);
 					local promise = mesa.chat:asyncRoll(rolagem, sheet.nomePersonagem .. " agiu com " ..  sheet.currentInstinto .. " e " .. sheet.currentConhecPrat);
-					local n, rollObject, logRec = await(promise); -- pegando os tres retornos da promise da rolagem e salvando em 3 variaveis locais
+					-- local n, rollObject, logRec = await(promise); -- pegando os tres retornos da promise da rolagem e salvando em 3 variaveis locais
 					-- tratando o resultado --
 					-- aqui o lance vai ser pegar essa table, e pra cada resultado comparar com uma tabela de valores dos dados especiais do Assimilacao --
 					-- mesa.chat:write(rollObject);
@@ -116,8 +117,8 @@
 			<checkBox field = "assim10" g= "col" g-width= "1"/>
 			<layout g="col" g-width= "1"/>
 			
-			<edit g="col" g-width= "6"/>
-			<label  field= "assimilacao" horzTextAlign= "leading" text= "Assimilação" g= "col" g-width= "6"/>
+			<edit field= "assimilacao" g="col" g-width= "6"/>
+			<label  horzTextAlign= "leading" text= "Assimilação" g= "col" g-width= "6"/>
 			
 		</layout>
 		
@@ -129,34 +130,34 @@
 	
 		<!--INSTINTOS-->	
 		<label class= "Titulo2" text = "INSTINTOS"/>
-		<periciaCampo tipo= "Instinto" titulo= "Reacao" texto= "Reação" grupo= "instintos" largura= "4"/>
-		<periciaCampo tipo= "Instinto" titulo= "Percepcao" texto= "Percepção" grupo= "instintos" largura= "4"/>
-		<periciaCampo tipo= "Instinto" titulo= "Sagacidade" texto= "Sagacidade" grupo= "instintos" largura= "4"/>
-		<periciaCampo tipo= "Instinto" titulo= "Potencia" texto= "Potência" grupo= "instintos" largura= "4"/>
-		<periciaCampo tipo= "Instinto" titulo= "Influencia" texto= "Influência" grupo= "instintos" largura= "4"/>
-		<periciaCampo tipo= "Instinto" titulo= "Resolucao" texto= "Resolução" grupo= "instintos" largura= "4"/>
+		<aptidaoCampo tipo= "Instinto" titulo= "Reacao" texto= "Reação" grupo= "instintos" largura= "4"/>
+		<aptidaoCampo tipo= "Instinto" titulo= "Percepcao" texto= "Percepção" grupo= "instintos" largura= "4"/>
+		<aptidaoCampo tipo= "Instinto" titulo= "Sagacidade" texto= "Sagacidade" grupo= "instintos" largura= "4"/>
+		<aptidaoCampo tipo= "Instinto" titulo= "Potencia" texto= "Potência" grupo= "instintos" largura= "4"/>
+		<aptidaoCampo tipo= "Instinto" titulo= "Influencia" texto= "Influência" grupo= "instintos" largura= "4"/>
+		<aptidaoCampo tipo= "Instinto" titulo= "Resolucao" texto= "Resolução" grupo= "instintos" largura= "4"/>
 
 
 		<!--CONHECIMENTOS-->
 
 		<label class= "Titulo2" text = "CONHECIMENTOS"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Agrario" texto= "Agrário" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Biologico" texto= "Biológico" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Exato" texto= "Exato" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Medicina" texto= "Medicina" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Social" texto= "Social" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Artistico" texto= "Artístico" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Agrario" texto= "Agrário" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Biologico" texto= "Biológico" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Exato" texto= "Exato" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Medicina" texto= "Medicina" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Social" texto= "Social" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Artistico" texto= "Artístico" grupo= "conhecPrat" largura= "4"/>
 
 
 		<!--PRATICAS-->
 
 		<label class= "Titulo2" text = "CONHECIMENTOS"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Esportivas" texto= "Esportivas" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Ferramentas" texto= "Ferramentas" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Oficios" texto= "Ofícios" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Armas" texto= "Armas" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Veiculos" texto= "Veículos" grupo= "conhecPrat" largura= "4"/>
-		<periciaCampo tipo= "ConhecPrat" titulo= "Infiltracao" texto= "Infiltração" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Esportivas" texto= "Esportivas" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Ferramentas" texto= "Ferramentas" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Oficios" texto= "Ofícios" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Armas" texto= "Armas" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Veiculos" texto= "Veículos" grupo= "conhecPrat" largura= "4"/>
+		<aptidaoCampo tipo= "ConhecPrat" titulo= "Infiltracao" texto= "Infiltração" grupo= "conhecPrat" largura= "4"/>
 
 		<checkBox name= "chkaAgirPorInstinto" text= "Agir por Instinto" field="agirPorInstinto" g= "col" g-width = "12" height= "30" margins= "{top=2, bottom= 2}"/>
 
@@ -193,6 +194,19 @@
 			<label class= "Titulo2" text= "CARACTERÍSTICAS E EQUIPAMENTOS"/>
 			<textEditor field= "caracteristicas" g= "col" g-width = "12" g-min-height = "300" horzTextAlign= "leading"/>
 		</layout>
+
+
+		<dataLink fields= "{'determinacao, assimilacao'}">
+			<event name='onChange'>
+				<![CDATA[
+					
+					sheet.determinacao = 10 - sheet.assimilacao;
+					sheet.assimilacao = 10 - sheet.determinacao;
+
+				]]>
+			</event>
+		</dataLink>
+
 	</rectangle>
 	</layout>
 	</scrollBox>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form name="Geral" align="client" theme="dark">
+
     <scrollBox  align= 'client'>
-        <checkBox top='20' left='10' field='teste'/>  
         <!--TEMPLATES-->
         
         <template name= 'espiral'>
@@ -31,23 +31,11 @@
             </layout>
         </template>
 
-        <template name= 'armaMelee'>
-            <layout g='col' g-width='3' g-auto-height= 'true'>
-                <button text='🎲' g='col' g-width='12'/>
-            </layout>
-            <layout g='col' g-width='6' g-auto-height= 'true' g-cnt-vert-align="between">
-                <info nomeInfo= 'Arma1' largura='12'/>
-                <info nomeInfo= 'Notas1' largura='12'/>
-            </layout>
-            <layout g='col' g-width='3' g-auto-height= 'true'>
-                <campo nomeCampo='ACO' largura='6' tamanhoFonte='10'/>
-                <campo nomeCampo='PODER + FORÇA' largura='6' tamanhoFonte='10'/>
-            </layout>
-        </template>
+
 
         <!-- INFO-->
-        <layout g='container' g-horz-align= 'center' g-cnt-gutter= '10' g-min-width="400">
-            <rectangle g='col' g-width='12' g-auto-height = 'true' g-margin-bottom= "10" g-padding-bottom="40" g-padding-left="20" g-padding-right="20" g-cnt-horz-align="around">
+        <layout g='col' g-width='8' g-horz-align= 'center' g-cnt-gutter= '10' g-min-height="1000" g-padding-top='20'>
+            <rectangle g='col' g-width='12' g-auto-height = 'true' g-margin-bottom= "10" g-padding-bottom="40" g-padding-top="40" g-padding-left="20" g-padding-right="20" g-cnt-horz-align="around">
                 
                 <info nomeInfo= 'NOME'  largura= '2'/>
                 <info nomeInfo= 'JOGADOR'  largura= '2'/>
@@ -63,7 +51,7 @@
             </rectangle>
 
             <!--Atributos-->
-            <rectangle g='col' g-width='3' g-auto-height = 'true'>
+            <rectangle g='col' g-width='3' g-auto-height = 'true' g-padding-bottom='30' >
                 <tituloBox titulo = "ATRIBUTOS"  g='col' largura= '12'/>
                 <layout g='col' g-width= '12' g-auto-height= 'true' g-max-height= '160' >
                     <layout g='col' g-width= '6' g-auto-height= 'true'>
@@ -119,33 +107,14 @@
             <layout g='col' g-width= '5' g-auto-height= 'true' g-cnt-gutter= '5' g-cnt-vert-align= 'center'>
                 <rectangle g='col' g-width='12' g-auto-height= 'true' g-margin-bottom='5'>
                     <tituloBox titulo = "CORPO-A-CORPO" g='row' largura='12'/>
-                    <layout g='col' g-width='2' g-auto-height= 'true'>
-                        <button text='⚔️' g='col' g-width='12'  g-min-height='60' fontSize='25'/>
-                    </layout>
-                    <layout g='col' g-width='6' g-auto-height= 'true'>
-                        <info nomeInfo= 'Arma1' largura='12'/>
-                        <info nomeInfo= 'Notas1' largura='12'/>
-                    </layout>
-                    <layout g='col' g-width='4' g-auto-height= 'true'>
-                        <campo nomeCampo='ACO' largura='6' tamanhoFonte='10'/>
-                        <campo nomeCampo='POD+FOR' largura='6' tamanhoFonte='10'/>
-                    </layout>
+                    <armaMelee/>
+                    <armaMelee/>
                     
                 </rectangle>
                 <rectangle g='col' g-width='12' g-auto-height= 'true' g-margin-bottom= '10'>
                     <tituloBox titulo = "ATAQUE À DISTÂNCIA" g='row' largura='12'/>
-                    <layout g='col' g-width='2' g-auto-height= 'true'>
-                        <button text='🏹' g='col' g-width='12' g-min-height='60' fontSize='25'/>
-                    </layout>
-                    <layout g='col' g-width='5' g-auto-height= 'true'>
-                        <info nomeInfo= 'Arma1' largura='12'/>
-                        <info nomeInfo= 'Notas1' largura='12'/>
-                    </layout>
-                    <layout g='col' g-width='5' g-auto-height= 'true'>
-                        <campo nomeCampo='ALC' largura='4' tamanhoFonte='10'/>
-                        <campo nomeCampo='ADI' largura='4' tamanhoFonte='10'/>
-                        <campo nomeCampo='POD' largura='4' tamanhoFonte='10'/>
-                    </layout>
+                    <armaRanged/>
+                    <armaRanged/>
                 </rectangle>
                 <rectangle g='col' g-width='12' g-auto-height= 'true' g-cnt-horz-align= 'right' g-margin-bottom='5'>
                     <tituloBox titulo = "DEFESA" g='row' largura='12'/>
@@ -186,24 +155,8 @@
             <layout g='col' g-width= '4' g-auto-height= 'true' >
                 <rectangle g='col' g-width='12' g-auto-height= 'true' g-max-height="400">
                     <tituloBox titulo= "PERÍCIAS" g="row" largura="12"/>
-                    <scrollBox g="col" g-width="12" g-min-height="300">
-                        <layout g="col" g-width="6"/>
-                        <label  horzTextAlign= 'center' text= 'Chave' g='col' g-width= '2'/>
-                        <label  horzTextAlign= 'center' text= 'ATR' g='col' g-width= '1'/>
-                        <label horzTextAlign= 'center'  text= 'NIV' g='col' g-width= '1'/>
-                        <label horzTextAlign= 'center'  text= 'out' g='col' g-width= '1'/>
-                        <label horzTextAlign= 'center'  text= 'Total' g='col' g-width= '1'/>
-                        <pericia nomePer= 'Arma de Mão' chaAtri="DES" perNiv= ' '/>
-                        <pericia nomePer= 'Arma Grande'  perNiv= ' '/>
-                        <pericia nomePer= 'Pistola'  perNiv= ' '/>
-                        <pericia nomePer= 'Fuzil' perNiv= ' '/>
-                        <pericia nomePer= 'Detecção' perNiv= ' '/>
-                        <pericia nomePer= 'Esgueirar' perNiv= ' '/>
-                        <pericia nomePer= 'Comandar (social)' perNiv= ' '/>
-                        
-                    </scrollBox>
+                    <pericias quantidade='51' altura='350'/>
                 </rectangle>
-
             <!--Espiral vital-->
                 <rectangle g='col' g-width='12' g-auto-height= 'true'>
                     <tituloBox titulo = "ESPIRAL VITAL" g='col' largura='12'/>
@@ -223,7 +176,7 @@
                         <label horzTextAlign='leading' text= "-2 DEF e não pode soltar magias" g='col' g-width= '12' textTrimming="none"/>
                     </layout>
                 </rectangle>
-            </layout>
+            </layout>   
         </layout>
     </scrollBox>
 </form>

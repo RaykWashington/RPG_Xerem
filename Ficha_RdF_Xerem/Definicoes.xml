@@ -2,7 +2,7 @@
 
 <script>
     <![CDATA[
-  
+
         Humano = {
             ["fis"] = {"5","7"};
             ["vel"] = {"6","7"};
@@ -89,6 +89,23 @@
             ["Nyss"] = Nyss,
             ["Ogrun"] = Ogrun,
             ["Trollkin"] = Trollkin
+        }
+
+        pericias = {
+
+            ['Arco'] = 'DES',
+            ['Arma de Arremesso'] = 'MAE',
+            ['Arma de Mão'] = 'MAE',
+            ['Arma Grande'] = 'MAE',
+            ['Artilharia Leve'] = 'DES',
+            ['Besta'] = 'DES',
+            ['Escudo'] = 'MAE',
+            ['Fuzil'] = 'MAE',
+            ['Lança'] = 'MAE',
+            ['Pistola'] = 'DES',
+            ['Alquimia'] = 'INT',
+            ['Arrombar'] = 'AGI',
+            ['Arte da Fuga'] = 'AGI',
         }
     ]]>
 </script>

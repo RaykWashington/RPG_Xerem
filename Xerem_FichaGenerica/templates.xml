@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	
+<group>
+	<style>
+	
+	label.Titulo1 {
+		horzTextAlign: center;
+		}
+		
+	edit {
+		horzTextAlign: center;
+		}
+		
+	rectangle.Fundo {
+		
+		margins: {top = 20, left = 20};
+		align: client;
+		}
+		
+	scrollBox.Fundo {
+		align: client;
+		margins: {left = 200, top = 20, right = 200, bottom = 50};
+
+	}
+	
+	label.TituloCampo {
+		horzTextAlign: trailing;
+		fontSize: 15;
+	}
+	</style>
+	
+	<template name= "campoCabecalho" width= "200" height= "60"  g= "col" g-width= "12" margins= "{top= 10, left= 10, right= 10, bottom= 10}">
+		<label class= "TituloCampo" text= "$(titulo)" left= "30" g= "col" g-width= "6" />
+		<edit left= "60" g= "col" g-width= "6"/>	
+	</template>
+	
+	
+	<template name= "cabecalho">
+		<layout width= "$(largura)" align= "client">
+			<!--
+				local listaDeCampos = totable(body);  
+				for k, v in pairs(listaDeCampos) do
+					campoParaGerar= v; 
+			-->
+			
+				<campoCabecalho titulo= "$(campoParaGerar)"/>
+				
+			<!--
+				end;
+			-->
+		</layout>
+	</template>
+</group>

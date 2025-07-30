@@ -1,39 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form name="Equipamentos" align="client" theme="dark">
+<form name="Habilidades" align="client" theme="dark">
+
+    
+    <template name='habilidades'>
+        <layout g='col' g-width='12'  g-auto-height='true' g-padding-bottom='20'>
+            <!-- for i = 1, quantidade, 1 do -->
+            <edit transparent='true' g='col' g-width= '3'/>
+            <edit transparent='true' g='col' g-width= '7'/>
+            <edit transparent='true' g='col' g-width= '2'/>
+            <horzLine g='col' g-width='12'/>
+            <!--end;-->
+        </layout>
+    </template>
 
     <scrollBox  align= 'client'>
-        <layout g='container' g-horz-align= 'center' g-cnt-gutter= '10' g-min-width="400">
-            <!--ARMAS CORPO A CORPO-->
-            <layout g='col' g-width='6' g-min-height= '400'>
-                <rectangle g='col' g-width='12' g-auto-height= 'true' g-min-height= '400' g-padding-left='10' g-padding-right='10'>
-                    <tituloBox titulo = "ARMAS CORPO A CORPO" g='row' largura ='12'/>
-                    <button text="+" g='col' g-width='1'
-                            onClick="self.rclArmasMelee:append();" />
-                    <label text= "NOME" horzTextAlign='leading' g='col' g-width= '4'/>
-                    <label text= "NOTAS" horzTextAlign='leading' g='col' g-width= '3'/>
-                    <label text= "ACO" horzTextAlign='leading' g='col' g-width= '1' hitTest= 'true' hint="Maestria (MAE) + Pericia Militar"/>
-                    <label text= "POD" horzTextAlign='center' g='col' g-width= '2'/>
-                    <label text= "EQUIP" horzTextAlign='leading' g='col' g-width= '1'/>
-                     <recordList name='rclArmasMelee' field='armasMelee' templateForm= 'frmItemArmaMelee' g='col' g-width='12' g-min-height='340' >
-                    </recordList>
-                </rectangle>
+        <layout g='col' g-width='8' g-horz-align= 'center' g-cnt-gutter= '10' g-cnt-line-spacing= '10' g-min-height="900" g-padding-top='30'>
+            <layout g='col' g-width='8' g-horz-align= 'center' g-cnt-gutter= '10' g-cnt-line-spacing= '10' g-min-height="800">
+                <layout g='col' g-width='6' g-min-height= '400' g-auto-height='true'>
+                    <rectangle g='col' g-width='12' g-min-height= '400' g-auto-height='true'>]
+                        <tituloBox titulo='BENEFICIOS' g='col' largura='12'/>
+                        <label g='col' g-width='3' text= 'BENEFICIO' />
+                        <label g='col' g-width='7' text= 'DESCRIÇÃO' />
+                        <label g='col' g-width='2' text= 'PAG' />
+                        <scrollBox g='col' g-width='12' g-min-height= '380'>
+                            <habilidades quantidade='10'/>
+                        </scrollBox>
+                    </rectangle>
+                    <rectangle g='col' g-width='12' g-min-height= '400' g-auto-height='true'>]
+                        <tituloBox titulo='CONEXÕES' g='col' largura='12'/>
+                        <textEditor g='col' g-width='12' g-min-height='380' />
+                    </rectangle>
+                </layout>
+                <layout g='col' g-width='6' g-min-height= '400' g-auto-height='true'>
+                    <rectangle g='col' g-width='12' g-min-height= '400' g-auto-height='true'>]
+                        <tituloBox titulo='HABILIDADES' g='col' largura='12'/>
+                        <label g='col' g-width='3' text= 'HABILIDADE' />
+                        <label g='col' g-width='7' text= 'DESCRIÇÃO' />
+                        <label g='col' g-width='2' text= 'PAG' />
+                        <scrollBox g='col' g-width='12' g-min-height= '380'>
+                            <habilidades quantidade='10'/>
+                        </scrollBox>
+                    </rectangle>
+                </layout>
             </layout>
-            <layout g='col' g-width='6' g-min-height= '400'>
-                <rectangle g='col' g-width='12' g-auto-height= 'true' g-min-height= '400' g-padding-left='10' g-padding-right='10'>
-                    <tituloBox titulo = "ARMAS À DISTANCIA" g='row' largura ='12'/>
-                    <button text="+" g='col' g-width='1' onClick="self.rclArmasRanged:append();" />
-                    <label text= "NOME" horzTextAlign='leading' g='col' g-width= '3'/>
-                    <label text= "NOTAS" horzTextAlign='leading' g='col' g-width= '3'/>
-                    <label text= "ALC" horzTextAlign='leading' g='col' g-width= '1' hitTest= 'true' hint="Maestria (MAE) + Pericia Militar"/>
-                    <label text= "ADI" horzTextAlign='leading' g='col' g-width= '1'/>
-                    <label text= "POD" horzTextAlign='leading' g='col' g-width= '1'/>
-                    <label text= "MUN" horzTextAlign='leading' g='col' g-width= '1'/>
-                    <label text= "EQUIP" horzTextAlign='leading' g='col' g-width= '1'/>
-                     <recordList name='rclArmasRanged' field='armasRanged' templateForm= 'frmItemArmaRanged' g='col' g-width='12' g-min-height='340' >
-                    </recordList>
+            <layout g='col' g-width='4' g-horz-align= 'center' g-cnt-gutter= '10' g-cnt-line-spacing= '10' g-min-height="800">
+                <layout g='col' g-width='12' g-min-height= '400' g-auto-height='true'>
+                <rectangle g='col' g-width='12' g-min-height= '800' g-auto-height='true'>]
+                    <tituloBox titulo='PERÍCIAS' g='col' largura='12'/>
+                    <pericias quantidade='51' altura ='680'/>
                 </rectangle>
+                </layout>
             </layout>
-            
         </layout>
     </scrollBox>
+
 </form>

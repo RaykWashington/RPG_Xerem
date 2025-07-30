@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="Anotacoes" align="client" theme="dark">
+
+
+ <scrollBox  align= 'client'>
+    <layout g='col' g-width='8' g-horz-align= 'center' g-cnt-gutter= '10' g-min-height="900" g-padding-top='30'>
+        <layout g='col' g-width = '6' g-auto-height='true'>
+            
+            <rectangle g='col' g-width='12' g-auto-height='true' g-min-height='400'  g-padding-bottom='5' g-padding-top='5' g-padding-left='5' g-padding-right='5'> 
+                <tituloBox titulo = 'FOTA' largura='12' g='col'/>
+                <image editable='true' g='col' g-width='12' style='autoFit' field='imgPers' g-vert-tile='true'/>
+            </rectangle>
+            
+            <rectangle g='col' g-width='12' g-auto-height='true' g-min-height='280'  g-padding-bottom= '20' >
+               <tituloBox titulo = 'ANOTACOES' largura='12' g='col'/>
+                <textEditor field= 'historia' g='row' width='12' g-vert-tile='true' transparent= 'true' fontSize= '15' g-padding-left= '20' g-padding-right= '20'/>
+            </rectangle>
+        </layout>
+
+        <layout g='col' g-width = '6' g-min-height= '800' g-cnt-vert-align= 'bottom' g-cnt-horz-align='center'>
+            <layout g='col' g-width = '12' g-auto-height='true' g-min-height='300' g-margin-bottom='30'>
+                <image src='/img/xerem_profile.png' g='col' g-width='12' g-min-height='400' style='proportional'/>
+            </layout>
+            <button g-horz-align= 'center' text = 'Xerém Destrói O RPG de Mesa' g='col' g-width='6'  onCLick= "GUI.openInBrowser('https://open.spotify.com/show/0cO3SWlsJw7nfoRePJjyzV?si=4e8678590abf405c')"/>
+        </layout>
+    </layout>
+</scrollBox>
+
+
+</form>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="Equipamento" align="client" theme="dark">
+
+    <scrollBox  align='client'>
+        <template name= 'equip'>
+        <layout g-width='12' g-gutter = '10'>
+            <!--for i = 1, linhas, 1 do-->
+                <!--for j = 1, colunas, 1 do-->
+                <edit g='col' g-width='$(largura)'/>
+                <!--end-->
+                <!--for k = 1, colunas, 1 do-->
+                <horzLine g='col' g-width='$(largura)'/>
+                <!--end;-->
+                
+            <!--end;-->
+        </layout>
+    </template>
+
+        <layout g-width = '12' g-min-width='800' g-padding-bottom= '50' g-padding-top= '50' g-padding-left= '200' g-padding-right= '200'>
+            <layout g-width='8' g-padding-right='50'>
+                <info infoNome= 'ARMAS' largura='12'/>    
+                <label g='col' g-width='2' text='Arma' />
+                <label g='col' g-width='2' text='Dificuldade' />
+                <label g='col' g-width='2' text='Dano' />
+                <label g='col' g-width='2' text='Alcance' />
+                <label g='col' g-width='2' text='Pente' />
+                <label g='col' g-width='2' text='Cdt' />
+
+                <equip linhas ='6' colunas='6' largura='2'/>
+            </layout>
+
+             <layout g-width='4'>
+                <info infoNome= 'ARMADURA' largura='12'/>    
+                <label g='col' g-width='4' text='Armadura' />
+                <label g='col' g-width='4' text='Resistência' />
+                <label g='col' g-width='4' text='Especial' />
+      
+
+                <equip linhas ='6' colunas='3' largura='4'/>
+            </layout>
+
+            <layout g-width = '12' g-min-height= '800' g-cnt-horz-align='center' g-cnt-vert-align='center'>
+                <titulo2 titulo='Créditos'/>
+                <layout g-width = '6' g-auto-height='true' g-min-height='300' g-margin-bottom='30'>
+                    <image src='/img/xerem_profile.png' align='client' style='proportional'/>
+                </layout>
+                <layout g-width = '6'>
+                    <button text = ' Red Star por Eric S.A. Araújo (Hobbit)' g='col' g-width='6' g-break-line-after='true' g-margin-bottom='5'/>
+                    <button text = 'Ficha - Xerém Destrói O RPG de Mesa' g='col' g-width='6'  onCLick= "GUI.openInBrowser('https://open.spotify.com/show/0cO3SWlsJw7nfoRePJjyzV?si=4e8678590abf405c')"/>
+                </layout>
+            </layout>
+        </layout>
+    </scrollBox>
+</form>

@@ -90,23 +90,23 @@ local function constructNew_frmAssimilacaoRpg()
 		local function lancar_dados()
 			local mesa = Firecast.getMesaDe(sheet);
 			local instinto = sheet.valInstinto;
-			local pericia = sheet.valConhecPrat;
+			local aptidao = sheet.valConhecPrat;
 
 			if sheet.agirPorInstinto == true and instinto ~= 0 then -- se for agir por instinto e tiver algum valor no instinto atual
 				mesa.chat:rolarDados(instinto.."d6", sheet.nomePersonagem .. " Agindo Por Instinto: " .. sheet.currentInstinto);
-				local rolespecial = "D6 aleatorio: \n"
+				local rolespecial = "D6 aleatorio: \n" -- ainda não tem relação com o resultado dos dados, tenho que lembrar como opera com ipairs pra fazer isso.
 				for i=1, instinto, 1 do
 					rolespecial =  rolespecial .. dadoEsp6[math.random(6)] .. "\n";
 				end;
 				mesa.chat:asyncSendStd(rolespecial);
 
 			else
-				if instinto and pericia ~= 0 then
+				if instinto and aptidao ~= 0 then
 					instinto = instinto .. "d6";
-					pericia = pericia .. "d10";
-					local rolagem = Firecast.interpretarRolagem(instinto):concatenar(pericia);
+					aptidao = aptidao .. "d10";
+					local rolagem = Firecast.interpretarRolagem(instinto):concatenar(aptidao);
 					local promise = mesa.chat:asyncRoll(rolagem, sheet.nomePersonagem .. " agiu com " ..  sheet.currentInstinto .. " e " .. sheet.currentConhecPrat);
-					local n, rollObject, logRec = await(promise); -- pegando os tres retornos da promise da rolagem e salvando em 3 variaveis locais
+					-- local n, rollObject, logRec = await(promise); -- pegando os tres retornos da promise da rolagem e salvando em 3 variaveis locais
 					-- tratando o resultado --
 					-- aqui o lance vai ser pegar essa table, e pra cada resultado comparar com uma tabela de valores dos dados especiais do Assimilacao --
 					-- mesa.chat:write(rollObject);
@@ -456,6 +456,7 @@ local function constructNew_frmAssimilacaoRpg()
 
     obj.edit6 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit6:setParent(obj.layout4);
+    obj.edit6:setField("assimilacao");
     obj.edit6.grid.role = "col";
     obj.edit6.grid.width = 6;
     obj.edit6:setName("edit6");
@@ -463,7 +464,6 @@ local function constructNew_frmAssimilacaoRpg()
 
     obj.label9 = GUI.fromHandle(_obj_newObject("label"));
     obj.label9:setParent(obj.layout4);
-    obj.label9:setField("assimilacao");
     obj.label9:setHorzTextAlign("leading");
     obj.label9:setText("Assimilação");
     obj.label9.grid.role = "col";
@@ -1076,6 +1076,11 @@ local function constructNew_frmAssimilacaoRpg()
     obj.textEditor3:setHorzTextAlign("leading");
     obj.textEditor3:setName("textEditor3");
 
+    obj.dataLink1 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink1:setParent(obj.rectangle1);
+    obj.dataLink1:setFields({'determinacao, assimilacao'});
+    obj.dataLink1:setName("dataLink1");
+
     obj._e_event0 = obj.edReacao:addEventListener("onChange",
         function ()
             sheet.valInstinto = sheet.Instinto.Reacao;
@@ -1371,7 +1376,14 @@ local function constructNew_frmAssimilacaoRpg()
             				--Firecast.getMesaDe(sheet).chat:write(msgDado);
         end);
 
+    obj._e_event37 = obj.dataLink1:addEventListener("onChange",
+        function (field, oldValue, newValue)
+            sheet.determinacao = 10 - sheet.assimilacao;
+            					sheet.assimilacao = 10 - sheet.determinacao;
+        end);
+
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event37);
         __o_rrpgObjs.removeEventListenerById(self._e_event36);
         __o_rrpgObjs.removeEventListenerById(self._e_event35);
         __o_rrpgObjs.removeEventListenerById(self._e_event34);
@@ -1535,6 +1547,7 @@ local function constructNew_frmAssimilacaoRpg()
         if self.label18 ~= nil then self.label18:destroy(); self.label18 = nil; end;
         if self.layout21 ~= nil then self.layout21:destroy(); self.layout21 = nil; end;
         if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
+        if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
         if self.btnFerramentas ~= nil then self.btnFerramentas:destroy(); self.btnFerramentas = nil; end;
         if self.checkBox2 ~= nil then self.checkBox2:destroy(); self.checkBox2 = nil; end;
         if self.edFerramentas ~= nil then self.edFerramentas:destroy(); self.edFerramentas = nil; end;

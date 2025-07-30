@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="Geral" align="client" theme="dark">
+    
+    <scrollBox  align='client'>
+        <image src='/img/redstar.png' align='top' width = '125' height='75' style='proportional'/>
+        <layout g-width='12' g-min-width='800' g-horz-align = 'center' g-padding-bottom= '50' g-padding-top= '100' g-padding-left= '200' g-padding-right= '200'>
+             <layout g-width='12' g-min-height = '150'  g-margin-bottom = '5'>
+                <info largura='4' infoNome='Nome: '/>
+                <info largura='4' infoNome='Especialização: '/>
+                <info largura='4' infoNome='Idade: '/>
+                <info largura='4' infoNome='Jogador: '/>
+                <info largura='4' infoNome='Motivação: '/>
+                <info largura='2' infoNome='Campanha: '/>
+                <info largura='2' infoNome='Experiência'/>
+            </layout>
+
+            <!--PRIMEIRA COLUNA-->
+            <layout g-width='5' g-min-height = '150' g-min-width= '400' g-margin-bottom = '5'>
+
+                <titulo2 titulo='CARACTERÍSTICAS'/>
+
+                <caracteristica texto='Força' car='for'/>
+                <caracteristica texto='Constituição' car='con'/>
+                <caracteristica texto='Destreza' car='des'/>
+                <caracteristica texto='Percepção' car='per'/>
+                <caracteristica texto='Inteligência' car='int'/>
+                <caracteristica texto='Força de Vontade' car='fdv'/>
+
+                 <titulo2 titulo='HABILIDADES'/>
+
+                <habilidade hab = 'esp' texto='Esportes'/>
+                <habilidade hab = 'combDes' texto='Combate Desarmado'/>
+                <habilidade hab = 'armBra' texto='Armas Brancas'/>
+                <habilidade hab = 'armFog' texto='Armas de Fogo'/>
+                <habilidade hab = 'cie' texto='Ciências'/>
+                <habilidade hab = 'cri' texto='Crime'/>
+                <habilidade hab = 'inv' texto='Investigação'/>
+                <habilidade hab = 'maq' texto='Maquinário'/>
+                <habilidade hab = 'man' texto='Manipulação'/>
+                <habilidade hab = 'med' texto='Medicina'/>
+                <habilidade hab = 'sob' texto='Sobrevivência'/>
+            </layout>
+
+            <!--SEGUNDA COLUNA-->
+            <layout g-width='4' g-min-height = '200' g-margin-right = '20' g-margin-left = '20' g-margin-bottom = '5'>
+                <layout g-width='12' g-margin-bottom='5' g-cnt-horz-align='center'>
+                    <rectangle g='col' g-width='12' g-auto-height='true' g-min-height='300' g-max-width='250'> 
+                        <image editable='true' g='col' g-width='12' style='autoFit' field='imgPers' g-vert-tile='true'/>
+                    </rectangle>
+                </layout>
+
+                <titulo2 titulo='VANTAGENS E DESVANTAGENS'/>
+                <atributos quantidade='10' atributo='Nome' valor='Pts.'/>
+            </layout>
+
+            <!--TERCEIRA COLUNA-->
+            <layout g-width='3' g-min-height = '200' g-margin-right = '20' g-margin-left = '20' g-margin-bottom = '5'>
+                <layout g-width='12' g-margin-bottom='5' g-min-height= '150'>
+                    <titulo2 titulo='SAÚDE E ARMADURA'/>
+                    <rectangle g='col' g-width='6' g-cnt-vert-align='center'>
+                        <edit field='pv' g='col' g-width='12' fontSize = '20' horzTextAlign='center' vertTextAlign='center'/>
+                    </rectangle>
+                    <rectangle g='col' g-width='6' g-cnt-vert-align='center'>
+                        <edit field='Defesa' g='col' g-width='12' fontSize = '20' horzTextAlign='center' vertTextAlign='center'/>
+                    </rectangle>
+                    <label g='col' g-width='6' horzTextAlign='center' text= 'Pontos de Vida'/>
+                    <label g='col' g-width='6' horzTextAlign='center' text= 'Defesa'/>
+                </layout>
+                <titulo2 titulo='INFECTOS'/>
+                <textEditor g='col' g-width='12' g-min-height='200'/>
+                <titulo2 titulo='ANOTÇÕES'/>
+                <textEditor g='col' g-width='12' g-min-height='200'/>
+            </layout>
+        </layout>
+    </scrollBox>
+</form>

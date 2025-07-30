@@ -33,7 +33,7 @@ local function constructNew_frmItemArmaMelee()
 
     obj.button1 = GUI.fromHandle(_obj_newObject("button"));
     obj.button1:setParent(obj);
-    obj.button1:setText("-");
+    obj.button1:setText("➖");
     obj.button1.grid.role = "col";
     obj.button1.grid.width = 1;
     obj.button1:setName("button1");
@@ -42,7 +42,7 @@ local function constructNew_frmItemArmaMelee()
     obj.edit1:setParent(obj);
     obj.edit1:setField("nomeArma");
     obj.edit1.grid.role = "col";
-    obj.edit1.grid.width = 4;
+    obj.edit1.grid.width = 3;
     obj.edit1:setName("edit1");
     obj.edit1:setTransparent(true);
     obj.edit1:setHeight(25);
@@ -51,7 +51,7 @@ local function constructNew_frmItemArmaMelee()
     obj.edit2:setParent(obj);
     obj.edit2:setField("notasArma");
     obj.edit2.grid.role = "col";
-    obj.edit2.grid.width = 3;
+    obj.edit2.grid.width = 4;
     obj.edit2:setName("edit2");
     obj.edit2:setTransparent(true);
     obj.edit2:setHeight(25);
@@ -62,11 +62,11 @@ local function constructNew_frmItemArmaMelee()
     obj.rectangle1.grid.width = 1;
     obj.rectangle1.grid["auto-height"] = true;
     obj.rectangle1:setName("rectangle1");
-    obj.rectangle1.grid["max-height"] = 35;
+    obj.rectangle1.grid["max-height"] = 30;
     obj.rectangle1:setCornerType("bevel");
+    obj.rectangle1:setXradius(7);
+    obj.rectangle1:setYradius(7);
     lfm_setPropAsString(obj.rectangle1, "corners", "topRight bottomRight bottomLeft");
-    obj.rectangle1:setXradius(15);
-    obj.rectangle1:setYradius(15);
     obj.rectangle1:setStrokeColor("#343434");
     obj.rectangle1:setStrokeSize(2);
     obj.rectangle1:setColor("#1f1e1e");
@@ -92,11 +92,11 @@ local function constructNew_frmItemArmaMelee()
     obj.rectangle2.grid.width = 2;
     obj.rectangle2.grid["auto-height"] = true;
     obj.rectangle2:setName("rectangle2");
-    obj.rectangle2.grid["max-height"] = 35;
+    obj.rectangle2.grid["max-height"] = 30;
     obj.rectangle2:setCornerType("bevel");
+    obj.rectangle2:setXradius(7);
+    obj.rectangle2:setYradius(7);
     lfm_setPropAsString(obj.rectangle2, "corners", "topRight bottomRight bottomLeft");
-    obj.rectangle2:setXradius(15);
-    obj.rectangle2:setYradius(15);
     obj.rectangle2:setStrokeColor("#343434");
     obj.rectangle2:setStrokeSize(2);
     obj.rectangle2:setColor("#1f1e1e");

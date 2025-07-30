@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="Styles" align="client" theme="dark">
+    <style>
+        horzLine{
+            strokeColor:#999999;
+        }
+       rectangle {
+            corners :topLeft topRight bottomRight bottomLeft;
+            cornerType: round;
+            xradius: 15;
+            yradius: 15;
+            strokeColor:#999999;
+            strokeSize: 1;
+            color: #343434;
+            g-padding-top: 20;
+            g-padding-left: 20;
+            g-padding-right: 20;
+            g-padding-bottom: 20;
+            }
+        label { 
+           fontColor : #9e9e9e;
+        }
+        layout {
+            g: col;
+            g-auto-height: true;
+        }
+
+        edit {
+            transparent: true;
+        }
+
+    </style>
+
+</form>

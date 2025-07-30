@@ -4,13 +4,14 @@
 
     <style>
         edit {transparent: true;}
-        rectangle {g-max-height: 35; cornerType:bevel;}
+        rectangle {g-max-height: 30; cornerType:bevel; xradius:7; yradius:7;}
+
     </style>
  
-    <button text='-' g='col' g-width='1'
+    <button text='➖' g='col' g-width='1'
         onClick='NDB.deleteNode(sheet);'/>
-    <edit field= 'nomeArma' g='col' g-width='4'/>
-    <edit field= 'notasArma' g='col' g-width='3'/>
+    <edit field= 'nomeArma' g='col' g-width='3'/>
+    <edit field= 'notasArma' g='col' g-width='4'/>
     <rectangle g='col' g-width='1' g-auto-height='true'>
         <edit field= 'ACOArma' g='col' g-width='12' type='number' horzTextAlign='center'/>
     </rectangle>  

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form formType="sheetTemplate" dataType="fichaMurrudun" 
+      title="Ficha Murrudun" name="frmFichaMurrudun">
+      <import file='styles.xml'/>
+      <import file='Templates.xml'/>
+      
+      <tabControl align='client'>
+            <tab title='Geral'>
+                  <import file='Geral.xml'/>
+            </tab> 
+             <tab title='Historia'>
+                  <import file='Historia.xml'/>
+            </tab> 
+      </tabControl>
+
+</form>

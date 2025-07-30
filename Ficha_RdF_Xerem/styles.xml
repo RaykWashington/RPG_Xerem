@@ -16,6 +16,7 @@
         label.boxTitle {g-padding-left: 8;}
         form { g-padding-top: 8; g-cnt-line-spacing: 4;}
         edit, label, comboBox { height: 25;}
+        label {fontColor:#b5b5b5 ;}
         horzLine {strokeColor: grey;}
         checkBox {scale: 1.2; g-vert-align: middle;}
     </style>

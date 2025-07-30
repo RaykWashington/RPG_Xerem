@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form formType="sheetTemplate" dataType="xeremFichaGenerica" 
-      title="Xerem Ficha Genérica" name="frmXeremGenerica">
+      title="Xerem Ficha Genérica" name="frmXeremGenerica" theme= "dark">
 	
-	<style>
-		label.Titulo1 {horzTextAlign: center;}
-		edit {horzTextAlign: center;}
-	</style>
+	<import file= "templates.xml"/>
 
+	<scrollBox class= "Fundo">
+		<rectangle class= "Fundo" color= "#2f3133">
+			<layout align= "left" width= "400">
+				<cabecalho largura= "500">
+					{"um", "doi", "tres", "essa porra", "quatro", "noventar"}
+				</cabecalho>
+				
+				<edit field= "valorA" align= "left" width= "50"/>
+				<edit field= "valorB" align= "left" width= "50"/>
+			</layout>
+		</rectangle>
+	</scrollBox>
+	
+	<dataLink fields= "{'valorA', 'valorB'}">
+		<event name= "onChange">
+		
+			local tempA, tempB
+			
+			if sheet.valorA == nil then
+				sheet.valorA = 0;
+			end;
+			
+			if sheet.valorB == nil then
+				sheet.valorB = 0;
+			end;
+			
+			tempA = 10 - sheet.valorB;
+			tempB = 10 - sheet.valorA;
+			
+			sheet.valorB = tempB;
+			sheet.valorA = tempA;
+			
+		</event>
+	</dataLink>
+	
 	
 </form>

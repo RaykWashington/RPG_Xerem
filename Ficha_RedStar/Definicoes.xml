@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<script>
+    <![CDATA[
+
+    caracteristicas = {
+        ['Força'] = 'valfor';
+        ['Constituição'] = 'valcon';
+        ['Destreza'] = 'valdes';
+        ['Percepção'] = 'valper';
+        ['Inteligência'] = 'valint';
+        ['Força de Vontade'] = 'valfdv';
+    }
+    habilidades = {
+        ['Esportes'] = 'esp';
+        ['Combate Desarmado'] = 'combDes';
+        ['Armas Brancas' ] = 'armBra';
+        ['Armas de Fogo'] = 'armFog';
+        ['Ciências' ] = 'cie';
+        ['Crime'] = 'cri';
+        ['Investigação'] = 'inv';
+        ['Maquinário'] = 'maq';
+        ['Manipulação'] = 'man';
+        ['Medicina'] = 'med';
+        ['Sobrevivência'] = 'sob';
+        }
+    dificuldade = {
+        ['Muito Fácil'] = '-3';
+        ['Banal'] = '-1';
+        ['Padrão'] = '+1';
+        ['Difícil'] = '+3';
+        ['Épico'] = '+6';
+    }
+    ]]>
+</script>

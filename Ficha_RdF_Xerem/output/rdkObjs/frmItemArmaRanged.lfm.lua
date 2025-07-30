@@ -33,7 +33,7 @@ local function constructNew_frmItemArmaRanged()
 
     obj.button1 = GUI.fromHandle(_obj_newObject("button"));
     obj.button1:setParent(obj);
-    obj.button1:setText("-");
+    obj.button1:setText("➖");
     obj.button1.grid.role = "col";
     obj.button1.grid.width = 1;
     obj.button1:setName("button1");
@@ -62,11 +62,11 @@ local function constructNew_frmItemArmaRanged()
     obj.rectangle1.grid.width = 1;
     obj.rectangle1.grid["auto-height"] = true;
     obj.rectangle1:setName("rectangle1");
-    obj.rectangle1.grid["max-height"] = 35;
+    obj.rectangle1.grid["max-height"] = 30;
+    obj.rectangle1:setXradius(12);
+    obj.rectangle1:setYradius(12);
     lfm_setPropAsString(obj.rectangle1, "corners", "topRight bottomRight bottomLeft");
     obj.rectangle1:setCornerType("round");
-    obj.rectangle1:setXradius(15);
-    obj.rectangle1:setYradius(15);
     obj.rectangle1:setStrokeColor("#343434");
     obj.rectangle1:setStrokeSize(2);
     obj.rectangle1:setColor("#1f1e1e");
@@ -92,11 +92,11 @@ local function constructNew_frmItemArmaRanged()
     obj.rectangle2.grid.width = 1;
     obj.rectangle2.grid["auto-height"] = true;
     obj.rectangle2:setName("rectangle2");
-    obj.rectangle2.grid["max-height"] = 35;
+    obj.rectangle2.grid["max-height"] = 30;
+    obj.rectangle2:setXradius(12);
+    obj.rectangle2:setYradius(12);
     lfm_setPropAsString(obj.rectangle2, "corners", "topRight bottomRight bottomLeft");
     obj.rectangle2:setCornerType("round");
-    obj.rectangle2:setXradius(15);
-    obj.rectangle2:setYradius(15);
     obj.rectangle2:setStrokeColor("#343434");
     obj.rectangle2:setStrokeSize(2);
     obj.rectangle2:setColor("#1f1e1e");
@@ -122,11 +122,11 @@ local function constructNew_frmItemArmaRanged()
     obj.rectangle3.grid.width = 1;
     obj.rectangle3.grid["auto-height"] = true;
     obj.rectangle3:setName("rectangle3");
-    obj.rectangle3.grid["max-height"] = 35;
+    obj.rectangle3.grid["max-height"] = 30;
+    obj.rectangle3:setXradius(12);
+    obj.rectangle3:setYradius(12);
     lfm_setPropAsString(obj.rectangle3, "corners", "topRight bottomRight bottomLeft");
     obj.rectangle3:setCornerType("round");
-    obj.rectangle3:setXradius(15);
-    obj.rectangle3:setYradius(15);
     obj.rectangle3:setStrokeColor("#343434");
     obj.rectangle3:setStrokeSize(2);
     obj.rectangle3:setColor("#1f1e1e");
@@ -152,11 +152,11 @@ local function constructNew_frmItemArmaRanged()
     obj.rectangle4.grid.width = 1;
     obj.rectangle4.grid["auto-height"] = true;
     obj.rectangle4:setName("rectangle4");
-    obj.rectangle4.grid["max-height"] = 35;
+    obj.rectangle4.grid["max-height"] = 30;
+    obj.rectangle4:setXradius(12);
+    obj.rectangle4:setYradius(12);
     lfm_setPropAsString(obj.rectangle4, "corners", "topRight bottomRight bottomLeft");
     obj.rectangle4:setCornerType("round");
-    obj.rectangle4:setXradius(15);
-    obj.rectangle4:setYradius(15);
     obj.rectangle4:setStrokeColor("#343434");
     obj.rectangle4:setStrokeSize(2);
     obj.rectangle4:setColor("#1f1e1e");

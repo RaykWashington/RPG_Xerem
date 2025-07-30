@@ -2,7 +2,7 @@
 
 	<group>
 		<!-- CAMPO INSTINTOS E PERICIAS -->
-		<template name = "periciaCampo">
+		<template name = "aptidaoCampo">
 			<layout g= "col" g-width= "$(largura)" margins= "{bottom = 4}">
 				<edit name= "ed$(titulo)" field = "$(tipo).$(titulo)" g= "col" g-width = "12" onChange= "sheet.val$(tipo) = sheet.$(tipo).$(titulo);"/> 
 				<radioButton name= "btn$(titulo)" text= "$(texto)" groupName = "$(grupo)" g= "col" g-width = "12"> 

@@ -24,7 +24,7 @@
 
     <template name= 'campo'>
         <layout g='col' g-width= '$(largura)'  g-auto-height='true' g-cnt-horz-align= 'middle' g-min-width="35" >
-        <rectangle corners= 'topLeft topRight bottomRight bottomLeft' g='col' g-width='12' g-auto-height='true' xradius= '10' yradius= '10' cornerType="bevel" g-min-height="40">
+        <rectangle corners= 'topLeft topRight bottomRight bottomLeft' g='col' g-width='12' g-auto-height='true' xradius= '10' yradius= '10' cornerType="bevel" g-min-height="30" g-margin-bottom='0' >
             <edit field = 'cam_$(nomeCampo)' transparent= 'true' horzTextAlign= 'center' vertTextAlign= 'center' g='col' g-width='12' fontSize= '15'/>
         </rectangle>
         <label  text= '$(nomeCampo)' vertTextAlign= "trailing" horzTextAlign= 'center' g= 'col' g-width= '12' fontSize= '$(tamanhoFonte)' textTrimming="none" wordWrap="true"/>
@@ -34,9 +34,9 @@
     <template name= 'campoBotao'>
         <layout g='col' g-width= '$(largura)'  g-auto-height='true' g-cnt-horz-align= 'middle' g-cnt-vert-align="bottom">
             <rectangle corners= 'topLeft topRight bottomRight bottomLeft' g='col' g-width='12' g-auto-height='true' g-min-width= '30' >
-                <edit field = 'cam_$(nomeCampo)'  horzTextAlign= 'center' vertTextAlign= 'center' transparent= 'true' g='col' g-width='12' fontSize= '20'/>
+                <edit field = 'cam_$(nomeCampo) or 0'  horzTextAlign= 'center' vertTextAlign= 'center' transparent= 'true' g='col' g-width='12' fontSize= '20'/>
             </rectangle>
-            <button  text= '$(nomeCampo)' horzTextAlign= 'center' g= 'col' g-width= '12' fontSize= '$(tamanhoFonte)'/>
+            <button  text= '$(nomeCampo)' horzTextAlign= 'center' g= 'col' g-width= '12' fontSize= '$(tamanhoFonte or 15)' onCLick='rolarTesteAtr(sheet.cam_$(nomeCampo))'/>
         </layout>
     </template>
 
@@ -44,9 +44,9 @@
         <layout g='col' g-width= '$(largura)' g-auto-height= 'true' g-cnt-horz-align= 'middle' g-cnt-vert-align= 'bottom' >
             <layout g='col' g-width= '6' g-auto-height= 'true'>
                 <rectangle corners= 'topLeft topRight bottomRight bottomLeft' g='col' g-width='12' g-auto-height='true' g-min-height="50" g-cnt-vert-align="bottom" strokeColor='$(linhaCor)'>
-                    <edit field = 'atr_$(ATR)'  horzTextAlign= 'center' vertTextAlign= 'trailing' transparent= 'true' g='col' g-width='12' fontSize= '20'/>
+                    <edit field = 'atr_$(ATR) or 0'  horzTextAlign= 'center' vertTextAlign= 'trailing' transparent= 'true' g='col' g-width='12' fontSize= '20'/>
                 </rectangle>
-                <button text= '$(ATR)' horzTextAlign= 'center' g= 'col' g-width= '12'/>
+                <button text= '$(ATR)' horzTextAlign= 'center' g= 'col' g-width= '12' onCLick='rolarTesteAtr(sheet.atr_$(ATR))'/>
             </layout>
 
             <layout g='col' g-width= '6' g-auto-height= 'true'>
@@ -60,13 +60,49 @@
 
     <template name= 'pericia'>
         <layout g='row' g-width='12' g-auto-height='true' >
-            <edit transparent= 'true' field= '$(nomePer)' g='col' g-width='6' horzTextAlign= 'leading'/>
+            <edit transparent= 'true' field= '$(nomePer)' g='col' g-width='4' horzTextAlign= 'leading'/>
             <comboBox transparent= 'true' field= 'cha_$(nomePer)' items='{"FIS", "VEL", "FOR", "AGI", "DES", "MAE", "INT", "ARC", "PER"}' g='col' g-width='2' horzTextAlign= 'center'/>
-            <edit transparent= 'true' field= 'valAtr_$(nomePer)' g='col' g-width='1' horzTextAlign= 'center'/>
-            <edit transparent= 'true' field= 'nivel_$(nomePer)'  g='col' g-width='1' horzTextAlign= 'center'/>
+            <edit transparent= 'true' field= 'valAtr_$(nomePer)' g='col' g-width='2' horzTextAlign= 'center'/>
+            <edit transparent= 'true' field= 'nivel_$(nomePer)'  g='col' g-width='2' horzTextAlign= 'center'/>
             <edit transparent= 'true' field= 'outro_$(nomePer)' g='col' g-width='1' horzTextAlign= 'center'/>
-            <button g='col' g-width='1'/>
+            <button g='col' g-width='1' text='🎲'/>
             <horzLine g='row'/>
         </layout>
+    </template>
+
+    <template name = 'armaMelee'>
+         <layout g='col' g-width='12' g-auto-height= 'true' g-padding-bottom='5'>
+            <button text='⚔️' g='col' g-width='1'  g-min-height='20' fontSize='20' onCLick='rolarTesteAtr(sheet.cam_ACO or 0)'/>
+            <info nomeInfo= 'Arma1' largura='3'/>
+            <info nomeInfo= 'Notas1' largura='3'/>
+            <campo nomeCampo='ACO' largura='2' tamanhoFonte='10'/>
+            <campo nomeCampo='POD+FOR' largura='2' tamanhoFonte='10'/>
+        </layout>
+    </template>
+
+    <template name = 'armaRanged'>
+        <layout g='col' g-width='12' g-auto-height= 'true' g-padding-bottom='5'>
+            <button text='🏹' g='col' g-width='1' g-min-height='20' fontSize='20'  onCLick='rolarTesteAtr(sheet.cam_ADI or 0)'/>
+            <info nomeInfo= 'Arma1' largura='3'/>
+            <info nomeInfo= 'Notas1' largura='2'/>
+            <campo nomeCampo='ALC' largura='2' tamanhoFonte='10'/>
+            <campo nomeCampo='ADI' largura='2' tamanhoFonte='10'/>
+            <campo nomeCampo='POD' largura='2' tamanhoFonte='10'/>
+        </layout>
+    </template>
+
+    <!--Pericias-->
+    <template name = 'pericias'>
+        <label  horzTextAlign= 'leading' text= 'Pericia' g='col' g-width= '4'/>
+        <label  horzTextAlign= 'leading' text= 'Chave' g='col' g-width= '2'/>
+        <label  horzTextAlign= 'leading' text= 'ATR' g='col' g-width= '2'/>
+        <label horzTextAlign= 'leading'  text= 'NIV' g='col' g-width= '2'/>
+        <label horzTextAlign= 'leading'  text= 'O' g='col' g-width= '1'/>
+        <label horzTextAlign= 'leading'  text= '' g='col' g-width= '1'/>
+        <scrollBox g="col" g-width="12" g-min-height="$(altura)">
+            <!--for i =1, quantidade, 1 do-->
+            <pericia />
+            <!--end;-->
+        </scrollBox>
     </template>
 </group>
