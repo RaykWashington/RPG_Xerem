@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name='frmVantDesv' g-auto-height='true'>
+    <import file="styles.xml"/>
+    <layout g='col' g-width='10' g-min-height='20'>
+        <edit g='col' g-width='10' field='$(atributo)'/>
+        <edit g='col' g-width='2' type='number' field='valor$(atributo)'/>
+        <horzLine g='col' g-width='10'/>
+        <horzLine g='col' g-width='2'/>
+    </layout>
+    <button g='col' g-width='2' onClick='NDB.deleteNode(sheet);' text='➖' g-vert-tile='true'/>
+</form>

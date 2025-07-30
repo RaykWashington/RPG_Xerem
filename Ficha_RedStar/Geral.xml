@@ -67,9 +67,9 @@
                     <label g='col' g-width='6' horzTextAlign='center' text= 'Defesa'/>
                 </layout>
                 <titulo2 titulo='INFECTOS'/>
-                <textEditor g='col' g-width='12' g-min-height='200'/>
+                <textEditor g='col' g-width='12' g-min-height='200' field='infectos'/>
                 <titulo2 titulo='ANOTÇÕES'/>
-                <textEditor g='col' g-width='12' g-min-height='200'/>
+                <textEditor g='col' g-width='12' g-min-height='200' field='anotacoes'/>
             </layout>
         </layout>
     </scrollBox>

@@ -85,33 +85,33 @@
             <button g='col' g-width='2' text='🎲'>
                 <event name='onClick'>
                     Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                        function(selected, seletedIndex, selectedText)
+                        function(selected, seletedIndex, car)
                             if selected then
-                                local car = (caracteristicas[selectedText]);
+                            
                                 local carVal = 1
 
-                                if car == 'valfor' then
+                                if car == 'Força' then
                                     carVal = sheet.valfor
                                 end
-                                if car == 'valcon' then
+                                if car == 'Constituição' then
                                     carVal = sheet.valcon
                                 end
-                                if car == 'valdes' then
+                                if car == 'Destreza' then
                                     carVal = sheet.valdes
                                 end
-                                if car == 'valper' then
+                                if car == 'Percepção' then
                                     carVal = sheet.valper
                                 end
-                                if car == 'valint' then
+                                if car == 'Inteligência' then
                                     carVal = sheet.valint
                                 end
-                                if car == 'valfdv' then
+                                if car == 'Força de Vontade' then
                                     carVal = sheet.valfdv
                                 end
                                 
                                 Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                     function(dif)
-                                        rolarTeste('$(texto)', carVal or 1, sheet.val$(hab) , dif);
+                                        rolarTeste('$(texto)', carVal or 1, sheet.val$(hab) or 0, dif);
                                     end
                                 );
                             else
@@ -125,14 +125,11 @@
 
     <template name= 'atributos'>
         <layout g-width='12' g-gutter = '10'>
-            <label g='col' g-width = '10' horzTextAlign='leading' text= '$(atributo)'/>
+            <label g='col' g-width = '8' horzTextAlign='leading' text= '$(atributo)'/>
             <label g='col' g-width = '2' horzTextAlign='center' text= '$(valor)'/>
-            <!--for i = 1, quantidade, 1 do-->
-            <edit g='col' g-width='10'/>
-            <edit g='col' g-width='2' type='number'/>
-            <horzLine g='col' g-width='10'/>
-            <horzLine g='col' g-width='2'/>
-            <!--end;-->
+            <button g='col' g-width='2' onClick='self.rclVantDesv:append();' text='➕'/>
+            <recordList name='rclVantDesv' field= 'vantDesv' templateForm = 'frmVantDesv' g='col' g-width='12' g-min-height='300' g-margin-top='10'>
+            </recordList>
         </layout>
     </template>
 

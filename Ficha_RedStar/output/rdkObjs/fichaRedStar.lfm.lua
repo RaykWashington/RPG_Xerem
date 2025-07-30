@@ -2187,7 +2187,7 @@ local function constructNew_frmFichaRedStar()
     obj.label28 = GUI.fromHandle(_obj_newObject("label"));
     obj.label28:setParent(obj.layout33);
     obj.label28.grid.role = "col";
-    obj.label28.grid.width = 10;
+    obj.label28.grid.width = 8;
     obj.label28:setHorzTextAlign("leading");
     obj.label28:setText("Nome");
     obj.label28:setName("label28");
@@ -2202,295 +2202,22 @@ local function constructNew_frmFichaRedStar()
     obj.label29:setName("label29");
     obj.label29:setFontColor("#9e9e9e");
 
-    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit8:setParent(obj.layout33);
-    obj.edit8.grid.role = "col";
-    obj.edit8.grid.width = 10;
-    obj.edit8:setName("edit8");
-    obj.edit8:setTransparent(true);
+    obj.button12 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button12:setParent(obj.layout33);
+    obj.button12.grid.role = "col";
+    obj.button12.grid.width = 2;
+    obj.button12:setText("➕");
+    obj.button12:setName("button12");
 
-    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit9:setParent(obj.layout33);
-    obj.edit9.grid.role = "col";
-    obj.edit9.grid.width = 2;
-    obj.edit9:setType("number");
-    obj.edit9:setName("edit9");
-    obj.edit9:setTransparent(true);
-
-    obj.horzLine11 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine11:setParent(obj.layout33);
-    obj.horzLine11.grid.role = "col";
-    obj.horzLine11.grid.width = 10;
-    obj.horzLine11:setName("horzLine11");
-    obj.horzLine11:setStrokeColor("#999999");
-
-    obj.horzLine12 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine12:setParent(obj.layout33);
-    obj.horzLine12.grid.role = "col";
-    obj.horzLine12.grid.width = 2;
-    obj.horzLine12:setName("horzLine12");
-    obj.horzLine12:setStrokeColor("#999999");
-
-    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit10:setParent(obj.layout33);
-    obj.edit10.grid.role = "col";
-    obj.edit10.grid.width = 10;
-    obj.edit10:setName("edit10");
-    obj.edit10:setTransparent(true);
-
-    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit11:setParent(obj.layout33);
-    obj.edit11.grid.role = "col";
-    obj.edit11.grid.width = 2;
-    obj.edit11:setType("number");
-    obj.edit11:setName("edit11");
-    obj.edit11:setTransparent(true);
-
-    obj.horzLine13 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine13:setParent(obj.layout33);
-    obj.horzLine13.grid.role = "col";
-    obj.horzLine13.grid.width = 10;
-    obj.horzLine13:setName("horzLine13");
-    obj.horzLine13:setStrokeColor("#999999");
-
-    obj.horzLine14 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine14:setParent(obj.layout33);
-    obj.horzLine14.grid.role = "col";
-    obj.horzLine14.grid.width = 2;
-    obj.horzLine14:setName("horzLine14");
-    obj.horzLine14:setStrokeColor("#999999");
-
-    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit12:setParent(obj.layout33);
-    obj.edit12.grid.role = "col";
-    obj.edit12.grid.width = 10;
-    obj.edit12:setName("edit12");
-    obj.edit12:setTransparent(true);
-
-    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit13:setParent(obj.layout33);
-    obj.edit13.grid.role = "col";
-    obj.edit13.grid.width = 2;
-    obj.edit13:setType("number");
-    obj.edit13:setName("edit13");
-    obj.edit13:setTransparent(true);
-
-    obj.horzLine15 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine15:setParent(obj.layout33);
-    obj.horzLine15.grid.role = "col";
-    obj.horzLine15.grid.width = 10;
-    obj.horzLine15:setName("horzLine15");
-    obj.horzLine15:setStrokeColor("#999999");
-
-    obj.horzLine16 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine16:setParent(obj.layout33);
-    obj.horzLine16.grid.role = "col";
-    obj.horzLine16.grid.width = 2;
-    obj.horzLine16:setName("horzLine16");
-    obj.horzLine16:setStrokeColor("#999999");
-
-    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit14:setParent(obj.layout33);
-    obj.edit14.grid.role = "col";
-    obj.edit14.grid.width = 10;
-    obj.edit14:setName("edit14");
-    obj.edit14:setTransparent(true);
-
-    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit15:setParent(obj.layout33);
-    obj.edit15.grid.role = "col";
-    obj.edit15.grid.width = 2;
-    obj.edit15:setType("number");
-    obj.edit15:setName("edit15");
-    obj.edit15:setTransparent(true);
-
-    obj.horzLine17 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine17:setParent(obj.layout33);
-    obj.horzLine17.grid.role = "col";
-    obj.horzLine17.grid.width = 10;
-    obj.horzLine17:setName("horzLine17");
-    obj.horzLine17:setStrokeColor("#999999");
-
-    obj.horzLine18 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine18:setParent(obj.layout33);
-    obj.horzLine18.grid.role = "col";
-    obj.horzLine18.grid.width = 2;
-    obj.horzLine18:setName("horzLine18");
-    obj.horzLine18:setStrokeColor("#999999");
-
-    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit16:setParent(obj.layout33);
-    obj.edit16.grid.role = "col";
-    obj.edit16.grid.width = 10;
-    obj.edit16:setName("edit16");
-    obj.edit16:setTransparent(true);
-
-    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit17:setParent(obj.layout33);
-    obj.edit17.grid.role = "col";
-    obj.edit17.grid.width = 2;
-    obj.edit17:setType("number");
-    obj.edit17:setName("edit17");
-    obj.edit17:setTransparent(true);
-
-    obj.horzLine19 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine19:setParent(obj.layout33);
-    obj.horzLine19.grid.role = "col";
-    obj.horzLine19.grid.width = 10;
-    obj.horzLine19:setName("horzLine19");
-    obj.horzLine19:setStrokeColor("#999999");
-
-    obj.horzLine20 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine20:setParent(obj.layout33);
-    obj.horzLine20.grid.role = "col";
-    obj.horzLine20.grid.width = 2;
-    obj.horzLine20:setName("horzLine20");
-    obj.horzLine20:setStrokeColor("#999999");
-
-    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit18:setParent(obj.layout33);
-    obj.edit18.grid.role = "col";
-    obj.edit18.grid.width = 10;
-    obj.edit18:setName("edit18");
-    obj.edit18:setTransparent(true);
-
-    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit19:setParent(obj.layout33);
-    obj.edit19.grid.role = "col";
-    obj.edit19.grid.width = 2;
-    obj.edit19:setType("number");
-    obj.edit19:setName("edit19");
-    obj.edit19:setTransparent(true);
-
-    obj.horzLine21 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine21:setParent(obj.layout33);
-    obj.horzLine21.grid.role = "col";
-    obj.horzLine21.grid.width = 10;
-    obj.horzLine21:setName("horzLine21");
-    obj.horzLine21:setStrokeColor("#999999");
-
-    obj.horzLine22 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine22:setParent(obj.layout33);
-    obj.horzLine22.grid.role = "col";
-    obj.horzLine22.grid.width = 2;
-    obj.horzLine22:setName("horzLine22");
-    obj.horzLine22:setStrokeColor("#999999");
-
-    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit20:setParent(obj.layout33);
-    obj.edit20.grid.role = "col";
-    obj.edit20.grid.width = 10;
-    obj.edit20:setName("edit20");
-    obj.edit20:setTransparent(true);
-
-    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit21:setParent(obj.layout33);
-    obj.edit21.grid.role = "col";
-    obj.edit21.grid.width = 2;
-    obj.edit21:setType("number");
-    obj.edit21:setName("edit21");
-    obj.edit21:setTransparent(true);
-
-    obj.horzLine23 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine23:setParent(obj.layout33);
-    obj.horzLine23.grid.role = "col";
-    obj.horzLine23.grid.width = 10;
-    obj.horzLine23:setName("horzLine23");
-    obj.horzLine23:setStrokeColor("#999999");
-
-    obj.horzLine24 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine24:setParent(obj.layout33);
-    obj.horzLine24.grid.role = "col";
-    obj.horzLine24.grid.width = 2;
-    obj.horzLine24:setName("horzLine24");
-    obj.horzLine24:setStrokeColor("#999999");
-
-    obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit22:setParent(obj.layout33);
-    obj.edit22.grid.role = "col";
-    obj.edit22.grid.width = 10;
-    obj.edit22:setName("edit22");
-    obj.edit22:setTransparent(true);
-
-    obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit23:setParent(obj.layout33);
-    obj.edit23.grid.role = "col";
-    obj.edit23.grid.width = 2;
-    obj.edit23:setType("number");
-    obj.edit23:setName("edit23");
-    obj.edit23:setTransparent(true);
-
-    obj.horzLine25 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine25:setParent(obj.layout33);
-    obj.horzLine25.grid.role = "col";
-    obj.horzLine25.grid.width = 10;
-    obj.horzLine25:setName("horzLine25");
-    obj.horzLine25:setStrokeColor("#999999");
-
-    obj.horzLine26 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine26:setParent(obj.layout33);
-    obj.horzLine26.grid.role = "col";
-    obj.horzLine26.grid.width = 2;
-    obj.horzLine26:setName("horzLine26");
-    obj.horzLine26:setStrokeColor("#999999");
-
-    obj.edit24 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit24:setParent(obj.layout33);
-    obj.edit24.grid.role = "col";
-    obj.edit24.grid.width = 10;
-    obj.edit24:setName("edit24");
-    obj.edit24:setTransparent(true);
-
-    obj.edit25 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit25:setParent(obj.layout33);
-    obj.edit25.grid.role = "col";
-    obj.edit25.grid.width = 2;
-    obj.edit25:setType("number");
-    obj.edit25:setName("edit25");
-    obj.edit25:setTransparent(true);
-
-    obj.horzLine27 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine27:setParent(obj.layout33);
-    obj.horzLine27.grid.role = "col";
-    obj.horzLine27.grid.width = 10;
-    obj.horzLine27:setName("horzLine27");
-    obj.horzLine27:setStrokeColor("#999999");
-
-    obj.horzLine28 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine28:setParent(obj.layout33);
-    obj.horzLine28.grid.role = "col";
-    obj.horzLine28.grid.width = 2;
-    obj.horzLine28:setName("horzLine28");
-    obj.horzLine28:setStrokeColor("#999999");
-
-    obj.edit26 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit26:setParent(obj.layout33);
-    obj.edit26.grid.role = "col";
-    obj.edit26.grid.width = 10;
-    obj.edit26:setName("edit26");
-    obj.edit26:setTransparent(true);
-
-    obj.edit27 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit27:setParent(obj.layout33);
-    obj.edit27.grid.role = "col";
-    obj.edit27.grid.width = 2;
-    obj.edit27:setType("number");
-    obj.edit27:setName("edit27");
-    obj.edit27:setTransparent(true);
-
-    obj.horzLine29 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine29:setParent(obj.layout33);
-    obj.horzLine29.grid.role = "col";
-    obj.horzLine29.grid.width = 10;
-    obj.horzLine29:setName("horzLine29");
-    obj.horzLine29:setStrokeColor("#999999");
-
-    obj.horzLine30 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine30:setParent(obj.layout33);
-    obj.horzLine30.grid.role = "col";
-    obj.horzLine30.grid.width = 2;
-    obj.horzLine30:setName("horzLine30");
-    obj.horzLine30:setStrokeColor("#999999");
+    obj.rclVantDesv = GUI.fromHandle(_obj_newObject("recordList"));
+    obj.rclVantDesv:setParent(obj.layout33);
+    obj.rclVantDesv:setName("rclVantDesv");
+    obj.rclVantDesv:setField("vantDesv");
+    obj.rclVantDesv:setTemplateForm("frmVantDesv");
+    obj.rclVantDesv.grid.role = "col";
+    obj.rclVantDesv.grid.width = 12;
+    obj.rclVantDesv.grid["min-height"] = 300;
+    obj.rclVantDesv.grid["margin-top"] = 10;
 
     obj.layout34 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout34:setParent(obj.layout1);
@@ -2522,12 +2249,12 @@ local function constructNew_frmFichaRedStar()
     obj.layout36.grid.role = "col";
     obj.layout36.grid["auto-height"] = true;
 
-    obj.horzLine31 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine31:setParent(obj.layout36);
-    obj.horzLine31.grid.role = "col";
-    obj.horzLine31.grid.width = 12;
-    obj.horzLine31:setName("horzLine31");
-    obj.horzLine31:setStrokeColor("#999999");
+    obj.horzLine11 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine11:setParent(obj.layout36);
+    obj.horzLine11.grid.role = "col";
+    obj.horzLine11.grid.width = 12;
+    obj.horzLine11:setName("horzLine11");
+    obj.horzLine11:setStrokeColor("#999999");
 
     obj.label30 = GUI.fromHandle(_obj_newObject("label"));
     obj.label30:setParent(obj.layout36);
@@ -2558,16 +2285,16 @@ local function constructNew_frmFichaRedStar()
     obj.rectangle2.grid["padding-right"] = 20;
     obj.rectangle2.grid["padding-bottom"] = 20;
 
-    obj.edit28 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit28:setParent(obj.rectangle2);
-    obj.edit28:setField("pv");
-    obj.edit28.grid.role = "col";
-    obj.edit28.grid.width = 12;
-    obj.edit28:setFontSize(20);
-    obj.edit28:setHorzTextAlign("center");
-    obj.edit28:setVertTextAlign("center");
-    obj.edit28:setName("edit28");
-    obj.edit28:setTransparent(true);
+    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit8:setParent(obj.rectangle2);
+    obj.edit8:setField("pv");
+    obj.edit8.grid.role = "col";
+    obj.edit8.grid.width = 12;
+    obj.edit8:setFontSize(20);
+    obj.edit8:setHorzTextAlign("center");
+    obj.edit8:setVertTextAlign("center");
+    obj.edit8:setName("edit8");
+    obj.edit8:setTransparent(true);
 
     obj.rectangle3 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle3:setParent(obj.layout35);
@@ -2587,16 +2314,16 @@ local function constructNew_frmFichaRedStar()
     obj.rectangle3.grid["padding-right"] = 20;
     obj.rectangle3.grid["padding-bottom"] = 20;
 
-    obj.edit29 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit29:setParent(obj.rectangle3);
-    obj.edit29:setField("Defesa");
-    obj.edit29.grid.role = "col";
-    obj.edit29.grid.width = 12;
-    obj.edit29:setFontSize(20);
-    obj.edit29:setHorzTextAlign("center");
-    obj.edit29:setVertTextAlign("center");
-    obj.edit29:setName("edit29");
-    obj.edit29:setTransparent(true);
+    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit9:setParent(obj.rectangle3);
+    obj.edit9:setField("Defesa");
+    obj.edit9.grid.role = "col";
+    obj.edit9.grid.width = 12;
+    obj.edit9:setFontSize(20);
+    obj.edit9:setHorzTextAlign("center");
+    obj.edit9:setVertTextAlign("center");
+    obj.edit9:setName("edit9");
+    obj.edit9:setTransparent(true);
 
     obj.label31 = GUI.fromHandle(_obj_newObject("label"));
     obj.label31:setParent(obj.layout35);
@@ -2626,12 +2353,12 @@ local function constructNew_frmFichaRedStar()
     obj.layout37.grid.role = "col";
     obj.layout37.grid["auto-height"] = true;
 
-    obj.horzLine32 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine32:setParent(obj.layout37);
-    obj.horzLine32.grid.role = "col";
-    obj.horzLine32.grid.width = 12;
-    obj.horzLine32:setName("horzLine32");
-    obj.horzLine32:setStrokeColor("#999999");
+    obj.horzLine12 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine12:setParent(obj.layout37);
+    obj.horzLine12.grid.role = "col";
+    obj.horzLine12.grid.width = 12;
+    obj.horzLine12:setName("horzLine12");
+    obj.horzLine12:setStrokeColor("#999999");
 
     obj.label33 = GUI.fromHandle(_obj_newObject("label"));
     obj.label33:setParent(obj.layout37);
@@ -2649,6 +2376,7 @@ local function constructNew_frmFichaRedStar()
     obj.textEditor1.grid.role = "col";
     obj.textEditor1.grid.width = 12;
     obj.textEditor1.grid["min-height"] = 200;
+    obj.textEditor1:setField("infectos");
     obj.textEditor1:setName("textEditor1");
 
     obj.layout38 = GUI.fromHandle(_obj_newObject("layout"));
@@ -2661,12 +2389,12 @@ local function constructNew_frmFichaRedStar()
     obj.layout38.grid.role = "col";
     obj.layout38.grid["auto-height"] = true;
 
-    obj.horzLine33 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine33:setParent(obj.layout38);
-    obj.horzLine33.grid.role = "col";
-    obj.horzLine33.grid.width = 12;
-    obj.horzLine33:setName("horzLine33");
-    obj.horzLine33:setStrokeColor("#999999");
+    obj.horzLine13 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine13:setParent(obj.layout38);
+    obj.horzLine13.grid.role = "col";
+    obj.horzLine13.grid.width = 12;
+    obj.horzLine13:setName("horzLine13");
+    obj.horzLine13:setStrokeColor("#999999");
 
     obj.label34 = GUI.fromHandle(_obj_newObject("label"));
     obj.label34:setParent(obj.layout38);
@@ -2684,6 +2412,7 @@ local function constructNew_frmFichaRedStar()
     obj.textEditor2.grid.role = "col";
     obj.textEditor2.grid.width = 12;
     obj.textEditor2.grid["min-height"] = 200;
+    obj.textEditor2:setField("anotacoes");
     obj.textEditor2:setName("textEditor2");
 
     obj.tab2 = GUI.fromHandle(_obj_newObject("tab"));
@@ -2730,23 +2459,23 @@ local function constructNew_frmFichaRedStar()
     obj.layout41.grid["margin-bottom"] = 5;
     obj.layout41:setName("layout41");
 
-    obj.edit30 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit30:setParent(obj.layout41);
-    obj.edit30.grid.role = "col";
-    obj.edit30.grid.width = 12;
-    obj.edit30:setHorzTextAlign("leading");
-    obj.edit30:setTransparent(true);
-    obj.edit30:setField("info_ARMAS");
-    obj.edit30:setType("text");
-    obj.edit30:setFontSize(20);
-    obj.edit30:setName("edit30");
+    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit10:setParent(obj.layout41);
+    obj.edit10.grid.role = "col";
+    obj.edit10.grid.width = 12;
+    obj.edit10:setHorzTextAlign("leading");
+    obj.edit10:setTransparent(true);
+    obj.edit10:setField("info_ARMAS");
+    obj.edit10:setType("text");
+    obj.edit10:setFontSize(20);
+    obj.edit10:setName("edit10");
 
-    obj.horzLine34 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine34:setParent(obj.layout41);
-    obj.horzLine34.grid.role = "col";
-    obj.horzLine34.grid.width = 12;
-    obj.horzLine34:setName("horzLine34");
-    obj.horzLine34:setStrokeColor("#999999");
+    obj.horzLine14 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine14:setParent(obj.layout41);
+    obj.horzLine14.grid.role = "col";
+    obj.horzLine14.grid.width = 12;
+    obj.horzLine14:setName("horzLine14");
+    obj.horzLine14:setStrokeColor("#999999");
 
     obj.label35 = GUI.fromHandle(_obj_newObject("label"));
     obj.label35:setParent(obj.layout41);
@@ -2777,7 +2506,7 @@ local function constructNew_frmFichaRedStar()
     obj.label38 = GUI.fromHandle(_obj_newObject("label"));
     obj.label38:setParent(obj.layout40);
     obj.label38.grid.role = "col";
-    obj.label38.grid.width = 2;
+    obj.label38.grid.width = 1;
     obj.label38:setText("Dano");
     obj.label38:setName("label38");
     obj.label38:setFontColor("#9e9e9e");
@@ -2806,553 +2535,58 @@ local function constructNew_frmFichaRedStar()
     obj.label41:setName("label41");
     obj.label41:setFontColor("#9e9e9e");
 
+    obj.addArma = GUI.fromHandle(_obj_newObject("button"));
+    obj.addArma:setParent(obj.layout40);
+    obj.addArma:setName("addArma");
+    obj.addArma.grid.role = "col";
+    obj.addArma.grid.width = 1;
+    obj.addArma:setText("➕");
+
+    obj.rclArmas = GUI.fromHandle(_obj_newObject("recordList"));
+    obj.rclArmas:setParent(obj.layout40);
+    obj.rclArmas:setName("rclArmas");
+    obj.rclArmas:setField("armas");
+    obj.rclArmas:setTemplateForm("frmArma");
+    obj.rclArmas.grid.role = "col";
+    obj.rclArmas.grid.width = 12;
+    obj.rclArmas.grid["min-height"] = 300;
+    obj.rclArmas.grid["margin-top"] = 10;
+
     obj.layout42 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout42:setParent(obj.layout40);
-    obj.layout42.grid.width = 12;
-    obj.layout42.grid.gutter = 10;
+    obj.layout42:setParent(obj.layout39);
+    obj.layout42.grid.width = 4;
     obj.layout42:setName("layout42");
     obj.layout42.grid.role = "col";
     obj.layout42.grid["auto-height"] = true;
 
-    obj.edit31 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit31:setParent(obj.layout42);
-    obj.edit31.grid.role = "col";
-    obj.edit31.grid.width = 2;
-    obj.edit31:setName("edit31");
-    obj.edit31:setTransparent(true);
-
-    obj.edit32 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit32:setParent(obj.layout42);
-    obj.edit32.grid.role = "col";
-    obj.edit32.grid.width = 2;
-    obj.edit32:setName("edit32");
-    obj.edit32:setTransparent(true);
-
-    obj.edit33 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit33:setParent(obj.layout42);
-    obj.edit33.grid.role = "col";
-    obj.edit33.grid.width = 2;
-    obj.edit33:setName("edit33");
-    obj.edit33:setTransparent(true);
-
-    obj.edit34 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit34:setParent(obj.layout42);
-    obj.edit34.grid.role = "col";
-    obj.edit34.grid.width = 2;
-    obj.edit34:setName("edit34");
-    obj.edit34:setTransparent(true);
-
-    obj.edit35 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit35:setParent(obj.layout42);
-    obj.edit35.grid.role = "col";
-    obj.edit35.grid.width = 2;
-    obj.edit35:setName("edit35");
-    obj.edit35:setTransparent(true);
-
-    obj.edit36 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit36:setParent(obj.layout42);
-    obj.edit36.grid.role = "col";
-    obj.edit36.grid.width = 2;
-    obj.edit36:setName("edit36");
-    obj.edit36:setTransparent(true);
-
-    obj.horzLine35 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine35:setParent(obj.layout42);
-    obj.horzLine35.grid.role = "col";
-    obj.horzLine35.grid.width = 2;
-    obj.horzLine35:setName("horzLine35");
-    obj.horzLine35:setStrokeColor("#999999");
-
-    obj.horzLine36 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine36:setParent(obj.layout42);
-    obj.horzLine36.grid.role = "col";
-    obj.horzLine36.grid.width = 2;
-    obj.horzLine36:setName("horzLine36");
-    obj.horzLine36:setStrokeColor("#999999");
-
-    obj.horzLine37 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine37:setParent(obj.layout42);
-    obj.horzLine37.grid.role = "col";
-    obj.horzLine37.grid.width = 2;
-    obj.horzLine37:setName("horzLine37");
-    obj.horzLine37:setStrokeColor("#999999");
-
-    obj.horzLine38 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine38:setParent(obj.layout42);
-    obj.horzLine38.grid.role = "col";
-    obj.horzLine38.grid.width = 2;
-    obj.horzLine38:setName("horzLine38");
-    obj.horzLine38:setStrokeColor("#999999");
-
-    obj.horzLine39 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine39:setParent(obj.layout42);
-    obj.horzLine39.grid.role = "col";
-    obj.horzLine39.grid.width = 2;
-    obj.horzLine39:setName("horzLine39");
-    obj.horzLine39:setStrokeColor("#999999");
-
-    obj.horzLine40 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine40:setParent(obj.layout42);
-    obj.horzLine40.grid.role = "col";
-    obj.horzLine40.grid.width = 2;
-    obj.horzLine40:setName("horzLine40");
-    obj.horzLine40:setStrokeColor("#999999");
-
-    obj.edit37 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit37:setParent(obj.layout42);
-    obj.edit37.grid.role = "col";
-    obj.edit37.grid.width = 2;
-    obj.edit37:setName("edit37");
-    obj.edit37:setTransparent(true);
-
-    obj.edit38 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit38:setParent(obj.layout42);
-    obj.edit38.grid.role = "col";
-    obj.edit38.grid.width = 2;
-    obj.edit38:setName("edit38");
-    obj.edit38:setTransparent(true);
-
-    obj.edit39 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit39:setParent(obj.layout42);
-    obj.edit39.grid.role = "col";
-    obj.edit39.grid.width = 2;
-    obj.edit39:setName("edit39");
-    obj.edit39:setTransparent(true);
-
-    obj.edit40 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit40:setParent(obj.layout42);
-    obj.edit40.grid.role = "col";
-    obj.edit40.grid.width = 2;
-    obj.edit40:setName("edit40");
-    obj.edit40:setTransparent(true);
-
-    obj.edit41 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit41:setParent(obj.layout42);
-    obj.edit41.grid.role = "col";
-    obj.edit41.grid.width = 2;
-    obj.edit41:setName("edit41");
-    obj.edit41:setTransparent(true);
-
-    obj.edit42 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit42:setParent(obj.layout42);
-    obj.edit42.grid.role = "col";
-    obj.edit42.grid.width = 2;
-    obj.edit42:setName("edit42");
-    obj.edit42:setTransparent(true);
-
-    obj.horzLine41 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine41:setParent(obj.layout42);
-    obj.horzLine41.grid.role = "col";
-    obj.horzLine41.grid.width = 2;
-    obj.horzLine41:setName("horzLine41");
-    obj.horzLine41:setStrokeColor("#999999");
-
-    obj.horzLine42 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine42:setParent(obj.layout42);
-    obj.horzLine42.grid.role = "col";
-    obj.horzLine42.grid.width = 2;
-    obj.horzLine42:setName("horzLine42");
-    obj.horzLine42:setStrokeColor("#999999");
-
-    obj.horzLine43 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine43:setParent(obj.layout42);
-    obj.horzLine43.grid.role = "col";
-    obj.horzLine43.grid.width = 2;
-    obj.horzLine43:setName("horzLine43");
-    obj.horzLine43:setStrokeColor("#999999");
-
-    obj.horzLine44 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine44:setParent(obj.layout42);
-    obj.horzLine44.grid.role = "col";
-    obj.horzLine44.grid.width = 2;
-    obj.horzLine44:setName("horzLine44");
-    obj.horzLine44:setStrokeColor("#999999");
-
-    obj.horzLine45 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine45:setParent(obj.layout42);
-    obj.horzLine45.grid.role = "col";
-    obj.horzLine45.grid.width = 2;
-    obj.horzLine45:setName("horzLine45");
-    obj.horzLine45:setStrokeColor("#999999");
-
-    obj.horzLine46 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine46:setParent(obj.layout42);
-    obj.horzLine46.grid.role = "col";
-    obj.horzLine46.grid.width = 2;
-    obj.horzLine46:setName("horzLine46");
-    obj.horzLine46:setStrokeColor("#999999");
-
-    obj.edit43 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit43:setParent(obj.layout42);
-    obj.edit43.grid.role = "col";
-    obj.edit43.grid.width = 2;
-    obj.edit43:setName("edit43");
-    obj.edit43:setTransparent(true);
-
-    obj.edit44 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit44:setParent(obj.layout42);
-    obj.edit44.grid.role = "col";
-    obj.edit44.grid.width = 2;
-    obj.edit44:setName("edit44");
-    obj.edit44:setTransparent(true);
-
-    obj.edit45 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit45:setParent(obj.layout42);
-    obj.edit45.grid.role = "col";
-    obj.edit45.grid.width = 2;
-    obj.edit45:setName("edit45");
-    obj.edit45:setTransparent(true);
-
-    obj.edit46 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit46:setParent(obj.layout42);
-    obj.edit46.grid.role = "col";
-    obj.edit46.grid.width = 2;
-    obj.edit46:setName("edit46");
-    obj.edit46:setTransparent(true);
-
-    obj.edit47 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit47:setParent(obj.layout42);
-    obj.edit47.grid.role = "col";
-    obj.edit47.grid.width = 2;
-    obj.edit47:setName("edit47");
-    obj.edit47:setTransparent(true);
-
-    obj.edit48 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit48:setParent(obj.layout42);
-    obj.edit48.grid.role = "col";
-    obj.edit48.grid.width = 2;
-    obj.edit48:setName("edit48");
-    obj.edit48:setTransparent(true);
-
-    obj.horzLine47 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine47:setParent(obj.layout42);
-    obj.horzLine47.grid.role = "col";
-    obj.horzLine47.grid.width = 2;
-    obj.horzLine47:setName("horzLine47");
-    obj.horzLine47:setStrokeColor("#999999");
-
-    obj.horzLine48 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine48:setParent(obj.layout42);
-    obj.horzLine48.grid.role = "col";
-    obj.horzLine48.grid.width = 2;
-    obj.horzLine48:setName("horzLine48");
-    obj.horzLine48:setStrokeColor("#999999");
-
-    obj.horzLine49 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine49:setParent(obj.layout42);
-    obj.horzLine49.grid.role = "col";
-    obj.horzLine49.grid.width = 2;
-    obj.horzLine49:setName("horzLine49");
-    obj.horzLine49:setStrokeColor("#999999");
-
-    obj.horzLine50 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine50:setParent(obj.layout42);
-    obj.horzLine50.grid.role = "col";
-    obj.horzLine50.grid.width = 2;
-    obj.horzLine50:setName("horzLine50");
-    obj.horzLine50:setStrokeColor("#999999");
-
-    obj.horzLine51 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine51:setParent(obj.layout42);
-    obj.horzLine51.grid.role = "col";
-    obj.horzLine51.grid.width = 2;
-    obj.horzLine51:setName("horzLine51");
-    obj.horzLine51:setStrokeColor("#999999");
-
-    obj.horzLine52 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine52:setParent(obj.layout42);
-    obj.horzLine52.grid.role = "col";
-    obj.horzLine52.grid.width = 2;
-    obj.horzLine52:setName("horzLine52");
-    obj.horzLine52:setStrokeColor("#999999");
-
-    obj.edit49 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit49:setParent(obj.layout42);
-    obj.edit49.grid.role = "col";
-    obj.edit49.grid.width = 2;
-    obj.edit49:setName("edit49");
-    obj.edit49:setTransparent(true);
-
-    obj.edit50 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit50:setParent(obj.layout42);
-    obj.edit50.grid.role = "col";
-    obj.edit50.grid.width = 2;
-    obj.edit50:setName("edit50");
-    obj.edit50:setTransparent(true);
-
-    obj.edit51 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit51:setParent(obj.layout42);
-    obj.edit51.grid.role = "col";
-    obj.edit51.grid.width = 2;
-    obj.edit51:setName("edit51");
-    obj.edit51:setTransparent(true);
-
-    obj.edit52 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit52:setParent(obj.layout42);
-    obj.edit52.grid.role = "col";
-    obj.edit52.grid.width = 2;
-    obj.edit52:setName("edit52");
-    obj.edit52:setTransparent(true);
-
-    obj.edit53 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit53:setParent(obj.layout42);
-    obj.edit53.grid.role = "col";
-    obj.edit53.grid.width = 2;
-    obj.edit53:setName("edit53");
-    obj.edit53:setTransparent(true);
-
-    obj.edit54 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit54:setParent(obj.layout42);
-    obj.edit54.grid.role = "col";
-    obj.edit54.grid.width = 2;
-    obj.edit54:setName("edit54");
-    obj.edit54:setTransparent(true);
-
-    obj.horzLine53 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine53:setParent(obj.layout42);
-    obj.horzLine53.grid.role = "col";
-    obj.horzLine53.grid.width = 2;
-    obj.horzLine53:setName("horzLine53");
-    obj.horzLine53:setStrokeColor("#999999");
-
-    obj.horzLine54 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine54:setParent(obj.layout42);
-    obj.horzLine54.grid.role = "col";
-    obj.horzLine54.grid.width = 2;
-    obj.horzLine54:setName("horzLine54");
-    obj.horzLine54:setStrokeColor("#999999");
-
-    obj.horzLine55 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine55:setParent(obj.layout42);
-    obj.horzLine55.grid.role = "col";
-    obj.horzLine55.grid.width = 2;
-    obj.horzLine55:setName("horzLine55");
-    obj.horzLine55:setStrokeColor("#999999");
-
-    obj.horzLine56 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine56:setParent(obj.layout42);
-    obj.horzLine56.grid.role = "col";
-    obj.horzLine56.grid.width = 2;
-    obj.horzLine56:setName("horzLine56");
-    obj.horzLine56:setStrokeColor("#999999");
-
-    obj.horzLine57 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine57:setParent(obj.layout42);
-    obj.horzLine57.grid.role = "col";
-    obj.horzLine57.grid.width = 2;
-    obj.horzLine57:setName("horzLine57");
-    obj.horzLine57:setStrokeColor("#999999");
-
-    obj.horzLine58 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine58:setParent(obj.layout42);
-    obj.horzLine58.grid.role = "col";
-    obj.horzLine58.grid.width = 2;
-    obj.horzLine58:setName("horzLine58");
-    obj.horzLine58:setStrokeColor("#999999");
-
-    obj.edit55 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit55:setParent(obj.layout42);
-    obj.edit55.grid.role = "col";
-    obj.edit55.grid.width = 2;
-    obj.edit55:setName("edit55");
-    obj.edit55:setTransparent(true);
-
-    obj.edit56 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit56:setParent(obj.layout42);
-    obj.edit56.grid.role = "col";
-    obj.edit56.grid.width = 2;
-    obj.edit56:setName("edit56");
-    obj.edit56:setTransparent(true);
-
-    obj.edit57 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit57:setParent(obj.layout42);
-    obj.edit57.grid.role = "col";
-    obj.edit57.grid.width = 2;
-    obj.edit57:setName("edit57");
-    obj.edit57:setTransparent(true);
-
-    obj.edit58 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit58:setParent(obj.layout42);
-    obj.edit58.grid.role = "col";
-    obj.edit58.grid.width = 2;
-    obj.edit58:setName("edit58");
-    obj.edit58:setTransparent(true);
-
-    obj.edit59 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit59:setParent(obj.layout42);
-    obj.edit59.grid.role = "col";
-    obj.edit59.grid.width = 2;
-    obj.edit59:setName("edit59");
-    obj.edit59:setTransparent(true);
-
-    obj.edit60 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit60:setParent(obj.layout42);
-    obj.edit60.grid.role = "col";
-    obj.edit60.grid.width = 2;
-    obj.edit60:setName("edit60");
-    obj.edit60:setTransparent(true);
-
-    obj.horzLine59 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine59:setParent(obj.layout42);
-    obj.horzLine59.grid.role = "col";
-    obj.horzLine59.grid.width = 2;
-    obj.horzLine59:setName("horzLine59");
-    obj.horzLine59:setStrokeColor("#999999");
-
-    obj.horzLine60 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine60:setParent(obj.layout42);
-    obj.horzLine60.grid.role = "col";
-    obj.horzLine60.grid.width = 2;
-    obj.horzLine60:setName("horzLine60");
-    obj.horzLine60:setStrokeColor("#999999");
-
-    obj.horzLine61 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine61:setParent(obj.layout42);
-    obj.horzLine61.grid.role = "col";
-    obj.horzLine61.grid.width = 2;
-    obj.horzLine61:setName("horzLine61");
-    obj.horzLine61:setStrokeColor("#999999");
-
-    obj.horzLine62 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine62:setParent(obj.layout42);
-    obj.horzLine62.grid.role = "col";
-    obj.horzLine62.grid.width = 2;
-    obj.horzLine62:setName("horzLine62");
-    obj.horzLine62:setStrokeColor("#999999");
-
-    obj.horzLine63 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine63:setParent(obj.layout42);
-    obj.horzLine63.grid.role = "col";
-    obj.horzLine63.grid.width = 2;
-    obj.horzLine63:setName("horzLine63");
-    obj.horzLine63:setStrokeColor("#999999");
-
-    obj.horzLine64 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine64:setParent(obj.layout42);
-    obj.horzLine64.grid.role = "col";
-    obj.horzLine64.grid.width = 2;
-    obj.horzLine64:setName("horzLine64");
-    obj.horzLine64:setStrokeColor("#999999");
-
-    obj.edit61 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit61:setParent(obj.layout42);
-    obj.edit61.grid.role = "col";
-    obj.edit61.grid.width = 2;
-    obj.edit61:setName("edit61");
-    obj.edit61:setTransparent(true);
-
-    obj.edit62 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit62:setParent(obj.layout42);
-    obj.edit62.grid.role = "col";
-    obj.edit62.grid.width = 2;
-    obj.edit62:setName("edit62");
-    obj.edit62:setTransparent(true);
-
-    obj.edit63 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit63:setParent(obj.layout42);
-    obj.edit63.grid.role = "col";
-    obj.edit63.grid.width = 2;
-    obj.edit63:setName("edit63");
-    obj.edit63:setTransparent(true);
-
-    obj.edit64 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit64:setParent(obj.layout42);
-    obj.edit64.grid.role = "col";
-    obj.edit64.grid.width = 2;
-    obj.edit64:setName("edit64");
-    obj.edit64:setTransparent(true);
-
-    obj.edit65 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit65:setParent(obj.layout42);
-    obj.edit65.grid.role = "col";
-    obj.edit65.grid.width = 2;
-    obj.edit65:setName("edit65");
-    obj.edit65:setTransparent(true);
-
-    obj.edit66 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit66:setParent(obj.layout42);
-    obj.edit66.grid.role = "col";
-    obj.edit66.grid.width = 2;
-    obj.edit66:setName("edit66");
-    obj.edit66:setTransparent(true);
-
-    obj.horzLine65 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine65:setParent(obj.layout42);
-    obj.horzLine65.grid.role = "col";
-    obj.horzLine65.grid.width = 2;
-    obj.horzLine65:setName("horzLine65");
-    obj.horzLine65:setStrokeColor("#999999");
-
-    obj.horzLine66 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine66:setParent(obj.layout42);
-    obj.horzLine66.grid.role = "col";
-    obj.horzLine66.grid.width = 2;
-    obj.horzLine66:setName("horzLine66");
-    obj.horzLine66:setStrokeColor("#999999");
-
-    obj.horzLine67 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine67:setParent(obj.layout42);
-    obj.horzLine67.grid.role = "col";
-    obj.horzLine67.grid.width = 2;
-    obj.horzLine67:setName("horzLine67");
-    obj.horzLine67:setStrokeColor("#999999");
-
-    obj.horzLine68 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine68:setParent(obj.layout42);
-    obj.horzLine68.grid.role = "col";
-    obj.horzLine68.grid.width = 2;
-    obj.horzLine68:setName("horzLine68");
-    obj.horzLine68:setStrokeColor("#999999");
-
-    obj.horzLine69 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine69:setParent(obj.layout42);
-    obj.horzLine69.grid.role = "col";
-    obj.horzLine69.grid.width = 2;
-    obj.horzLine69:setName("horzLine69");
-    obj.horzLine69:setStrokeColor("#999999");
-
-    obj.horzLine70 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine70:setParent(obj.layout42);
-    obj.horzLine70.grid.role = "col";
-    obj.horzLine70.grid.width = 2;
-    obj.horzLine70:setName("horzLine70");
-    obj.horzLine70:setStrokeColor("#999999");
-
     obj.layout43 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout43:setParent(obj.layout39);
-    obj.layout43.grid.width = 4;
-    obj.layout43:setName("layout43");
+    obj.layout43:setParent(obj.layout42);
     obj.layout43.grid.role = "col";
+    obj.layout43.grid.width = 12;
     obj.layout43.grid["auto-height"] = true;
+    obj.layout43.grid["margin-bottom"] = 5;
+    obj.layout43:setName("layout43");
 
-    obj.layout44 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout44:setParent(obj.layout43);
-    obj.layout44.grid.role = "col";
-    obj.layout44.grid.width = 12;
-    obj.layout44.grid["auto-height"] = true;
-    obj.layout44.grid["margin-bottom"] = 5;
-    obj.layout44:setName("layout44");
+    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit11:setParent(obj.layout43);
+    obj.edit11.grid.role = "col";
+    obj.edit11.grid.width = 12;
+    obj.edit11:setHorzTextAlign("leading");
+    obj.edit11:setTransparent(true);
+    obj.edit11:setField("info_ARMADURA");
+    obj.edit11:setType("text");
+    obj.edit11:setFontSize(20);
+    obj.edit11:setName("edit11");
 
-    obj.edit67 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit67:setParent(obj.layout44);
-    obj.edit67.grid.role = "col";
-    obj.edit67.grid.width = 12;
-    obj.edit67:setHorzTextAlign("leading");
-    obj.edit67:setTransparent(true);
-    obj.edit67:setField("info_ARMADURA");
-    obj.edit67:setType("text");
-    obj.edit67:setFontSize(20);
-    obj.edit67:setName("edit67");
-
-    obj.horzLine71 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine71:setParent(obj.layout44);
-    obj.horzLine71.grid.role = "col";
-    obj.horzLine71.grid.width = 12;
-    obj.horzLine71:setName("horzLine71");
-    obj.horzLine71:setStrokeColor("#999999");
+    obj.horzLine15 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine15:setParent(obj.layout43);
+    obj.horzLine15.grid.role = "col";
+    obj.horzLine15.grid.width = 12;
+    obj.horzLine15:setName("horzLine15");
+    obj.horzLine15:setStrokeColor("#999999");
 
     obj.label42 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label42:setParent(obj.layout44);
+    obj.label42:setParent(obj.layout43);
     obj.label42.grid.role = "col";
     obj.label42.grid.width = 12;
     obj.label42:setHorzTextAlign("leading");
@@ -3362,7 +2596,7 @@ local function constructNew_frmFichaRedStar()
     obj.label42:setFontColor("#9e9e9e");
 
     obj.label43 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label43:setParent(obj.layout43);
+    obj.label43:setParent(obj.layout42);
     obj.label43.grid.role = "col";
     obj.label43.grid.width = 4;
     obj.label43:setText("Armadura");
@@ -3370,388 +2604,145 @@ local function constructNew_frmFichaRedStar()
     obj.label43:setFontColor("#9e9e9e");
 
     obj.label44 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label44:setParent(obj.layout43);
+    obj.label44:setParent(obj.layout42);
     obj.label44.grid.role = "col";
-    obj.label44.grid.width = 4;
+    obj.label44.grid.width = 3;
     obj.label44:setText("Resistência");
     obj.label44:setName("label44");
     obj.label44:setFontColor("#9e9e9e");
 
     obj.label45 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label45:setParent(obj.layout43);
+    obj.label45:setParent(obj.layout42);
     obj.label45.grid.role = "col";
-    obj.label45.grid.width = 4;
+    obj.label45.grid.width = 3;
     obj.label45:setText("Especial");
     obj.label45:setName("label45");
     obj.label45:setFontColor("#9e9e9e");
 
+    obj.addArmadura = GUI.fromHandle(_obj_newObject("button"));
+    obj.addArmadura:setParent(obj.layout42);
+    obj.addArmadura:setName("addArmadura");
+    obj.addArmadura.grid.role = "col";
+    obj.addArmadura.grid.width = 2;
+    obj.addArmadura:setText("➕");
+
+    obj.rclArmadura = GUI.fromHandle(_obj_newObject("recordList"));
+    obj.rclArmadura:setParent(obj.layout42);
+    obj.rclArmadura:setName("rclArmadura");
+    obj.rclArmadura:setField("armadura");
+    obj.rclArmadura:setTemplateForm("frmArmadura");
+    obj.rclArmadura.grid.role = "col";
+    obj.rclArmadura.grid.width = 12;
+    obj.rclArmadura.grid["min-height"] = 300;
+    obj.rclArmadura.grid["margin-top"] = 10;
+
+    obj.layout44 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout44:setParent(obj.layout39);
+    obj.layout44.grid.width = 12;
+    obj.layout44.grid["min-height"] = 800;
+    obj.layout44.grid["cnt-horz-align"] = "center";
+    obj.layout44.grid["cnt-vert-align"] = "center";
+    obj.layout44:setName("layout44");
+    obj.layout44.grid.role = "col";
+    obj.layout44.grid["auto-height"] = true;
+
     obj.layout45 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout45:setParent(obj.layout43);
+    obj.layout45:setParent(obj.layout44);
     obj.layout45.grid.width = 12;
-    obj.layout45.grid.gutter = 10;
+    obj.layout45.grid["cnt-vert-align"] = "center";
+    obj.layout45.grid["margin-bottom"] = 20;
+    obj.layout45.grid["margin-top"] = 20;
     obj.layout45:setName("layout45");
     obj.layout45.grid.role = "col";
     obj.layout45.grid["auto-height"] = true;
 
-    obj.edit68 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit68:setParent(obj.layout45);
-    obj.edit68.grid.role = "col";
-    obj.edit68.grid.width = 4;
-    obj.edit68:setName("edit68");
-    obj.edit68:setTransparent(true);
-
-    obj.edit69 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit69:setParent(obj.layout45);
-    obj.edit69.grid.role = "col";
-    obj.edit69.grid.width = 4;
-    obj.edit69:setName("edit69");
-    obj.edit69:setTransparent(true);
-
-    obj.edit70 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit70:setParent(obj.layout45);
-    obj.edit70.grid.role = "col";
-    obj.edit70.grid.width = 4;
-    obj.edit70:setName("edit70");
-    obj.edit70:setTransparent(true);
-
-    obj.horzLine72 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine72:setParent(obj.layout45);
-    obj.horzLine72.grid.role = "col";
-    obj.horzLine72.grid.width = 4;
-    obj.horzLine72:setName("horzLine72");
-    obj.horzLine72:setStrokeColor("#999999");
-
-    obj.horzLine73 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine73:setParent(obj.layout45);
-    obj.horzLine73.grid.role = "col";
-    obj.horzLine73.grid.width = 4;
-    obj.horzLine73:setName("horzLine73");
-    obj.horzLine73:setStrokeColor("#999999");
-
-    obj.horzLine74 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine74:setParent(obj.layout45);
-    obj.horzLine74.grid.role = "col";
-    obj.horzLine74.grid.width = 4;
-    obj.horzLine74:setName("horzLine74");
-    obj.horzLine74:setStrokeColor("#999999");
-
-    obj.edit71 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit71:setParent(obj.layout45);
-    obj.edit71.grid.role = "col";
-    obj.edit71.grid.width = 4;
-    obj.edit71:setName("edit71");
-    obj.edit71:setTransparent(true);
-
-    obj.edit72 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit72:setParent(obj.layout45);
-    obj.edit72.grid.role = "col";
-    obj.edit72.grid.width = 4;
-    obj.edit72:setName("edit72");
-    obj.edit72:setTransparent(true);
-
-    obj.edit73 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit73:setParent(obj.layout45);
-    obj.edit73.grid.role = "col";
-    obj.edit73.grid.width = 4;
-    obj.edit73:setName("edit73");
-    obj.edit73:setTransparent(true);
-
-    obj.horzLine75 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine75:setParent(obj.layout45);
-    obj.horzLine75.grid.role = "col";
-    obj.horzLine75.grid.width = 4;
-    obj.horzLine75:setName("horzLine75");
-    obj.horzLine75:setStrokeColor("#999999");
-
-    obj.horzLine76 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine76:setParent(obj.layout45);
-    obj.horzLine76.grid.role = "col";
-    obj.horzLine76.grid.width = 4;
-    obj.horzLine76:setName("horzLine76");
-    obj.horzLine76:setStrokeColor("#999999");
-
-    obj.horzLine77 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine77:setParent(obj.layout45);
-    obj.horzLine77.grid.role = "col";
-    obj.horzLine77.grid.width = 4;
-    obj.horzLine77:setName("horzLine77");
-    obj.horzLine77:setStrokeColor("#999999");
-
-    obj.edit74 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit74:setParent(obj.layout45);
-    obj.edit74.grid.role = "col";
-    obj.edit74.grid.width = 4;
-    obj.edit74:setName("edit74");
-    obj.edit74:setTransparent(true);
-
-    obj.edit75 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit75:setParent(obj.layout45);
-    obj.edit75.grid.role = "col";
-    obj.edit75.grid.width = 4;
-    obj.edit75:setName("edit75");
-    obj.edit75:setTransparent(true);
-
-    obj.edit76 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit76:setParent(obj.layout45);
-    obj.edit76.grid.role = "col";
-    obj.edit76.grid.width = 4;
-    obj.edit76:setName("edit76");
-    obj.edit76:setTransparent(true);
-
-    obj.horzLine78 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine78:setParent(obj.layout45);
-    obj.horzLine78.grid.role = "col";
-    obj.horzLine78.grid.width = 4;
-    obj.horzLine78:setName("horzLine78");
-    obj.horzLine78:setStrokeColor("#999999");
-
-    obj.horzLine79 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine79:setParent(obj.layout45);
-    obj.horzLine79.grid.role = "col";
-    obj.horzLine79.grid.width = 4;
-    obj.horzLine79:setName("horzLine79");
-    obj.horzLine79:setStrokeColor("#999999");
-
-    obj.horzLine80 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine80:setParent(obj.layout45);
-    obj.horzLine80.grid.role = "col";
-    obj.horzLine80.grid.width = 4;
-    obj.horzLine80:setName("horzLine80");
-    obj.horzLine80:setStrokeColor("#999999");
-
-    obj.edit77 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit77:setParent(obj.layout45);
-    obj.edit77.grid.role = "col";
-    obj.edit77.grid.width = 4;
-    obj.edit77:setName("edit77");
-    obj.edit77:setTransparent(true);
-
-    obj.edit78 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit78:setParent(obj.layout45);
-    obj.edit78.grid.role = "col";
-    obj.edit78.grid.width = 4;
-    obj.edit78:setName("edit78");
-    obj.edit78:setTransparent(true);
-
-    obj.edit79 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit79:setParent(obj.layout45);
-    obj.edit79.grid.role = "col";
-    obj.edit79.grid.width = 4;
-    obj.edit79:setName("edit79");
-    obj.edit79:setTransparent(true);
-
-    obj.horzLine81 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine81:setParent(obj.layout45);
-    obj.horzLine81.grid.role = "col";
-    obj.horzLine81.grid.width = 4;
-    obj.horzLine81:setName("horzLine81");
-    obj.horzLine81:setStrokeColor("#999999");
-
-    obj.horzLine82 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine82:setParent(obj.layout45);
-    obj.horzLine82.grid.role = "col";
-    obj.horzLine82.grid.width = 4;
-    obj.horzLine82:setName("horzLine82");
-    obj.horzLine82:setStrokeColor("#999999");
-
-    obj.horzLine83 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine83:setParent(obj.layout45);
-    obj.horzLine83.grid.role = "col";
-    obj.horzLine83.grid.width = 4;
-    obj.horzLine83:setName("horzLine83");
-    obj.horzLine83:setStrokeColor("#999999");
-
-    obj.edit80 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit80:setParent(obj.layout45);
-    obj.edit80.grid.role = "col";
-    obj.edit80.grid.width = 4;
-    obj.edit80:setName("edit80");
-    obj.edit80:setTransparent(true);
-
-    obj.edit81 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit81:setParent(obj.layout45);
-    obj.edit81.grid.role = "col";
-    obj.edit81.grid.width = 4;
-    obj.edit81:setName("edit81");
-    obj.edit81:setTransparent(true);
-
-    obj.edit82 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit82:setParent(obj.layout45);
-    obj.edit82.grid.role = "col";
-    obj.edit82.grid.width = 4;
-    obj.edit82:setName("edit82");
-    obj.edit82:setTransparent(true);
-
-    obj.horzLine84 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine84:setParent(obj.layout45);
-    obj.horzLine84.grid.role = "col";
-    obj.horzLine84.grid.width = 4;
-    obj.horzLine84:setName("horzLine84");
-    obj.horzLine84:setStrokeColor("#999999");
-
-    obj.horzLine85 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine85:setParent(obj.layout45);
-    obj.horzLine85.grid.role = "col";
-    obj.horzLine85.grid.width = 4;
-    obj.horzLine85:setName("horzLine85");
-    obj.horzLine85:setStrokeColor("#999999");
-
-    obj.horzLine86 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine86:setParent(obj.layout45);
-    obj.horzLine86.grid.role = "col";
-    obj.horzLine86.grid.width = 4;
-    obj.horzLine86:setName("horzLine86");
-    obj.horzLine86:setStrokeColor("#999999");
-
-    obj.edit83 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit83:setParent(obj.layout45);
-    obj.edit83.grid.role = "col";
-    obj.edit83.grid.width = 4;
-    obj.edit83:setName("edit83");
-    obj.edit83:setTransparent(true);
-
-    obj.edit84 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit84:setParent(obj.layout45);
-    obj.edit84.grid.role = "col";
-    obj.edit84.grid.width = 4;
-    obj.edit84:setName("edit84");
-    obj.edit84:setTransparent(true);
-
-    obj.edit85 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit85:setParent(obj.layout45);
-    obj.edit85.grid.role = "col";
-    obj.edit85.grid.width = 4;
-    obj.edit85:setName("edit85");
-    obj.edit85:setTransparent(true);
-
-    obj.horzLine87 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine87:setParent(obj.layout45);
-    obj.horzLine87.grid.role = "col";
-    obj.horzLine87.grid.width = 4;
-    obj.horzLine87:setName("horzLine87");
-    obj.horzLine87:setStrokeColor("#999999");
-
-    obj.horzLine88 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine88:setParent(obj.layout45);
-    obj.horzLine88.grid.role = "col";
-    obj.horzLine88.grid.width = 4;
-    obj.horzLine88:setName("horzLine88");
-    obj.horzLine88:setStrokeColor("#999999");
-
-    obj.horzLine89 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine89:setParent(obj.layout45);
-    obj.horzLine89.grid.role = "col";
-    obj.horzLine89.grid.width = 4;
-    obj.horzLine89:setName("horzLine89");
-    obj.horzLine89:setStrokeColor("#999999");
-
-    obj.layout46 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout46:setParent(obj.layout39);
-    obj.layout46.grid.width = 12;
-    obj.layout46.grid["min-height"] = 800;
-    obj.layout46.grid["cnt-horz-align"] = "center";
-    obj.layout46.grid["cnt-vert-align"] = "center";
-    obj.layout46:setName("layout46");
-    obj.layout46.grid.role = "col";
-    obj.layout46.grid["auto-height"] = true;
-
-    obj.layout47 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout47:setParent(obj.layout46);
-    obj.layout47.grid.width = 12;
-    obj.layout47.grid["cnt-vert-align"] = "center";
-    obj.layout47.grid["margin-bottom"] = 20;
-    obj.layout47.grid["margin-top"] = 20;
-    obj.layout47:setName("layout47");
-    obj.layout47.grid.role = "col";
-    obj.layout47.grid["auto-height"] = true;
-
-    obj.horzLine90 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine90:setParent(obj.layout47);
-    obj.horzLine90.grid.role = "col";
-    obj.horzLine90.grid.width = 12;
-    obj.horzLine90:setName("horzLine90");
-    obj.horzLine90:setStrokeColor("#999999");
+    obj.horzLine16 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine16:setParent(obj.layout45);
+    obj.horzLine16.grid.role = "col";
+    obj.horzLine16.grid.width = 12;
+    obj.horzLine16:setName("horzLine16");
+    obj.horzLine16:setStrokeColor("#999999");
 
     obj.label46 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label46:setParent(obj.layout47);
+    obj.label46:setParent(obj.layout45);
     obj.label46.grid.role = "col";
     obj.label46.grid.width = 12;
     obj.label46:setFontSize(20);
-    obj.label46:setText("Créditos");
+    obj.label46:setText("CRÉDITOS");
     obj.label46:setHorzTextAlign("center");
     obj.label46.grid["margin-top"] = 5;
     obj.label46:setName("label46");
     obj.label46:setFontColor("#9e9e9e");
 
-    obj.layout48 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout48:setParent(obj.layout46);
-    obj.layout48.grid.width = 6;
-    obj.layout48.grid["auto-height"] = true;
-    obj.layout48.grid["min-height"] = 300;
-    obj.layout48.grid["margin-bottom"] = 30;
-    obj.layout48:setName("layout48");
-    obj.layout48.grid.role = "col";
+    obj.layout46 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout46:setParent(obj.layout44);
+    obj.layout46.grid.width = 6;
+    obj.layout46.grid["auto-height"] = true;
+    obj.layout46.grid["min-height"] = 300;
+    obj.layout46.grid["margin-bottom"] = 30;
+    obj.layout46:setName("layout46");
+    obj.layout46.grid.role = "col";
 
     obj.image3 = GUI.fromHandle(_obj_newObject("image"));
-    obj.image3:setParent(obj.layout48);
+    obj.image3:setParent(obj.layout46);
     obj.image3:setSRC("/img/xerem_profile.png");
     obj.image3:setAlign("client");
     obj.image3:setStyle("proportional");
     obj.image3:setName("image3");
 
-    obj.layout49 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout49:setParent(obj.layout46);
-    obj.layout49.grid.width = 6;
-    obj.layout49:setName("layout49");
-    obj.layout49.grid.role = "col";
-    obj.layout49.grid["auto-height"] = true;
-
-    obj.button12 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button12:setParent(obj.layout49);
-    obj.button12:setText(" Red Star por Eric S.A. Araújo (Hobbit)");
-    obj.button12.grid.role = "col";
-    obj.button12.grid.width = 6;
-    obj.button12.grid["break-line-after"] = true;
-    obj.button12.grid["margin-bottom"] = 5;
-    obj.button12:setName("button12");
+    obj.layout47 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout47:setParent(obj.layout44);
+    obj.layout47.grid.width = 6;
+    obj.layout47:setName("layout47");
+    obj.layout47.grid.role = "col";
+    obj.layout47.grid["auto-height"] = true;
 
     obj.button13 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button13:setParent(obj.layout49);
-    obj.button13:setText("Ficha - Xerém Destrói O RPG de Mesa");
+    obj.button13:setParent(obj.layout47);
+    obj.button13:setText(" Red Star por Eric S.A. Araújo (Hobbit)");
     obj.button13.grid.role = "col";
     obj.button13.grid.width = 6;
+    obj.button13.grid["break-line-after"] = true;
+    obj.button13.grid["margin-bottom"] = 5;
     obj.button13:setName("button13");
+
+    obj.button14 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button14:setParent(obj.layout47);
+    obj.button14:setText("Ficha - Xerém Destrói O RPG de Mesa");
+    obj.button14.grid.role = "col";
+    obj.button14.grid.width = 6;
+    obj.button14:setName("button14");
 
     obj._e_event0 = obj.button1:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Esportes', carVal or 1, sheet.valesp , dif);
+                                                    rolarTeste('Esportes', carVal or 1, sheet.valesp or 0, dif);
                                                 end
                                             );
                                         else
@@ -3763,33 +2754,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event1 = obj.button2:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Combate Desarmado', carVal or 1, sheet.valcombDes , dif);
+                                                    rolarTeste('Combate Desarmado', carVal or 1, sheet.valcombDes or 0, dif);
                                                 end
                                             );
                                         else
@@ -3801,33 +2792,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event2 = obj.button3:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Armas Brancas', carVal or 1, sheet.valarmBra , dif);
+                                                    rolarTeste('Armas Brancas', carVal or 1, sheet.valarmBra or 0, dif);
                                                 end
                                             );
                                         else
@@ -3839,33 +2830,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event3 = obj.button4:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Armas de Fogo', carVal or 1, sheet.valarmFog , dif);
+                                                    rolarTeste('Armas de Fogo', carVal or 1, sheet.valarmFog or 0, dif);
                                                 end
                                             );
                                         else
@@ -3877,33 +2868,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event4 = obj.button5:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Ciências', carVal or 1, sheet.valcie , dif);
+                                                    rolarTeste('Ciências', carVal or 1, sheet.valcie or 0, dif);
                                                 end
                                             );
                                         else
@@ -3915,33 +2906,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event5 = obj.button6:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Crime', carVal or 1, sheet.valcri , dif);
+                                                    rolarTeste('Crime', carVal or 1, sheet.valcri or 0, dif);
                                                 end
                                             );
                                         else
@@ -3953,33 +2944,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event6 = obj.button7:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Investigação', carVal or 1, sheet.valinv , dif);
+                                                    rolarTeste('Investigação', carVal or 1, sheet.valinv or 0, dif);
                                                 end
                                             );
                                         else
@@ -3991,33 +2982,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event7 = obj.button8:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Maquinário', carVal or 1, sheet.valmaq , dif);
+                                                    rolarTeste('Maquinário', carVal or 1, sheet.valmaq or 0, dif);
                                                 end
                                             );
                                         else
@@ -4029,33 +3020,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event8 = obj.button9:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Manipulação', carVal or 1, sheet.valman , dif);
+                                                    rolarTeste('Manipulação', carVal or 1, sheet.valman or 0, dif);
                                                 end
                                             );
                                         else
@@ -4067,33 +3058,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event9 = obj.button10:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Medicina', carVal or 1, sheet.valmed , dif);
+                                                    rolarTeste('Medicina', carVal or 1, sheet.valmed or 0, dif);
                                                 end
                                             );
                                         else
@@ -4105,33 +3096,33 @@ local function constructNew_frmFichaRedStar()
     obj._e_event10 = obj.button11:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
-                                    function(selected, seletedIndex, selectedText)
+                                    function(selected, seletedIndex, car)
                                         if selected then
-                                            local car = (caracteristicas[selectedText]);
+                                        
                                             local carVal = 1
             
-                                            if car == 'valfor' then
+                                            if car == 'Força' then
                                                 carVal = sheet.valfor
                                             end
-                                            if car == 'valcon' then
+                                            if car == 'Constituição' then
                                                 carVal = sheet.valcon
                                             end
-                                            if car == 'valdes' then
+                                            if car == 'Destreza' then
                                                 carVal = sheet.valdes
                                             end
-                                            if car == 'valper' then
+                                            if car == 'Percepção' then
                                                 carVal = sheet.valper
                                             end
-                                            if car == 'valint' then
+                                            if car == 'Inteligência' then
                                                 carVal = sheet.valint
                                             end
-                                            if car == 'valfdv' then
+                                            if car == 'Força de Vontade' then
                                                 carVal = sheet.valfdv
                                             end
                                             
                                             Dialogs.inputQuery("Dificuldade", "Insira a dificuldade", '+1',
                                                 function(dif)
-                                                    rolarTeste('Sobrevivência', carVal or 1, sheet.valsob , dif);
+                                                    rolarTeste('Sobrevivência', carVal or 1, sheet.valsob or 0, dif);
                                                 end
                                             );
                                         else
@@ -4140,12 +3131,30 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event11 = obj.button13:addEventListener("onClick",
+    obj._e_event11 = obj.button12:addEventListener("onClick",
+        function (event)
+            self.rclVantDesv:append();
+        end);
+
+    obj._e_event12 = obj.addArma:addEventListener("onClick",
+        function (event)
+            self.rclArmas:append();
+        end);
+
+    obj._e_event13 = obj.addArmadura:addEventListener("onClick",
+        function (event)
+            self.rclArmadura:append();
+        end);
+
+    obj._e_event14 = obj.button14:addEventListener("onClick",
         function (event)
             GUI.openInBrowser('https://open.spotify.com/show/0cO3SWlsJw7nfoRePJjyzV?si=4e8678590abf405c')
         end);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event14);
+        __o_rrpgObjs.removeEventListenerById(self._e_event13);
+        __o_rrpgObjs.removeEventListenerById(self._e_event12);
         __o_rrpgObjs.removeEventListenerById(self._e_event11);
         __o_rrpgObjs.removeEventListenerById(self._e_event10);
         __o_rrpgObjs.removeEventListenerById(self._e_event9);
@@ -4169,38 +3178,49 @@ local function constructNew_frmFichaRedStar()
           self:setNodeDatabase(nil);
         end;
 
-        if self.edit77 ~= nil then self.edit77:destroy(); self.edit77 = nil; end;
-        if self.edit47 ~= nil then self.edit47:destroy(); self.edit47 = nil; end;
+        if self.layout8 ~= nil then self.layout8:destroy(); self.layout8 = nil; end;
+        if self.radioButton119 ~= nil then self.radioButton119:destroy(); self.radioButton119 = nil; end;
+        if self.radioButton43 ~= nil then self.radioButton43:destroy(); self.radioButton43 = nil; end;
+        if self.layout11 ~= nil then self.layout11:destroy(); self.layout11 = nil; end;
+        if self.label37 ~= nil then self.label37:destroy(); self.label37 = nil; end;
         if self.radioButton29 ~= nil then self.radioButton29:destroy(); self.radioButton29 = nil; end;
+        if self.layout3 ~= nil then self.layout3:destroy(); self.layout3 = nil; end;
+        if self.radioButton69 ~= nil then self.radioButton69:destroy(); self.radioButton69 = nil; end;
         if self.radioButton107 ~= nil then self.radioButton107:destroy(); self.radioButton107 = nil; end;
-        if self.edit70 ~= nil then self.edit70:destroy(); self.edit70 = nil; end;
-        if self.edit42 ~= nil then self.edit42:destroy(); self.edit42 = nil; end;
+        if self.layout43 ~= nil then self.layout43:destroy(); self.layout43 = nil; end;
         if self.radioButton55 ~= nil then self.radioButton55:destroy(); self.radioButton55 = nil; end;
-        if self.horzLine60 ~= nil then self.horzLine60:destroy(); self.horzLine60 = nil; end;
-        if self.horzLine52 ~= nil then self.horzLine52:destroy(); self.horzLine52 = nil; end;
-        if self.edit49 ~= nil then self.edit49:destroy(); self.edit49 = nil; end;
+        if self.button11 ~= nil then self.button11:destroy(); self.button11 = nil; end;
+        if self.rclArmas ~= nil then self.rclArmas:destroy(); self.rclArmas = nil; end;
+        if self.radioButton66 ~= nil then self.radioButton66:destroy(); self.radioButton66 = nil; end;
+        if self.radioButton10 ~= nil then self.radioButton10:destroy(); self.radioButton10 = nil; end;
+        if self.layout46 ~= nil then self.layout46:destroy(); self.layout46 = nil; end;
         if self.radioButton50 ~= nil then self.radioButton50:destroy(); self.radioButton50 = nil; end;
-        if self.radioButton132 ~= nil then self.radioButton132:destroy(); self.radioButton132 = nil; end;
+        if self.horzLine12 ~= nil then self.horzLine12:destroy(); self.horzLine12 = nil; end;
+        if self.radioButton8 ~= nil then self.radioButton8:destroy(); self.radioButton8 = nil; end;
         if self.radioButton23 ~= nil then self.radioButton23:destroy(); self.radioButton23 = nil; end;
-        if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
-        if self.horzLine65 ~= nil then self.horzLine65:destroy(); self.horzLine65 = nil; end;
-        if self.horzLine26 ~= nil then self.horzLine26:destroy(); self.horzLine26 = nil; end;
-        if self.horzLine59 ~= nil then self.horzLine59:destroy(); self.horzLine59 = nil; end;
+        if self.radioButton132 ~= nil then self.radioButton132:destroy(); self.radioButton132 = nil; end;
+        if self.radioButton63 ~= nil then self.radioButton63:destroy(); self.radioButton63 = nil; end;
+        if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
+        if self.label22 ~= nil then self.label22:destroy(); self.label22 = nil; end;
         if self.horzLine9 ~= nil then self.horzLine9:destroy(); self.horzLine9 = nil; end;
         if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
-        if self.edit65 ~= nil then self.edit65:destroy(); self.edit65 = nil; end;
         if self.layout37 ~= nil then self.layout37:destroy(); self.layout37 = nil; end;
-        if self.horzLine23 ~= nil then self.horzLine23:destroy(); self.horzLine23 = nil; end;
+        if self.radioButton86 ~= nil then self.radioButton86:destroy(); self.radioButton86 = nil; end;
+        if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
+        if self.radioButton121 ~= nil then self.radioButton121:destroy(); self.radioButton121 = nil; end;
+        if self.label29 ~= nil then self.label29:destroy(); self.label29 = nil; end;
         if self.horzLine6 ~= nil then self.horzLine6:destroy(); self.horzLine6 = nil; end;
-        if self.edit60 ~= nil then self.edit60:destroy(); self.edit60 = nil; end;
-        if self.horzLine86 ~= nil then self.horzLine86:destroy(); self.horzLine86 = nil; end;
+        if self.radioButton6 ~= nil then self.radioButton6:destroy(); self.radioButton6 = nil; end;
+        if self.layout25 ~= nil then self.layout25:destroy(); self.layout25 = nil; end;
+        if self.radioButton124 ~= nil then self.radioButton124:destroy(); self.radioButton124 = nil; end;
+        if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
         if self.horzLine3 ~= nil then self.horzLine3:destroy(); self.horzLine3 = nil; end;
         if self.label39 ~= nil then self.label39:destroy(); self.label39 = nil; end;
         if self.edit3 ~= nil then self.edit3:destroy(); self.edit3 = nil; end;
+        if self.radioButton76 ~= nil then self.radioButton76:destroy(); self.radioButton76 = nil; end;
         if self.radioButton91 ~= nil then self.radioButton91:destroy(); self.radioButton91 = nil; end;
+        if self.layout20 ~= nil then self.layout20:destroy(); self.layout20 = nil; end;
         if self.button8 ~= nil then self.button8:destroy(); self.button8 = nil; end;
-        if self.horzLine70 ~= nil then self.horzLine70:destroy(); self.horzLine70 = nil; end;
-        if self.horzLine83 ~= nil then self.horzLine83:destroy(); self.horzLine83 = nil; end;
         if self.radioButton110 ~= nil then self.radioButton110:destroy(); self.radioButton110 = nil; end;
         if self.tab1 ~= nil then self.tab1:destroy(); self.tab1 = nil; end;
         if self.radioButton35 ~= nil then self.radioButton35:destroy(); self.radioButton35 = nil; end;
@@ -4209,83 +3229,116 @@ local function constructNew_frmFichaRedStar()
         if self.edit6 ~= nil then self.edit6:destroy(); self.edit6 = nil; end;
         if self.button3 ~= nil then self.button3:destroy(); self.button3 = nil; end;
         if self.radioButton94 ~= nil then self.radioButton94:destroy(); self.radioButton94 = nil; end;
-        if self.horzLine36 ~= nil then self.horzLine36:destroy(); self.horzLine36 = nil; end;
+        if self.rclVantDesv ~= nil then self.rclVantDesv:destroy(); self.rclVantDesv = nil; end;
         if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
-        if self.horzLine88 ~= nil then self.horzLine88:destroy(); self.horzLine88 = nil; end;
+        if self.radioButton108 ~= nil then self.radioButton108:destroy(); self.radioButton108 = nil; end;
         if self.radioButton115 ~= nil then self.radioButton115:destroy(); self.radioButton115 = nil; end;
         if self.label40 ~= nil then self.label40:destroy(); self.label40 = nil; end;
         if self.radioButton38 ~= nil then self.radioButton38:destroy(); self.radioButton38 = nil; end;
         if self.label9 ~= nil then self.label9:destroy(); self.label9 = nil; end;
         if self.layout15 ~= nil then self.layout15:destroy(); self.layout15 = nil; end;
         if self.radioButton47 ~= nil then self.radioButton47:destroy(); self.radioButton47 = nil; end;
+        if self.radioButton78 ~= nil then self.radioButton78:destroy(); self.radioButton78 = nil; end;
         if self.button6 ~= nil then self.button6:destroy(); self.button6 = nil; end;
-        if self.horzLine31 ~= nil then self.horzLine31:destroy(); self.horzLine31 = nil; end;
         if self.label33 ~= nil then self.label33:destroy(); self.label33 = nil; end;
+        if self.Geral ~= nil then self.Geral:destroy(); self.Geral = nil; end;
         if self.layout7 ~= nil then self.layout7:destroy(); self.layout7 = nil; end;
+        if self.radioButton103 ~= nil then self.radioButton103:destroy(); self.radioButton103 = nil; end;
         if self.radioButton40 ~= nil then self.radioButton40:destroy(); self.radioButton40 = nil; end;
-        if self.edit31 ~= nil then self.edit31:destroy(); self.edit31 = nil; end;
         if self.layout2 ~= nil then self.layout2:destroy(); self.layout2 = nil; end;
+        if self.radioButton106 ~= nil then self.radioButton106:destroy(); self.radioButton106 = nil; end;
+        if self.rclArmadura ~= nil then self.rclArmadura:destroy(); self.rclArmadura = nil; end;
         if self.layout42 ~= nil then self.layout42:destroy(); self.layout42 = nil; end;
-        if self.horzLine16 ~= nil then self.horzLine16:destroy(); self.horzLine16 = nil; end;
+        if self.radioButton54 ~= nil then self.radioButton54:destroy(); self.radioButton54 = nil; end;
         if self.label7 ~= nil then self.label7:destroy(); self.label7 = nil; end;
+        if self.horzLine16 ~= nil then self.horzLine16:destroy(); self.horzLine16 = nil; end;
         if self.radioButton67 ~= nil then self.radioButton67:destroy(); self.radioButton67 = nil; end;
+        if self.tabControl1 ~= nil then self.tabControl1:destroy(); self.tabControl1 = nil; end;
         if self.radioButton17 ~= nil then self.radioButton17:destroy(); self.radioButton17 = nil; end;
         if self.layout45 ~= nil then self.layout45:destroy(); self.layout45 = nil; end;
         if self.edit10 ~= nil then self.edit10:destroy(); self.edit10 = nil; end;
         if self.radioButton9 ~= nil then self.radioButton9:destroy(); self.radioButton9 = nil; end;
-        if self.edit85 ~= nil then self.edit85:destroy(); self.edit85 = nil; end;
+        if self.radioButton24 ~= nil then self.radioButton24:destroy(); self.radioButton24 = nil; end;
+        if self.radioButton133 ~= nil then self.radioButton133:destroy(); self.radioButton133 = nil; end;
         if self.radioButton82 ~= nil then self.radioButton82:destroy(); self.radioButton82 = nil; end;
         if self.label11 ~= nil then self.label11:destroy(); self.label11 = nil; end;
         if self.label25 ~= nil then self.label25:destroy(); self.label25 = nil; end;
-        if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
-        if self.horzLine18 ~= nil then self.horzLine18:destroy(); self.horzLine18 = nil; end;
-        if self.layout48 ~= nil then self.layout48:destroy(); self.layout48 = nil; end;
         if self.radioButton2 ~= nil then self.radioButton2:destroy(); self.radioButton2 = nil; end;
+        if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
+        if self.layout30 ~= nil then self.layout30:destroy(); self.layout30 = nil; end;
         if self.radioButton87 ~= nil then self.radioButton87:destroy(); self.radioButton87 = nil; end;
         if self.radioButton120 ~= nil then self.radioButton120:destroy(); self.radioButton120 = nil; end;
         if self.label28 ~= nil then self.label28:destroy(); self.label28 = nil; end;
-        if self.edit57 ~= nil then self.edit57:destroy(); self.edit57 = nil; end;
+        if self.horzLine7 ~= nil then self.horzLine7:destroy(); self.horzLine7 = nil; end;
         if self.radioButton7 ~= nil then self.radioButton7:destroy(); self.radioButton7 = nil; end;
         if self.layout24 ~= nil then self.layout24:destroy(); self.layout24 = nil; end;
         if self.radioButton88 ~= nil then self.radioButton88:destroy(); self.radioButton88 = nil; end;
         if self.scrollBox1 ~= nil then self.scrollBox1:destroy(); self.scrollBox1 = nil; end;
         if self.radioButton127 ~= nil then self.radioButton127:destroy(); self.radioButton127 = nil; end;
         if self.rectangle2 ~= nil then self.rectangle2:destroy(); self.rectangle2 = nil; end;
+        if self.radioButton31 ~= nil then self.radioButton31:destroy(); self.radioButton31 = nil; end;
+        if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
         if self.radioButton71 ~= nil then self.radioButton71:destroy(); self.radioButton71 = nil; end;
+        if self.radioButton90 ~= nil then self.radioButton90:destroy(); self.radioButton90 = nil; end;
         if self.layout23 ~= nil then self.layout23:destroy(); self.layout23 = nil; end;
-        if self.horzLine44 ~= nil then self.horzLine44:destroy(); self.horzLine44 = nil; end;
-        if self.edit78 ~= nil then self.edit78:destroy(); self.edit78 = nil; end;
+        if self.radioButton111 ~= nil then self.radioButton111:destroy(); self.radioButton111 = nil; end;
+        if self.label44 ~= nil then self.label44:destroy(); self.label44 = nil; end;
+        if self.radioButton34 ~= nil then self.radioButton34:destroy(); self.radioButton34 = nil; end;
+        if self.layout19 ~= nil then self.layout19:destroy(); self.layout19 = nil; end;
+        if self.button2 ~= nil then self.button2:destroy(); self.button2 = nil; end;
+        if self.radioButton44 ~= nil then self.radioButton44:destroy(); self.radioButton44 = nil; end;
+        if self.label8 ~= nil then self.label8:destroy(); self.label8 = nil; end;
+        if self.layout12 ~= nil then self.layout12:destroy(); self.layout12 = nil; end;
+        if self.label34 ~= nil then self.label34:destroy(); self.label34 = nil; end;
+        if self.button5 ~= nil then self.button5:destroy(); self.button5 = nil; end;
+        if self.layout6 ~= nil then self.layout6:destroy(); self.layout6 = nil; end;
         if self.radioButton102 ~= nil then self.radioButton102:destroy(); self.radioButton102 = nil; end;
-        if self.horzLine68 ~= nil then self.horzLine68:destroy(); self.horzLine68 = nil; end;
-        if self.edit75 ~= nil then self.edit75:destroy(); self.edit75 = nil; end;
-        if self.edit41 ~= nil then self.edit41:destroy(); self.edit41 = nil; end;
+        if self.radioButton41 ~= nil then self.radioButton41:destroy(); self.radioButton41 = nil; end;
+        if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
+        if self.button12 ~= nil then self.button12:destroy(); self.button12 = nil; end;
+        if self.layout1 ~= nil then self.layout1:destroy(); self.layout1 = nil; end;
         if self.radioButton105 ~= nil then self.radioButton105:destroy(); self.radioButton105 = nil; end;
-        if self.horzLine51 ~= nil then self.horzLine51:destroy(); self.horzLine51 = nil; end;
+        if self.radioButton13 ~= nil then self.radioButton13:destroy(); self.radioButton13 = nil; end;
+        if self.label18 ~= nil then self.label18:destroy(); self.label18 = nil; end;
+        if self.layout41 ~= nil then self.layout41:destroy(); self.layout41 = nil; end;
         if self.radioButton53 ~= nil then self.radioButton53:destroy(); self.radioButton53 = nil; end;
+        if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
+        if self.horzLine11 ~= nil then self.horzLine11:destroy(); self.horzLine11 = nil; end;
         if self.radioButton20 ~= nil then self.radioButton20:destroy(); self.radioButton20 = nil; end;
-        if self.edit22 ~= nil then self.edit22:destroy(); self.edit22 = nil; end;
-        if self.horzLine66 ~= nil then self.horzLine66:destroy(); self.horzLine66 = nil; end;
-        if self.horzLine54 ~= nil then self.horzLine54:destroy(); self.horzLine54 = nil; end;
+        if self.radioButton60 ~= nil then self.radioButton60:destroy(); self.radioButton60 = nil; end;
+        if self.radioButton16 ~= nil then self.radioButton16:destroy(); self.radioButton16 = nil; end;
+        if self.layout44 ~= nil then self.layout44:destroy(); self.layout44 = nil; end;
+        if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
+        if self.radioButton129 ~= nil then self.radioButton129:destroy(); self.radioButton129 = nil; end;
+        if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
+        if self.addArmadura ~= nil then self.addArmadura:destroy(); self.addArmadura = nil; end;
         if self.radioButton134 ~= nil then self.radioButton134:destroy(); self.radioButton134 = nil; end;
         if self.radioButton25 ~= nil then self.radioButton25:destroy(); self.radioButton25 = nil; end;
-        if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
         if self.layout34 ~= nil then self.layout34:destroy(); self.layout34 = nil; end;
-        if self.horzLine24 ~= nil then self.horzLine24:destroy(); self.horzLine24 = nil; end;
+        if self.radioButton83 ~= nil then self.radioButton83:destroy(); self.radioButton83 = nil; end;
+        if self.radioButton19 ~= nil then self.radioButton19:destroy(); self.radioButton19 = nil; end;
+        if self.label16 ~= nil then self.label16:destroy(); self.label16 = nil; end;
+        if self.label24 ~= nil then self.label24:destroy(); self.label24 = nil; end;
         if self.radioButton59 ~= nil then self.radioButton59:destroy(); self.radioButton59 = nil; end;
+        if self.radioButton3 ~= nil then self.radioButton3:destroy(); self.radioButton3 = nil; end;
         if self.radioButton99 ~= nil then self.radioButton99:destroy(); self.radioButton99 = nil; end;
-        if self.edit28 ~= nil then self.edit28:destroy(); self.edit28 = nil; end;
-        if self.edit63 ~= nil then self.edit63:destroy(); self.edit63 = nil; end;
         if self.layout31 ~= nil then self.layout31:destroy(); self.layout31 = nil; end;
-        if self.horzLine21 ~= nil then self.horzLine21:destroy(); self.horzLine21 = nil; end;
+        if self.radioButton84 ~= nil then self.radioButton84:destroy(); self.radioButton84 = nil; end;
         if self.Equipamento ~= nil then self.Equipamento:destroy(); self.Equipamento = nil; end;
-        if self.horzLine73 ~= nil then self.horzLine73:destroy(); self.horzLine73 = nil; end;
-        if self.horzLine80 ~= nil then self.horzLine80:destroy(); self.horzLine80 = nil; end;
-        if self.tab2 ~= nil then self.tab2:destroy(); self.tab2 = nil; end;
+        if self.radioButton123 ~= nil then self.radioButton123:destroy(); self.radioButton123 = nil; end;
+        if self.textEditor2 ~= nil then self.textEditor2:destroy(); self.textEditor2 = nil; end;
+        if self.radioButton4 ~= nil then self.radioButton4:destroy(); self.radioButton4 = nil; end;
+        if self.radioButton75 ~= nil then self.radioButton75:destroy(); self.radioButton75 = nil; end;
+        if self.layout27 ~= nil then self.layout27:destroy(); self.layout27 = nil; end;
+        if self.radioButton89 ~= nil then self.radioButton89:destroy(); self.radioButton89 = nil; end;
+        if self.radioButton126 ~= nil then self.radioButton126:destroy(); self.radioButton126 = nil; end;
+        if self.rectangle3 ~= nil then self.rectangle3:destroy(); self.rectangle3 = nil; end;
         if self.radioButton30 ~= nil then self.radioButton30:destroy(); self.radioButton30 = nil; end;
+        if self.tab2 ~= nil then self.tab2:destroy(); self.tab2 = nil; end;
         if self.edit5 ~= nil then self.edit5:destroy(); self.edit5 = nil; end;
+        if self.radioButton70 ~= nil then self.radioButton70:destroy(); self.radioButton70 = nil; end;
         if self.radioButton97 ~= nil then self.radioButton97:destroy(); self.radioButton97 = nil; end;
-        if self.edit69 ~= nil then self.edit69:destroy(); self.edit69 = nil; end;
-        if self.horzLine76 ~= nil then self.horzLine76:destroy(); self.horzLine76 = nil; end;
+        if self.layout22 ~= nil then self.layout22:destroy(); self.layout22 = nil; end;
         if self.image2 ~= nil then self.image2:destroy(); self.image2 = nil; end;
         if self.radioButton116 ~= nil then self.radioButton116:destroy(); self.radioButton116 = nil; end;
         if self.label43 ~= nil then self.label43:destroy(); self.label43 = nil; end;
@@ -4294,264 +3347,60 @@ local function constructNew_frmFichaRedStar()
         if self.layout16 ~= nil then self.layout16:destroy(); self.layout16 = nil; end;
         if self.label30 ~= nil then self.label30:destroy(); self.label30 = nil; end;
         if self.button1 ~= nil then self.button1:destroy(); self.button1 = nil; end;
-        if self.horzLine34 ~= nil then self.horzLine34:destroy(); self.horzLine34 = nil; end;
-        if self.edit39 ~= nil then self.edit39:destroy(); self.edit39 = nil; end;
-        if self.horzLine79 ~= nil then self.horzLine79:destroy(); self.horzLine79 = nil; end;
+        if self.layout29 ~= nil then self.layout29:destroy(); self.layout29 = nil; end;
         if self.radioButton45 ~= nil then self.radioButton45:destroy(); self.radioButton45 = nil; end;
         if self.layout13 ~= nil then self.layout13:destroy(); self.layout13 = nil; end;
         if self.label35 ~= nil then self.label35:destroy(); self.label35 = nil; end;
         if self.button4 ~= nil then self.button4:destroy(); self.button4 = nil; end;
-        if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
         if self.layout5 ~= nil then self.layout5:destroy(); self.layout5 = nil; end;
-        if self.horzLine15 ~= nil then self.horzLine15:destroy(); self.horzLine15 = nil; end;
+        if self.radioButton101 ~= nil then self.radioButton101:destroy(); self.radioButton101 = nil; end;
+        if self.radioButton57 ~= nil then self.radioButton57:destroy(); self.radioButton57 = nil; end;
         if self.label2 ~= nil then self.label2:destroy(); self.label2 = nil; end;
-        if self.edit18 ~= nil then self.edit18:destroy(); self.edit18 = nil; end;
+        if self.horzLine15 ~= nil then self.horzLine15:destroy(); self.horzLine15 = nil; end;
+        if self.addArma ~= nil then self.addArma:destroy(); self.addArma = nil; end;
         if self.button13 ~= nil then self.button13:destroy(); self.button13 = nil; end;
-        if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
+        if self.radioButton104 ~= nil then self.radioButton104:destroy(); self.radioButton104 = nil; end;
         if self.radioButton64 ~= nil then self.radioButton64:destroy(); self.radioButton64 = nil; end;
         if self.radioButton12 ~= nil then self.radioButton12:destroy(); self.radioButton12 = nil; end;
         if self.label19 ~= nil then self.label19:destroy(); self.label19 = nil; end;
         if self.layout40 ~= nil then self.layout40:destroy(); self.layout40 = nil; end;
-        if self.horzLine10 ~= nil then self.horzLine10:destroy(); self.horzLine10 = nil; end;
+        if self.radioButton52 ~= nil then self.radioButton52:destroy(); self.radioButton52 = nil; end;
         if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
-        if self.edit80 ~= nil then self.edit80:destroy(); self.edit80 = nil; end;
+        if self.horzLine10 ~= nil then self.horzLine10:destroy(); self.horzLine10 = nil; end;
+        if self.radioButton130 ~= nil then self.radioButton130:destroy(); self.radioButton130 = nil; end;
+        if self.radioButton21 ~= nil then self.radioButton21:destroy(); self.radioButton21 = nil; end;
+        if self.button14 ~= nil then self.button14:destroy(); self.button14 = nil; end;
+        if self.layout38 ~= nil then self.layout38:destroy(); self.layout38 = nil; end;
         if self.radioButton61 ~= nil then self.radioButton61:destroy(); self.radioButton61 = nil; end;
         if self.radioButton15 ~= nil then self.radioButton15:destroy(); self.radioButton15 = nil; end;
         if self.label12 ~= nil then self.label12:destroy(); self.label12 = nil; end;
         if self.label20 ~= nil then self.label20:destroy(); self.label20 = nil; end;
         if self.radioButton128 ~= nil then self.radioButton128:destroy(); self.radioButton128 = nil; end;
-        if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
+        if self.radioButton135 ~= nil then self.radioButton135:destroy(); self.radioButton135 = nil; end;
+        if self.radioButton26 ~= nil then self.radioButton26:destroy(); self.radioButton26 = nil; end;
+        if self.layout35 ~= nil then self.layout35:destroy(); self.layout35 = nil; end;
         if self.radioButton80 ~= nil then self.radioButton80:destroy(); self.radioButton80 = nil; end;
         if self.radioButton18 ~= nil then self.radioButton18:destroy(); self.radioButton18 = nil; end;
         if self.label17 ~= nil then self.label17:destroy(); self.label17 = nil; end;
         if self.label27 ~= nil then self.label27:destroy(); self.label27 = nil; end;
-        if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
-        if self.edit54 ~= nil then self.edit54:destroy(); self.edit54 = nil; end;
-        if self.radioButton85 ~= nil then self.radioButton85:destroy(); self.radioButton85 = nil; end;
-        if self.radioButton122 ~= nil then self.radioButton122:destroy(); self.radioButton122 = nil; end;
-        if self.edit51 ~= nil then self.edit51:destroy(); self.edit51 = nil; end;
-        if self.radioButton5 ~= nil then self.radioButton5:destroy(); self.radioButton5 = nil; end;
-        if self.radioButton74 ~= nil then self.radioButton74:destroy(); self.radioButton74 = nil; end;
-        if self.layout26 ~= nil then self.layout26:destroy(); self.layout26 = nil; end;
-        if self.horzLine41 ~= nil then self.horzLine41:destroy(); self.horzLine41 = nil; end;
-        if self.radioButton73 ~= nil then self.radioButton73:destroy(); self.radioButton73 = nil; end;
-        if self.horzLine46 ~= nil then self.horzLine46:destroy(); self.horzLine46 = nil; end;
-        if self.layout28 ~= nil then self.layout28:destroy(); self.layout28 = nil; end;
-        if self.edit76 ~= nil then self.edit76:destroy(); self.edit76 = nil; end;
-        if self.edit44 ~= nil then self.edit44:destroy(); self.edit44 = nil; end;
-        if self.radioButton28 ~= nil then self.radioButton28:destroy(); self.radioButton28 = nil; end;
-        if self.radioButton100 ~= nil then self.radioButton100:destroy(); self.radioButton100 = nil; end;
-        if self.edit73 ~= nil then self.edit73:destroy(); self.edit73 = nil; end;
-        if self.edit43 ~= nil then self.edit43:destroy(); self.edit43 = nil; end;
-        if self.radioButton56 ~= nil then self.radioButton56:destroy(); self.radioButton56 = nil; end;
-        if self.horzLine63 ~= nil then self.horzLine63:destroy(); self.horzLine63 = nil; end;
-        if self.horzLine53 ~= nil then self.horzLine53:destroy(); self.horzLine53 = nil; end;
-        if self.radioButton51 ~= nil then self.radioButton51:destroy(); self.radioButton51 = nil; end;
-        if self.radioButton131 ~= nil then self.radioButton131:destroy(); self.radioButton131 = nil; end;
-        if self.radioButton22 ~= nil then self.radioButton22:destroy(); self.radioButton22 = nil; end;
-        if self.edit20 ~= nil then self.edit20:destroy(); self.edit20 = nil; end;
-        if self.layout39 ~= nil then self.layout39:destroy(); self.layout39 = nil; end;
-        if self.horzLine64 ~= nil then self.horzLine64:destroy(); self.horzLine64 = nil; end;
-        if self.horzLine29 ~= nil then self.horzLine29:destroy(); self.horzLine29 = nil; end;
-        if self.horzLine56 ~= nil then self.horzLine56:destroy(); self.horzLine56 = nil; end;
-        if self.horzLine8 ~= nil then self.horzLine8:destroy(); self.horzLine8 = nil; end;
-        if self.radioButton136 ~= nil then self.radioButton136:destroy(); self.radioButton136 = nil; end;
-        if self.radioButton27 ~= nil then self.radioButton27:destroy(); self.radioButton27 = nil; end;
-        if self.edit66 ~= nil then self.edit66:destroy(); self.edit66 = nil; end;
-        if self.layout36 ~= nil then self.layout36:destroy(); self.layout36 = nil; end;
-        if self.horzLine22 ~= nil then self.horzLine22:destroy(); self.horzLine22 = nil; end;
-        if self.horzLine5 ~= nil then self.horzLine5:destroy(); self.horzLine5 = nil; end;
-        if self.edit61 ~= nil then self.edit61:destroy(); self.edit61 = nil; end;
-        if self.layout33 ~= nil then self.layout33:destroy(); self.layout33 = nil; end;
-        if self.horzLine85 ~= nil then self.horzLine85:destroy(); self.horzLine85 = nil; end;
-        if self.horzLine2 ~= nil then self.horzLine2:destroy(); self.horzLine2 = nil; end;
-        if self.label38 ~= nil then self.label38:destroy(); self.label38 = nil; end;
-        if self.radioButton92 ~= nil then self.radioButton92:destroy(); self.radioButton92 = nil; end;
-        if self.button9 ~= nil then self.button9:destroy(); self.button9 = nil; end;
-        if self.horzLine71 ~= nil then self.horzLine71:destroy(); self.horzLine71 = nil; end;
-        if self.horzLine90 ~= nil then self.horzLine90:destroy(); self.horzLine90 = nil; end;
-        if self.horzLine82 ~= nil then self.horzLine82:destroy(); self.horzLine82 = nil; end;
-        if self.radioButton113 ~= nil then self.radioButton113:destroy(); self.radioButton113 = nil; end;
-        if self.label46 ~= nil then self.label46:destroy(); self.label46 = nil; end;
-        if self.radioButton32 ~= nil then self.radioButton32:destroy(); self.radioButton32 = nil; end;
-        if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
-        if self.radioButton95 ~= nil then self.radioButton95:destroy(); self.radioButton95 = nil; end;
-        if self.horzLine37 ~= nil then self.horzLine37:destroy(); self.horzLine37 = nil; end;
-        if self.horzLine74 ~= nil then self.horzLine74:destroy(); self.horzLine74 = nil; end;
-        if self.radioButton114 ~= nil then self.radioButton114:destroy(); self.radioButton114 = nil; end;
-        if self.label41 ~= nil then self.label41:destroy(); self.label41 = nil; end;
-        if self.radioButton39 ~= nil then self.radioButton39:destroy(); self.radioButton39 = nil; end;
-        if self.radioButton46 ~= nil then self.radioButton46:destroy(); self.radioButton46 = nil; end;
-        if self.layout14 ~= nil then self.layout14:destroy(); self.layout14 = nil; end;
-        if self.label32 ~= nil then self.label32:destroy(); self.label32 = nil; end;
-        if self.button7 ~= nil then self.button7:destroy(); self.button7 = nil; end;
-        if self.horzLine32 ~= nil then self.horzLine32:destroy(); self.horzLine32 = nil; end;
-        if self.layout8 ~= nil then self.layout8:destroy(); self.layout8 = nil; end;
-        if self.radioButton119 ~= nil then self.radioButton119:destroy(); self.radioButton119 = nil; end;
-        if self.radioButton43 ~= nil then self.radioButton43:destroy(); self.radioButton43 = nil; end;
-        if self.layout11 ~= nil then self.layout11:destroy(); self.layout11 = nil; end;
-        if self.label37 ~= nil then self.label37:destroy(); self.label37 = nil; end;
-        if self.edit30 ~= nil then self.edit30:destroy(); self.edit30 = nil; end;
-        if self.layout3 ~= nil then self.layout3:destroy(); self.layout3 = nil; end;
-        if self.radioButton69 ~= nil then self.radioButton69:destroy(); self.radioButton69 = nil; end;
-        if self.layout43 ~= nil then self.layout43:destroy(); self.layout43 = nil; end;
-        if self.horzLine17 ~= nil then self.horzLine17:destroy(); self.horzLine17 = nil; end;
-        if self.button11 ~= nil then self.button11:destroy(); self.button11 = nil; end;
-        if self.edit35 ~= nil then self.edit35:destroy(); self.edit35 = nil; end;
-        if self.horzLine38 ~= nil then self.horzLine38:destroy(); self.horzLine38 = nil; end;
-        if self.radioButton66 ~= nil then self.radioButton66:destroy(); self.radioButton66 = nil; end;
-        if self.radioButton10 ~= nil then self.radioButton10:destroy(); self.radioButton10 = nil; end;
-        if self.layout46 ~= nil then self.layout46:destroy(); self.layout46 = nil; end;
-        if self.horzLine12 ~= nil then self.horzLine12:destroy(); self.horzLine12 = nil; end;
-        if self.radioButton8 ~= nil then self.radioButton8:destroy(); self.radioButton8 = nil; end;
-        if self.edit82 ~= nil then self.edit82:destroy(); self.edit82 = nil; end;
-        if self.radioButton63 ~= nil then self.radioButton63:destroy(); self.radioButton63 = nil; end;
-        if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
-        if self.label22 ~= nil then self.label22:destroy(); self.label22 = nil; end;
-        if self.edit14 ~= nil then self.edit14:destroy(); self.edit14 = nil; end;
-        if self.horzLine19 ~= nil then self.horzLine19:destroy(); self.horzLine19 = nil; end;
-        if self.edit59 ~= nil then self.edit59:destroy(); self.edit59 = nil; end;
-        if self.layout49 ~= nil then self.layout49:destroy(); self.layout49 = nil; end;
-        if self.radioButton86 ~= nil then self.radioButton86:destroy(); self.radioButton86 = nil; end;
-        if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
-        if self.radioButton121 ~= nil then self.radioButton121:destroy(); self.radioButton121 = nil; end;
-        if self.label29 ~= nil then self.label29:destroy(); self.label29 = nil; end;
-        if self.horzLine49 ~= nil then self.horzLine49:destroy(); self.horzLine49 = nil; end;
-        if self.edit56 ~= nil then self.edit56:destroy(); self.edit56 = nil; end;
-        if self.radioButton6 ~= nil then self.radioButton6:destroy(); self.radioButton6 = nil; end;
-        if self.layout25 ~= nil then self.layout25:destroy(); self.layout25 = nil; end;
-        if self.radioButton124 ~= nil then self.radioButton124:destroy(); self.radioButton124 = nil; end;
-        if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
-        if self.edit53 ~= nil then self.edit53:destroy(); self.edit53 = nil; end;
-        if self.radioButton76 ~= nil then self.radioButton76:destroy(); self.radioButton76 = nil; end;
-        if self.layout20 ~= nil then self.layout20:destroy(); self.layout20 = nil; end;
-        if self.horzLine43 ~= nil then self.horzLine43:destroy(); self.horzLine43 = nil; end;
-        if self.radioButton108 ~= nil then self.radioButton108:destroy(); self.radioButton108 = nil; end;
-        if self.radioButton78 ~= nil then self.radioButton78:destroy(); self.radioButton78 = nil; end;
-        if self.Geral ~= nil then self.Geral:destroy(); self.Geral = nil; end;
-        if self.radioButton103 ~= nil then self.radioButton103:destroy(); self.radioButton103 = nil; end;
-        if self.edit74 ~= nil then self.edit74:destroy(); self.edit74 = nil; end;
-        if self.edit46 ~= nil then self.edit46:destroy(); self.edit46 = nil; end;
-        if self.radioButton106 ~= nil then self.radioButton106:destroy(); self.radioButton106 = nil; end;
-        if self.edit71 ~= nil then self.edit71:destroy(); self.edit71 = nil; end;
-        if self.radioButton54 ~= nil then self.radioButton54:destroy(); self.radioButton54 = nil; end;
-        if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
-        if self.horzLine61 ~= nil then self.horzLine61:destroy(); self.horzLine61 = nil; end;
-        if self.tabControl1 ~= nil then self.tabControl1:destroy(); self.tabControl1 = nil; end;
-        if self.edit48 ~= nil then self.edit48:destroy(); self.edit48 = nil; end;
-        if self.horzLine55 ~= nil then self.horzLine55:destroy(); self.horzLine55 = nil; end;
-        if self.radioButton133 ~= nil then self.radioButton133:destroy(); self.radioButton133 = nil; end;
-        if self.radioButton24 ~= nil then self.radioButton24:destroy(); self.radioButton24 = nil; end;
-        if self.edit26 ~= nil then self.edit26:destroy(); self.edit26 = nil; end;
-        if self.horzLine27 ~= nil then self.horzLine27:destroy(); self.horzLine27 = nil; end;
-        if self.horzLine58 ~= nil then self.horzLine58:destroy(); self.horzLine58 = nil; end;
-        if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
-        if self.edit29 ~= nil then self.edit29:destroy(); self.edit29 = nil; end;
-        if self.edit64 ~= nil then self.edit64:destroy(); self.edit64 = nil; end;
-        if self.layout30 ~= nil then self.layout30:destroy(); self.layout30 = nil; end;
-        if self.horzLine20 ~= nil then self.horzLine20:destroy(); self.horzLine20 = nil; end;
-        if self.horzLine7 ~= nil then self.horzLine7:destroy(); self.horzLine7 = nil; end;
-        if self.horzLine87 ~= nil then self.horzLine87:destroy(); self.horzLine87 = nil; end;
-        if self.radioButton31 ~= nil then self.radioButton31:destroy(); self.radioButton31 = nil; end;
-        if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
-        if self.radioButton90 ~= nil then self.radioButton90:destroy(); self.radioButton90 = nil; end;
-        if self.horzLine77 ~= nil then self.horzLine77:destroy(); self.horzLine77 = nil; end;
-        if self.radioButton111 ~= nil then self.radioButton111:destroy(); self.radioButton111 = nil; end;
-        if self.label44 ~= nil then self.label44:destroy(); self.label44 = nil; end;
-        if self.radioButton34 ~= nil then self.radioButton34:destroy(); self.radioButton34 = nil; end;
-        if self.layout19 ~= nil then self.layout19:destroy(); self.layout19 = nil; end;
-        if self.button2 ~= nil then self.button2:destroy(); self.button2 = nil; end;
-        if self.horzLine35 ~= nil then self.horzLine35:destroy(); self.horzLine35 = nil; end;
-        if self.edit38 ~= nil then self.edit38:destroy(); self.edit38 = nil; end;
-        if self.horzLine89 ~= nil then self.horzLine89:destroy(); self.horzLine89 = nil; end;
-        if self.radioButton44 ~= nil then self.radioButton44:destroy(); self.radioButton44 = nil; end;
-        if self.label8 ~= nil then self.label8:destroy(); self.label8 = nil; end;
-        if self.layout12 ~= nil then self.layout12:destroy(); self.layout12 = nil; end;
-        if self.label34 ~= nil then self.label34:destroy(); self.label34 = nil; end;
-        if self.button5 ~= nil then self.button5:destroy(); self.button5 = nil; end;
-        if self.horzLine30 ~= nil then self.horzLine30:destroy(); self.horzLine30 = nil; end;
-        if self.layout6 ~= nil then self.layout6:destroy(); self.layout6 = nil; end;
-        if self.radioButton41 ~= nil then self.radioButton41:destroy(); self.radioButton41 = nil; end;
-        if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
-        if self.button12 ~= nil then self.button12:destroy(); self.button12 = nil; end;
-        if self.edit36 ~= nil then self.edit36:destroy(); self.edit36 = nil; end;
-        if self.layout1 ~= nil then self.layout1:destroy(); self.layout1 = nil; end;
-        if self.radioButton13 ~= nil then self.radioButton13:destroy(); self.radioButton13 = nil; end;
-        if self.label18 ~= nil then self.label18:destroy(); self.label18 = nil; end;
-        if self.layout41 ~= nil then self.layout41:destroy(); self.layout41 = nil; end;
-        if self.horzLine11 ~= nil then self.horzLine11:destroy(); self.horzLine11 = nil; end;
-        if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
-        if self.edit81 ~= nil then self.edit81:destroy(); self.edit81 = nil; end;
-        if self.radioButton60 ~= nil then self.radioButton60:destroy(); self.radioButton60 = nil; end;
-        if self.radioButton16 ~= nil then self.radioButton16:destroy(); self.radioButton16 = nil; end;
-        if self.layout44 ~= nil then self.layout44:destroy(); self.layout44 = nil; end;
-        if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
-        if self.radioButton129 ~= nil then self.radioButton129:destroy(); self.radioButton129 = nil; end;
-        if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
-        if self.edit84 ~= nil then self.edit84:destroy(); self.edit84 = nil; end;
-        if self.radioButton83 ~= nil then self.radioButton83:destroy(); self.radioButton83 = nil; end;
-        if self.radioButton19 ~= nil then self.radioButton19:destroy(); self.radioButton19 = nil; end;
-        if self.label16 ~= nil then self.label16:destroy(); self.label16 = nil; end;
-        if self.label24 ~= nil then self.label24:destroy(); self.label24 = nil; end;
-        if self.edit16 ~= nil then self.edit16:destroy(); self.edit16 = nil; end;
-        if self.radioButton3 ~= nil then self.radioButton3:destroy(); self.radioButton3 = nil; end;
-        if self.radioButton84 ~= nil then self.radioButton84:destroy(); self.radioButton84 = nil; end;
-        if self.radioButton123 ~= nil then self.radioButton123:destroy(); self.radioButton123 = nil; end;
-        if self.textEditor2 ~= nil then self.textEditor2:destroy(); self.textEditor2 = nil; end;
-        if self.edit50 ~= nil then self.edit50:destroy(); self.edit50 = nil; end;
-        if self.radioButton4 ~= nil then self.radioButton4:destroy(); self.radioButton4 = nil; end;
-        if self.radioButton75 ~= nil then self.radioButton75:destroy(); self.radioButton75 = nil; end;
-        if self.layout27 ~= nil then self.layout27:destroy(); self.layout27 = nil; end;
-        if self.radioButton89 ~= nil then self.radioButton89:destroy(); self.radioButton89 = nil; end;
-        if self.radioButton126 ~= nil then self.radioButton126:destroy(); self.radioButton126 = nil; end;
-        if self.rectangle3 ~= nil then self.rectangle3:destroy(); self.rectangle3 = nil; end;
-        if self.horzLine40 ~= nil then self.horzLine40:destroy(); self.horzLine40 = nil; end;
-        if self.radioButton70 ~= nil then self.radioButton70:destroy(); self.radioButton70 = nil; end;
-        if self.layout22 ~= nil then self.layout22:destroy(); self.layout22 = nil; end;
-        if self.horzLine45 ~= nil then self.horzLine45:destroy(); self.horzLine45 = nil; end;
-        if self.layout29 ~= nil then self.layout29:destroy(); self.layout29 = nil; end;
-        if self.edit79 ~= nil then self.edit79:destroy(); self.edit79 = nil; end;
-        if self.edit45 ~= nil then self.edit45:destroy(); self.edit45 = nil; end;
-        if self.radioButton101 ~= nil then self.radioButton101:destroy(); self.radioButton101 = nil; end;
-        if self.horzLine69 ~= nil then self.horzLine69:destroy(); self.horzLine69 = nil; end;
-        if self.edit72 ~= nil then self.edit72:destroy(); self.edit72 = nil; end;
-        if self.edit40 ~= nil then self.edit40:destroy(); self.edit40 = nil; end;
-        if self.radioButton57 ~= nil then self.radioButton57:destroy(); self.radioButton57 = nil; end;
-        if self.radioButton104 ~= nil then self.radioButton104:destroy(); self.radioButton104 = nil; end;
-        if self.horzLine62 ~= nil then self.horzLine62:destroy(); self.horzLine62 = nil; end;
-        if self.horzLine50 ~= nil then self.horzLine50:destroy(); self.horzLine50 = nil; end;
-        if self.radioButton52 ~= nil then self.radioButton52:destroy(); self.radioButton52 = nil; end;
-        if self.radioButton130 ~= nil then self.radioButton130:destroy(); self.radioButton130 = nil; end;
-        if self.radioButton21 ~= nil then self.radioButton21:destroy(); self.radioButton21 = nil; end;
-        if self.edit21 ~= nil then self.edit21:destroy(); self.edit21 = nil; end;
-        if self.layout38 ~= nil then self.layout38:destroy(); self.layout38 = nil; end;
-        if self.horzLine67 ~= nil then self.horzLine67:destroy(); self.horzLine67 = nil; end;
-        if self.horzLine28 ~= nil then self.horzLine28:destroy(); self.horzLine28 = nil; end;
-        if self.horzLine57 ~= nil then self.horzLine57:destroy(); self.horzLine57 = nil; end;
-        if self.radioButton135 ~= nil then self.radioButton135:destroy(); self.radioButton135 = nil; end;
-        if self.radioButton26 ~= nil then self.radioButton26:destroy(); self.radioButton26 = nil; end;
-        if self.edit24 ~= nil then self.edit24:destroy(); self.edit24 = nil; end;
-        if self.edit67 ~= nil then self.edit67:destroy(); self.edit67 = nil; end;
-        if self.layout35 ~= nil then self.layout35:destroy(); self.layout35 = nil; end;
-        if self.horzLine25 ~= nil then self.horzLine25:destroy(); self.horzLine25 = nil; end;
         if self.radioButton58 ~= nil then self.radioButton58:destroy(); self.radioButton58 = nil; end;
         if self.horzLine4 ~= nil then self.horzLine4:destroy(); self.horzLine4 = nil; end;
         if self.radioButton98 ~= nil then self.radioButton98:destroy(); self.radioButton98 = nil; end;
-        if self.edit62 ~= nil then self.edit62:destroy(); self.edit62 = nil; end;
         if self.layout32 ~= nil then self.layout32:destroy(); self.layout32 = nil; end;
-        if self.horzLine84 ~= nil then self.horzLine84:destroy(); self.horzLine84 = nil; end;
+        if self.radioButton85 ~= nil then self.radioButton85:destroy(); self.radioButton85 = nil; end;
+        if self.radioButton122 ~= nil then self.radioButton122:destroy(); self.radioButton122 = nil; end;
         if self.horzLine1 ~= nil then self.horzLine1:destroy(); self.horzLine1 = nil; end;
+        if self.radioButton5 ~= nil then self.radioButton5:destroy(); self.radioButton5 = nil; end;
         if self.edit1 ~= nil then self.edit1:destroy(); self.edit1 = nil; end;
         if self.Styles ~= nil then self.Styles:destroy(); self.Styles = nil; end;
+        if self.radioButton74 ~= nil then self.radioButton74:destroy(); self.radioButton74 = nil; end;
         if self.radioButton93 ~= nil then self.radioButton93:destroy(); self.radioButton93 = nil; end;
-        if self.horzLine72 ~= nil then self.horzLine72:destroy(); self.horzLine72 = nil; end;
-        if self.horzLine81 ~= nil then self.horzLine81:destroy(); self.horzLine81 = nil; end;
+        if self.layout26 ~= nil then self.layout26:destroy(); self.layout26 = nil; end;
         if self.radioButton112 ~= nil then self.radioButton112:destroy(); self.radioButton112 = nil; end;
         if self.radioButton33 ~= nil then self.radioButton33:destroy(); self.radioButton33 = nil; end;
         if self.edit4 ~= nil then self.edit4:destroy(); self.edit4 = nil; end;
+        if self.radioButton73 ~= nil then self.radioButton73:destroy(); self.radioButton73 = nil; end;
         if self.radioButton96 ~= nil then self.radioButton96:destroy(); self.radioButton96 = nil; end;
-        if self.edit68 ~= nil then self.edit68:destroy(); self.edit68 = nil; end;
-        if self.horzLine75 ~= nil then self.horzLine75:destroy(); self.horzLine75 = nil; end;
         if self.image3 ~= nil then self.image3:destroy(); self.image3 = nil; end;
         if self.radioButton117 ~= nil then self.radioButton117:destroy(); self.radioButton117 = nil; end;
         if self.label42 ~= nil then self.label42:destroy(); self.label42 = nil; end;
@@ -4559,50 +3408,66 @@ local function constructNew_frmFichaRedStar()
         if self.radioButton49 ~= nil then self.radioButton49:destroy(); self.radioButton49 = nil; end;
         if self.layout17 ~= nil then self.layout17:destroy(); self.layout17 = nil; end;
         if self.label31 ~= nil then self.label31:destroy(); self.label31 = nil; end;
-        if self.horzLine78 ~= nil then self.horzLine78:destroy(); self.horzLine78 = nil; end;
-        if self.horzLine33 ~= nil then self.horzLine33:destroy(); self.horzLine33 = nil; end;
+        if self.layout28 ~= nil then self.layout28:destroy(); self.layout28 = nil; end;
         if self.layout9 ~= nil then self.layout9:destroy(); self.layout9 = nil; end;
         if self.radioButton118 ~= nil then self.radioButton118:destroy(); self.radioButton118 = nil; end;
         if self.radioButton42 ~= nil then self.radioButton42:destroy(); self.radioButton42 = nil; end;
         if self.layout10 ~= nil then self.layout10:destroy(); self.layout10 = nil; end;
         if self.label36 ~= nil then self.label36:destroy(); self.label36 = nil; end;
-        if self.edit33 ~= nil then self.edit33:destroy(); self.edit33 = nil; end;
+        if self.radioButton28 ~= nil then self.radioButton28:destroy(); self.radioButton28 = nil; end;
         if self.layout4 ~= nil then self.layout4:destroy(); self.layout4 = nil; end;
         if self.radioButton68 ~= nil then self.radioButton68:destroy(); self.radioButton68 = nil; end;
-        if self.horzLine14 ~= nil then self.horzLine14:destroy(); self.horzLine14 = nil; end;
+        if self.radioButton100 ~= nil then self.radioButton100:destroy(); self.radioButton100 = nil; end;
+        if self.radioButton56 ~= nil then self.radioButton56:destroy(); self.radioButton56 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
         if self.button10 ~= nil then self.button10:destroy(); self.button10 = nil; end;
-        if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
-        if self.edit34 ~= nil then self.edit34:destroy(); self.edit34 = nil; end;
-        if self.horzLine39 ~= nil then self.horzLine39:destroy(); self.horzLine39 = nil; end;
+        if self.horzLine14 ~= nil then self.horzLine14:destroy(); self.horzLine14 = nil; end;
         if self.radioButton65 ~= nil then self.radioButton65:destroy(); self.radioButton65 = nil; end;
         if self.radioButton11 ~= nil then self.radioButton11:destroy(); self.radioButton11 = nil; end;
         if self.layout47 ~= nil then self.layout47:destroy(); self.layout47 = nil; end;
-        if self.horzLine13 ~= nil then self.horzLine13:destroy(); self.horzLine13 = nil; end;
+        if self.radioButton51 ~= nil then self.radioButton51:destroy(); self.radioButton51 = nil; end;
         if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
-        if self.edit83 ~= nil then self.edit83:destroy(); self.edit83 = nil; end;
+        if self.horzLine13 ~= nil then self.horzLine13:destroy(); self.horzLine13 = nil; end;
+        if self.radioButton131 ~= nil then self.radioButton131:destroy(); self.radioButton131 = nil; end;
+        if self.radioButton22 ~= nil then self.radioButton22:destroy(); self.radioButton22 = nil; end;
+        if self.layout39 ~= nil then self.layout39:destroy(); self.layout39 = nil; end;
         if self.radioButton62 ~= nil then self.radioButton62:destroy(); self.radioButton62 = nil; end;
         if self.radioButton14 ~= nil then self.radioButton14:destroy(); self.radioButton14 = nil; end;
         if self.label13 ~= nil then self.label13:destroy(); self.label13 = nil; end;
         if self.label23 ~= nil then self.label23:destroy(); self.label23 = nil; end;
-        if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
-        if self.edit58 ~= nil then self.edit58:destroy(); self.edit58 = nil; end;
+        if self.horzLine8 ~= nil then self.horzLine8:destroy(); self.horzLine8 = nil; end;
+        if self.radioButton136 ~= nil then self.radioButton136:destroy(); self.radioButton136 = nil; end;
+        if self.radioButton27 ~= nil then self.radioButton27:destroy(); self.radioButton27 = nil; end;
+        if self.layout36 ~= nil then self.layout36:destroy(); self.layout36 = nil; end;
         if self.radioButton81 ~= nil then self.radioButton81:destroy(); self.radioButton81 = nil; end;
         if self.label14 ~= nil then self.label14:destroy(); self.label14 = nil; end;
         if self.label26 ~= nil then self.label26:destroy(); self.label26 = nil; end;
         if self.textEditor1 ~= nil then self.textEditor1:destroy(); self.textEditor1 = nil; end;
-        if self.horzLine48 ~= nil then self.horzLine48:destroy(); self.horzLine48 = nil; end;
-        if self.edit55 ~= nil then self.edit55:destroy(); self.edit55 = nil; end;
+        if self.horzLine5 ~= nil then self.horzLine5:destroy(); self.horzLine5 = nil; end;
         if self.radioButton1 ~= nil then self.radioButton1:destroy(); self.radioButton1 = nil; end;
+        if self.layout33 ~= nil then self.layout33:destroy(); self.layout33 = nil; end;
         if self.radioButton125 ~= nil then self.radioButton125:destroy(); self.radioButton125 = nil; end;
-        if self.edit52 ~= nil then self.edit52:destroy(); self.edit52 = nil; end;
+        if self.horzLine2 ~= nil then self.horzLine2:destroy(); self.horzLine2 = nil; end;
+        if self.label38 ~= nil then self.label38:destroy(); self.label38 = nil; end;
+        if self.radioButton92 ~= nil then self.radioButton92:destroy(); self.radioButton92 = nil; end;
         if self.radioButton77 ~= nil then self.radioButton77:destroy(); self.radioButton77 = nil; end;
+        if self.button9 ~= nil then self.button9:destroy(); self.button9 = nil; end;
         if self.layout21 ~= nil then self.layout21:destroy(); self.layout21 = nil; end;
         if self.scrollBox2 ~= nil then self.scrollBox2:destroy(); self.scrollBox2 = nil; end;
-        if self.horzLine42 ~= nil then self.horzLine42:destroy(); self.horzLine42 = nil; end;
+        if self.radioButton113 ~= nil then self.radioButton113:destroy(); self.radioButton113 = nil; end;
+        if self.label46 ~= nil then self.label46:destroy(); self.label46 = nil; end;
+        if self.radioButton32 ~= nil then self.radioButton32:destroy(); self.radioButton32 = nil; end;
+        if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
         if self.radioButton72 ~= nil then self.radioButton72:destroy(); self.radioButton72 = nil; end;
+        if self.radioButton95 ~= nil then self.radioButton95:destroy(); self.radioButton95 = nil; end;
         if self.radioButton109 ~= nil then self.radioButton109:destroy(); self.radioButton109 = nil; end;
-        if self.horzLine47 ~= nil then self.horzLine47:destroy(); self.horzLine47 = nil; end;
+        if self.radioButton114 ~= nil then self.radioButton114:destroy(); self.radioButton114 = nil; end;
+        if self.label41 ~= nil then self.label41:destroy(); self.label41 = nil; end;
+        if self.radioButton39 ~= nil then self.radioButton39:destroy(); self.radioButton39 = nil; end;
+        if self.radioButton46 ~= nil then self.radioButton46:destroy(); self.radioButton46 = nil; end;
+        if self.layout14 ~= nil then self.layout14:destroy(); self.layout14 = nil; end;
+        if self.label32 ~= nil then self.label32:destroy(); self.label32 = nil; end;
+        if self.button7 ~= nil then self.button7:destroy(); self.button7 = nil; end;
         if self.radioButton79 ~= nil then self.radioButton79:destroy(); self.radioButton79 = nil; end;
         self:_oldLFMDestroy();
     end;

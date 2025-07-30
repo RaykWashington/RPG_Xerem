@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name='frmArma' g-auto-height='true'>
+    <import file="styles.xml"/>
+    <layout g='col' g-width='11' g-min-height='20'>
+        <edit g='col' g-width='3' field='$(arma)'/>
+        <edit g='col' g-width='2' field='$(arma)Dif'/>
+        <edit g='col' g-width='1' field='$(arma)Dan'/>
+        <edit g='col' g-width='2' field='$(arma)Alc'/>
+        <edit g='col' g-width='2' field='$(arma)Pen'/>
+        <edit g='col' g-width='2' field='$(arma)Cdt'/>
+      
+        <horzLine g='col' g-width='3'/>
+        <horzLine g='col' g-width='2'/>
+        <horzLine g='col' g-width='1'/>
+        <horzLine g='col' g-width='2'/>
+        <horzLine g='col' g-width='2'/>
+        <horzLine g='col' g-width='2'/>
+        
+  
+    </layout>
+    <button g='col' g-width='1' onClick='NDB.deleteNode(sheet);' text='➖' g-vert-tile='true'/>
+</form>
