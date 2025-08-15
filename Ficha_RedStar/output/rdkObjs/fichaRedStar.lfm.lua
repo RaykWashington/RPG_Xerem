@@ -38,6 +38,17 @@ local function constructNew_frmFichaRedStar()
     obj.Styles:setTheme("dark");
 
 
+        local function rolarTesteCar(texto, dados)
+            local mesa =  Firecast.getMesaDe(sheet)
+            local rolagem = Firecast.interpretarRolagem( dados .. ("d10"));
+
+           mesa.chat:rolarDados(rolagem)
+
+            mesa.chat:asyncSendStd('teste de '..texto);
+
+        end;
+
+
         local function rolarTeste(texto, dados, habilidade, dificuldade)
             local mesa =  Firecast.getMesaDe(sheet)
             local sucessos = 0;
@@ -50,7 +61,7 @@ local function constructNew_frmFichaRedStar()
                 elseif string.sub(dificuldade,1,1) == "-" then
                     dif = dif - tonumber(string.sub(dificuldade,2))
                 else
-                    dif = dif + tonumber(string.sub(dificuldade,2))
+                    dif = dif + tonumber(string.sub(dificuldade,1))
             end;
 
             local promessa = mesa.chat:asyncRoll(rolagem)
@@ -133,7 +144,7 @@ local function constructNew_frmFichaRedStar()
 
     obj.scrollBox1 = GUI.fromHandle(_obj_newObject("scrollBox"));
     obj.scrollBox1:setParent(obj.Geral);
-    obj.scrollBox1:setAlign("client");
+    obj.scrollBox1:setAlign("contents");
     obj.scrollBox1:setName("scrollBox1");
 
     obj.image1 = GUI.fromHandle(_obj_newObject("image"));
@@ -152,8 +163,8 @@ local function constructNew_frmFichaRedStar()
     obj.layout1.grid["horz-align"] = "center";
     obj.layout1.grid["padding-bottom"] = 50;
     obj.layout1.grid["padding-top"] = 100;
-    obj.layout1.grid["padding-left"] = 200;
-    obj.layout1.grid["padding-right"] = 200;
+    obj.layout1.grid["padding-left"] = 150;
+    obj.layout1.grid["padding-right"] = 150;
     obj.layout1:setName("layout1");
     obj.layout1.grid.role = "col";
     obj.layout1.grid["auto-height"] = true;
@@ -201,7 +212,8 @@ local function constructNew_frmFichaRedStar()
     obj.label1:setText("Nome: ");
     obj.label1:setVertTextAlign("trailing");
     obj.label1:setName("label1");
-    obj.label1:setFontColor("#9e9e9e");
+    obj.label1:setFontColor("#ffffff");
+    obj.label1:setFontSize(15);
 
     obj.layout4 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout4:setParent(obj.layout2);
@@ -237,7 +249,8 @@ local function constructNew_frmFichaRedStar()
     obj.label2:setText("Especialização: ");
     obj.label2:setVertTextAlign("trailing");
     obj.label2:setName("label2");
-    obj.label2:setFontColor("#9e9e9e");
+    obj.label2:setFontColor("#ffffff");
+    obj.label2:setFontSize(15);
 
     obj.layout5 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout5:setParent(obj.layout2);
@@ -273,7 +286,8 @@ local function constructNew_frmFichaRedStar()
     obj.label3:setText("Idade: ");
     obj.label3:setVertTextAlign("trailing");
     obj.label3:setName("label3");
-    obj.label3:setFontColor("#9e9e9e");
+    obj.label3:setFontColor("#ffffff");
+    obj.label3:setFontSize(15);
 
     obj.layout6 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout6:setParent(obj.layout2);
@@ -309,7 +323,8 @@ local function constructNew_frmFichaRedStar()
     obj.label4:setText("Jogador: ");
     obj.label4:setVertTextAlign("trailing");
     obj.label4:setName("label4");
-    obj.label4:setFontColor("#9e9e9e");
+    obj.label4:setFontColor("#ffffff");
+    obj.label4:setFontSize(15);
 
     obj.layout7 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout7:setParent(obj.layout2);
@@ -345,7 +360,8 @@ local function constructNew_frmFichaRedStar()
     obj.label5:setText("Motivação: ");
     obj.label5:setVertTextAlign("trailing");
     obj.label5:setName("label5");
-    obj.label5:setFontColor("#9e9e9e");
+    obj.label5:setFontColor("#ffffff");
+    obj.label5:setFontSize(15);
 
     obj.layout8 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout8:setParent(obj.layout2);
@@ -381,7 +397,8 @@ local function constructNew_frmFichaRedStar()
     obj.label6:setText("Campanha: ");
     obj.label6:setVertTextAlign("trailing");
     obj.label6:setName("label6");
-    obj.label6:setFontColor("#9e9e9e");
+    obj.label6:setFontColor("#ffffff");
+    obj.label6:setFontSize(15);
 
     obj.layout9 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout9:setParent(obj.layout2);
@@ -417,13 +434,14 @@ local function constructNew_frmFichaRedStar()
     obj.label7:setText("Experiência");
     obj.label7:setVertTextAlign("trailing");
     obj.label7:setName("label7");
-    obj.label7:setFontColor("#9e9e9e");
+    obj.label7:setFontColor("#ffffff");
+    obj.label7:setFontSize(15);
 
     obj.layout10 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout10:setParent(obj.layout1);
-    obj.layout10.grid.width = 5;
+    obj.layout10.grid.width = 12;
     obj.layout10.grid["min-height"] = 150;
-    obj.layout10.grid["min-width"] = 400;
+    obj.layout10.grid["min-width"] = 500;
     obj.layout10.grid["margin-bottom"] = 5;
     obj.layout10:setName("layout10");
     obj.layout10.grid.role = "col";
@@ -455,7 +473,7 @@ local function constructNew_frmFichaRedStar()
     obj.label8:setHorzTextAlign("center");
     obj.label8.grid["margin-top"] = 5;
     obj.label8:setName("label8");
-    obj.label8:setFontColor("#9e9e9e");
+    obj.label8:setFontColor("#ffffff");
 
     obj.layout12 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout12:setParent(obj.layout10);
@@ -469,12 +487,13 @@ local function constructNew_frmFichaRedStar()
     obj.label9 = GUI.fromHandle(_obj_newObject("label"));
     obj.label9:setParent(obj.layout12);
     obj.label9.grid.role = "col";
-    obj.label9.grid.width = 3;
+    obj.label9.grid.width = 2;
     obj.label9:setHorzTextAlign("leading");
     obj.label9:setText("Força");
     obj.label9:setVertTextAlign("trailing");
     obj.label9:setName("label9");
-    obj.label9:setFontColor("#9e9e9e");
+    obj.label9:setFontColor("#ffffff");
+    obj.label9:setFontSize(15);
 
     obj.radioButton1 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton1:setParent(obj.layout12);
@@ -548,6 +567,13 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton8:setFieldValue("8");
     obj.radioButton8:setName("radioButton8");
 
+    obj.button1 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button1:setParent(obj.layout12);
+    obj.button1.grid.role = "col";
+    obj.button1.grid.width = 2;
+    obj.button1:setText("🎲");
+    obj.button1:setName("button1");
+
     obj.layout13 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout13:setParent(obj.layout10);
     obj.layout13.grid.role = "col";
@@ -560,12 +586,13 @@ local function constructNew_frmFichaRedStar()
     obj.label10 = GUI.fromHandle(_obj_newObject("label"));
     obj.label10:setParent(obj.layout13);
     obj.label10.grid.role = "col";
-    obj.label10.grid.width = 3;
+    obj.label10.grid.width = 2;
     obj.label10:setHorzTextAlign("leading");
     obj.label10:setText("Constituição");
     obj.label10:setVertTextAlign("trailing");
     obj.label10:setName("label10");
-    obj.label10:setFontColor("#9e9e9e");
+    obj.label10:setFontColor("#ffffff");
+    obj.label10:setFontSize(15);
 
     obj.radioButton9 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton9:setParent(obj.layout13);
@@ -639,6 +666,13 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton16:setFieldValue("8");
     obj.radioButton16:setName("radioButton16");
 
+    obj.button2 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button2:setParent(obj.layout13);
+    obj.button2.grid.role = "col";
+    obj.button2.grid.width = 2;
+    obj.button2:setText("🎲");
+    obj.button2:setName("button2");
+
     obj.layout14 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout14:setParent(obj.layout10);
     obj.layout14.grid.role = "col";
@@ -651,12 +685,13 @@ local function constructNew_frmFichaRedStar()
     obj.label11 = GUI.fromHandle(_obj_newObject("label"));
     obj.label11:setParent(obj.layout14);
     obj.label11.grid.role = "col";
-    obj.label11.grid.width = 3;
+    obj.label11.grid.width = 2;
     obj.label11:setHorzTextAlign("leading");
     obj.label11:setText("Destreza");
     obj.label11:setVertTextAlign("trailing");
     obj.label11:setName("label11");
-    obj.label11:setFontColor("#9e9e9e");
+    obj.label11:setFontColor("#ffffff");
+    obj.label11:setFontSize(15);
 
     obj.radioButton17 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton17:setParent(obj.layout14);
@@ -730,6 +765,13 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton24:setFieldValue("8");
     obj.radioButton24:setName("radioButton24");
 
+    obj.button3 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button3:setParent(obj.layout14);
+    obj.button3.grid.role = "col";
+    obj.button3.grid.width = 2;
+    obj.button3:setText("🎲");
+    obj.button3:setName("button3");
+
     obj.layout15 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout15:setParent(obj.layout10);
     obj.layout15.grid.role = "col";
@@ -742,12 +784,13 @@ local function constructNew_frmFichaRedStar()
     obj.label12 = GUI.fromHandle(_obj_newObject("label"));
     obj.label12:setParent(obj.layout15);
     obj.label12.grid.role = "col";
-    obj.label12.grid.width = 3;
+    obj.label12.grid.width = 2;
     obj.label12:setHorzTextAlign("leading");
     obj.label12:setText("Percepção");
     obj.label12:setVertTextAlign("trailing");
     obj.label12:setName("label12");
-    obj.label12:setFontColor("#9e9e9e");
+    obj.label12:setFontColor("#ffffff");
+    obj.label12:setFontSize(15);
 
     obj.radioButton25 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton25:setParent(obj.layout15);
@@ -821,6 +864,13 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton32:setFieldValue("8");
     obj.radioButton32:setName("radioButton32");
 
+    obj.button4 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button4:setParent(obj.layout15);
+    obj.button4.grid.role = "col";
+    obj.button4.grid.width = 2;
+    obj.button4:setText("🎲");
+    obj.button4:setName("button4");
+
     obj.layout16 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout16:setParent(obj.layout10);
     obj.layout16.grid.role = "col";
@@ -833,12 +883,13 @@ local function constructNew_frmFichaRedStar()
     obj.label13 = GUI.fromHandle(_obj_newObject("label"));
     obj.label13:setParent(obj.layout16);
     obj.label13.grid.role = "col";
-    obj.label13.grid.width = 3;
+    obj.label13.grid.width = 2;
     obj.label13:setHorzTextAlign("leading");
     obj.label13:setText("Inteligência");
     obj.label13:setVertTextAlign("trailing");
     obj.label13:setName("label13");
-    obj.label13:setFontColor("#9e9e9e");
+    obj.label13:setFontColor("#ffffff");
+    obj.label13:setFontSize(15);
 
     obj.radioButton33 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton33:setParent(obj.layout16);
@@ -912,6 +963,13 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton40:setFieldValue("8");
     obj.radioButton40:setName("radioButton40");
 
+    obj.button5 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button5:setParent(obj.layout16);
+    obj.button5.grid.role = "col";
+    obj.button5.grid.width = 2;
+    obj.button5:setText("🎲");
+    obj.button5:setName("button5");
+
     obj.layout17 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout17:setParent(obj.layout10);
     obj.layout17.grid.role = "col";
@@ -924,12 +982,13 @@ local function constructNew_frmFichaRedStar()
     obj.label14 = GUI.fromHandle(_obj_newObject("label"));
     obj.label14:setParent(obj.layout17);
     obj.label14.grid.role = "col";
-    obj.label14.grid.width = 3;
+    obj.label14.grid.width = 2;
     obj.label14:setHorzTextAlign("leading");
     obj.label14:setText("Força de Vontade");
     obj.label14:setVertTextAlign("trailing");
     obj.label14:setName("label14");
-    obj.label14:setFontColor("#9e9e9e");
+    obj.label14:setFontColor("#ffffff");
+    obj.label14:setFontSize(15);
 
     obj.radioButton41 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton41:setParent(obj.layout17);
@@ -1003,6 +1062,13 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton48:setFieldValue("8");
     obj.radioButton48:setName("radioButton48");
 
+    obj.button6 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button6:setParent(obj.layout17);
+    obj.button6.grid.role = "col";
+    obj.button6.grid.width = 2;
+    obj.button6:setText("🎲");
+    obj.button6:setName("button6");
+
     obj.layout18 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout18:setParent(obj.layout10);
     obj.layout18.grid.width = 12;
@@ -1029,7 +1095,7 @@ local function constructNew_frmFichaRedStar()
     obj.label15:setHorzTextAlign("center");
     obj.label15.grid["margin-top"] = 5;
     obj.label15:setName("label15");
-    obj.label15:setFontColor("#9e9e9e");
+    obj.label15:setFontColor("#ffffff");
 
     obj.layout19 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout19:setParent(obj.layout10);
@@ -1047,7 +1113,8 @@ local function constructNew_frmFichaRedStar()
     obj.label16:setText("Esportes");
     obj.label16:setHorzTextAlign("center");
     obj.label16:setName("label16");
-    obj.label16:setFontColor("#9e9e9e");
+    obj.label16:setFontColor("#ffffff");
+    obj.label16:setFontSize(15);
 
     obj.radioButton49 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton49:setParent(obj.layout19);
@@ -1121,12 +1188,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton56:setFieldValue("8");
     obj.radioButton56:setName("radioButton56");
 
-    obj.button1 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button1:setParent(obj.layout19);
-    obj.button1.grid.role = "col";
-    obj.button1.grid.width = 2;
-    obj.button1:setText("🎲");
-    obj.button1:setName("button1");
+    obj.button7 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button7:setParent(obj.layout19);
+    obj.button7.grid.role = "col";
+    obj.button7.grid.width = 2;
+    obj.button7:setText("🎲");
+    obj.button7:setName("button7");
 
     obj.layout20 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout20:setParent(obj.layout10);
@@ -1144,7 +1211,8 @@ local function constructNew_frmFichaRedStar()
     obj.label17:setText("Combate Desarmado");
     obj.label17:setHorzTextAlign("center");
     obj.label17:setName("label17");
-    obj.label17:setFontColor("#9e9e9e");
+    obj.label17:setFontColor("#ffffff");
+    obj.label17:setFontSize(15);
 
     obj.radioButton57 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton57:setParent(obj.layout20);
@@ -1218,12 +1286,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton64:setFieldValue("8");
     obj.radioButton64:setName("radioButton64");
 
-    obj.button2 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button2:setParent(obj.layout20);
-    obj.button2.grid.role = "col";
-    obj.button2.grid.width = 2;
-    obj.button2:setText("🎲");
-    obj.button2:setName("button2");
+    obj.button8 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button8:setParent(obj.layout20);
+    obj.button8.grid.role = "col";
+    obj.button8.grid.width = 2;
+    obj.button8:setText("🎲");
+    obj.button8:setName("button8");
 
     obj.layout21 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout21:setParent(obj.layout10);
@@ -1241,7 +1309,8 @@ local function constructNew_frmFichaRedStar()
     obj.label18:setText("Armas Brancas");
     obj.label18:setHorzTextAlign("center");
     obj.label18:setName("label18");
-    obj.label18:setFontColor("#9e9e9e");
+    obj.label18:setFontColor("#ffffff");
+    obj.label18:setFontSize(15);
 
     obj.radioButton65 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton65:setParent(obj.layout21);
@@ -1315,12 +1384,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton72:setFieldValue("8");
     obj.radioButton72:setName("radioButton72");
 
-    obj.button3 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button3:setParent(obj.layout21);
-    obj.button3.grid.role = "col";
-    obj.button3.grid.width = 2;
-    obj.button3:setText("🎲");
-    obj.button3:setName("button3");
+    obj.button9 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button9:setParent(obj.layout21);
+    obj.button9.grid.role = "col";
+    obj.button9.grid.width = 2;
+    obj.button9:setText("🎲");
+    obj.button9:setName("button9");
 
     obj.layout22 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout22:setParent(obj.layout10);
@@ -1338,7 +1407,8 @@ local function constructNew_frmFichaRedStar()
     obj.label19:setText("Armas de Fogo");
     obj.label19:setHorzTextAlign("center");
     obj.label19:setName("label19");
-    obj.label19:setFontColor("#9e9e9e");
+    obj.label19:setFontColor("#ffffff");
+    obj.label19:setFontSize(15);
 
     obj.radioButton73 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton73:setParent(obj.layout22);
@@ -1412,12 +1482,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton80:setFieldValue("8");
     obj.radioButton80:setName("radioButton80");
 
-    obj.button4 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button4:setParent(obj.layout22);
-    obj.button4.grid.role = "col";
-    obj.button4.grid.width = 2;
-    obj.button4:setText("🎲");
-    obj.button4:setName("button4");
+    obj.button10 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button10:setParent(obj.layout22);
+    obj.button10.grid.role = "col";
+    obj.button10.grid.width = 2;
+    obj.button10:setText("🎲");
+    obj.button10:setName("button10");
 
     obj.layout23 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout23:setParent(obj.layout10);
@@ -1435,7 +1505,8 @@ local function constructNew_frmFichaRedStar()
     obj.label20:setText("Ciências");
     obj.label20:setHorzTextAlign("center");
     obj.label20:setName("label20");
-    obj.label20:setFontColor("#9e9e9e");
+    obj.label20:setFontColor("#ffffff");
+    obj.label20:setFontSize(15);
 
     obj.radioButton81 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton81:setParent(obj.layout23);
@@ -1509,12 +1580,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton88:setFieldValue("8");
     obj.radioButton88:setName("radioButton88");
 
-    obj.button5 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button5:setParent(obj.layout23);
-    obj.button5.grid.role = "col";
-    obj.button5.grid.width = 2;
-    obj.button5:setText("🎲");
-    obj.button5:setName("button5");
+    obj.button11 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button11:setParent(obj.layout23);
+    obj.button11.grid.role = "col";
+    obj.button11.grid.width = 2;
+    obj.button11:setText("🎲");
+    obj.button11:setName("button11");
 
     obj.layout24 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout24:setParent(obj.layout10);
@@ -1532,7 +1603,8 @@ local function constructNew_frmFichaRedStar()
     obj.label21:setText("Crime");
     obj.label21:setHorzTextAlign("center");
     obj.label21:setName("label21");
-    obj.label21:setFontColor("#9e9e9e");
+    obj.label21:setFontColor("#ffffff");
+    obj.label21:setFontSize(15);
 
     obj.radioButton89 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton89:setParent(obj.layout24);
@@ -1606,12 +1678,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton96:setFieldValue("8");
     obj.radioButton96:setName("radioButton96");
 
-    obj.button6 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button6:setParent(obj.layout24);
-    obj.button6.grid.role = "col";
-    obj.button6.grid.width = 2;
-    obj.button6:setText("🎲");
-    obj.button6:setName("button6");
+    obj.button12 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button12:setParent(obj.layout24);
+    obj.button12.grid.role = "col";
+    obj.button12.grid.width = 2;
+    obj.button12:setText("🎲");
+    obj.button12:setName("button12");
 
     obj.layout25 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout25:setParent(obj.layout10);
@@ -1629,7 +1701,8 @@ local function constructNew_frmFichaRedStar()
     obj.label22:setText("Investigação");
     obj.label22:setHorzTextAlign("center");
     obj.label22:setName("label22");
-    obj.label22:setFontColor("#9e9e9e");
+    obj.label22:setFontColor("#ffffff");
+    obj.label22:setFontSize(15);
 
     obj.radioButton97 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton97:setParent(obj.layout25);
@@ -1703,12 +1776,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton104:setFieldValue("8");
     obj.radioButton104:setName("radioButton104");
 
-    obj.button7 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button7:setParent(obj.layout25);
-    obj.button7.grid.role = "col";
-    obj.button7.grid.width = 2;
-    obj.button7:setText("🎲");
-    obj.button7:setName("button7");
+    obj.button13 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button13:setParent(obj.layout25);
+    obj.button13.grid.role = "col";
+    obj.button13.grid.width = 2;
+    obj.button13:setText("🎲");
+    obj.button13:setName("button13");
 
     obj.layout26 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout26:setParent(obj.layout10);
@@ -1726,7 +1799,8 @@ local function constructNew_frmFichaRedStar()
     obj.label23:setText("Maquinário");
     obj.label23:setHorzTextAlign("center");
     obj.label23:setName("label23");
-    obj.label23:setFontColor("#9e9e9e");
+    obj.label23:setFontColor("#ffffff");
+    obj.label23:setFontSize(15);
 
     obj.radioButton105 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton105:setParent(obj.layout26);
@@ -1800,12 +1874,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton112:setFieldValue("8");
     obj.radioButton112:setName("radioButton112");
 
-    obj.button8 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button8:setParent(obj.layout26);
-    obj.button8.grid.role = "col";
-    obj.button8.grid.width = 2;
-    obj.button8:setText("🎲");
-    obj.button8:setName("button8");
+    obj.button14 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button14:setParent(obj.layout26);
+    obj.button14.grid.role = "col";
+    obj.button14.grid.width = 2;
+    obj.button14:setText("🎲");
+    obj.button14:setName("button14");
 
     obj.layout27 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout27:setParent(obj.layout10);
@@ -1823,7 +1897,8 @@ local function constructNew_frmFichaRedStar()
     obj.label24:setText("Manipulação");
     obj.label24:setHorzTextAlign("center");
     obj.label24:setName("label24");
-    obj.label24:setFontColor("#9e9e9e");
+    obj.label24:setFontColor("#ffffff");
+    obj.label24:setFontSize(15);
 
     obj.radioButton113 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton113:setParent(obj.layout27);
@@ -1897,12 +1972,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton120:setFieldValue("8");
     obj.radioButton120:setName("radioButton120");
 
-    obj.button9 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button9:setParent(obj.layout27);
-    obj.button9.grid.role = "col";
-    obj.button9.grid.width = 2;
-    obj.button9:setText("🎲");
-    obj.button9:setName("button9");
+    obj.button15 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button15:setParent(obj.layout27);
+    obj.button15.grid.role = "col";
+    obj.button15.grid.width = 2;
+    obj.button15:setText("🎲");
+    obj.button15:setName("button15");
 
     obj.layout28 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout28:setParent(obj.layout10);
@@ -1920,7 +1995,8 @@ local function constructNew_frmFichaRedStar()
     obj.label25:setText("Medicina");
     obj.label25:setHorzTextAlign("center");
     obj.label25:setName("label25");
-    obj.label25:setFontColor("#9e9e9e");
+    obj.label25:setFontColor("#ffffff");
+    obj.label25:setFontSize(15);
 
     obj.radioButton121 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton121:setParent(obj.layout28);
@@ -1994,12 +2070,12 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton128:setFieldValue("8");
     obj.radioButton128:setName("radioButton128");
 
-    obj.button10 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button10:setParent(obj.layout28);
-    obj.button10.grid.role = "col";
-    obj.button10.grid.width = 2;
-    obj.button10:setText("🎲");
-    obj.button10:setName("button10");
+    obj.button16 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button16:setParent(obj.layout28);
+    obj.button16.grid.role = "col";
+    obj.button16.grid.width = 2;
+    obj.button16:setText("🎲");
+    obj.button16:setName("button16");
 
     obj.layout29 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout29:setParent(obj.layout10);
@@ -2017,7 +2093,8 @@ local function constructNew_frmFichaRedStar()
     obj.label26:setText("Sobrevivência");
     obj.label26:setHorzTextAlign("center");
     obj.label26:setName("label26");
-    obj.label26:setFontColor("#9e9e9e");
+    obj.label26:setFontColor("#ffffff");
+    obj.label26:setFontSize(15);
 
     obj.radioButton129 = GUI.fromHandle(_obj_newObject("radioButton"));
     obj.radioButton129:setParent(obj.layout29);
@@ -2091,16 +2168,16 @@ local function constructNew_frmFichaRedStar()
     obj.radioButton136:setFieldValue("8");
     obj.radioButton136:setName("radioButton136");
 
-    obj.button11 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button11:setParent(obj.layout29);
-    obj.button11.grid.role = "col";
-    obj.button11.grid.width = 2;
-    obj.button11:setText("🎲");
-    obj.button11:setName("button11");
+    obj.button17 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button17:setParent(obj.layout29);
+    obj.button17.grid.role = "col";
+    obj.button17.grid.width = 2;
+    obj.button17:setText("🎲");
+    obj.button17:setName("button17");
 
     obj.layout30 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout30:setParent(obj.layout1);
-    obj.layout30.grid.width = 4;
+    obj.layout30.grid.width = 12;
     obj.layout30.grid["min-height"] = 200;
     obj.layout30.grid["margin-right"] = 20;
     obj.layout30.grid["margin-left"] = 20;
@@ -2113,43 +2190,14 @@ local function constructNew_frmFichaRedStar()
     obj.layout31:setParent(obj.layout30);
     obj.layout31.grid.width = 12;
     obj.layout31.grid["margin-bottom"] = 5;
+    obj.layout31.grid["min-height"] = 150;
     obj.layout31.grid["cnt-horz-align"] = "center";
     obj.layout31:setName("layout31");
     obj.layout31.grid.role = "col";
     obj.layout31.grid["auto-height"] = true;
 
-    obj.rectangle1 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle1:setParent(obj.layout31);
-    obj.rectangle1.grid.role = "col";
-    obj.rectangle1.grid.width = 12;
-    obj.rectangle1.grid["auto-height"] = true;
-    obj.rectangle1.grid["min-height"] = 300;
-    obj.rectangle1.grid["max-width"] = 250;
-    obj.rectangle1:setName("rectangle1");
-    lfm_setPropAsString(obj.rectangle1, "corners", "topLeft topRight bottomRight bottomLeft");
-    obj.rectangle1:setCornerType("round");
-    obj.rectangle1:setXradius(15);
-    obj.rectangle1:setYradius(15);
-    obj.rectangle1:setStrokeColor("#999999");
-    obj.rectangle1:setStrokeSize(1);
-    obj.rectangle1:setColor("#343434");
-    obj.rectangle1.grid["padding-top"] = 20;
-    obj.rectangle1.grid["padding-left"] = 20;
-    obj.rectangle1.grid["padding-right"] = 20;
-    obj.rectangle1.grid["padding-bottom"] = 20;
-
-    obj.image2 = GUI.fromHandle(_obj_newObject("image"));
-    obj.image2:setParent(obj.rectangle1);
-    obj.image2:setEditable(true);
-    obj.image2.grid.role = "col";
-    obj.image2.grid.width = 12;
-    obj.image2:setStyle("autoFit");
-    obj.image2:setField("imgPers");
-    obj.image2.grid["vert-tile"] = true;
-    obj.image2:setName("image2");
-
     obj.layout32 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout32:setParent(obj.layout30);
+    obj.layout32:setParent(obj.layout31);
     obj.layout32.grid.width = 12;
     obj.layout32.grid["cnt-vert-align"] = "center";
     obj.layout32.grid["margin-bottom"] = 20;
@@ -2170,108 +2218,47 @@ local function constructNew_frmFichaRedStar()
     obj.label27.grid.role = "col";
     obj.label27.grid.width = 12;
     obj.label27:setFontSize(20);
-    obj.label27:setText("VANTAGENS E DESVANTAGENS");
+    obj.label27:setText("SAÚDE E ARMADURA");
     obj.label27:setHorzTextAlign("center");
     obj.label27.grid["margin-top"] = 5;
     obj.label27:setName("label27");
-    obj.label27:setFontColor("#9e9e9e");
+    obj.label27:setFontColor("#ffffff");
 
-    obj.layout33 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout33:setParent(obj.layout30);
-    obj.layout33.grid.width = 12;
-    obj.layout33.grid.gutter = 10;
-    obj.layout33:setName("layout33");
-    obj.layout33.grid.role = "col";
-    obj.layout33.grid["auto-height"] = true;
+    obj.rectangle1 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle1:setParent(obj.layout31);
+    obj.rectangle1.grid.role = "col";
+    obj.rectangle1.grid.width = 4;
+    obj.rectangle1.grid["cnt-vert-align"] = "center";
+    obj.rectangle1:setName("rectangle1");
+    lfm_setPropAsString(obj.rectangle1, "corners", "topLeft topRight bottomRight bottomLeft");
+    obj.rectangle1:setCornerType("round");
+    obj.rectangle1:setXradius(15);
+    obj.rectangle1:setYradius(15);
+    obj.rectangle1:setStrokeColor("#999999");
+    obj.rectangle1:setStrokeSize(1);
+    obj.rectangle1:setColor("#343434");
+    obj.rectangle1.grid["padding-top"] = 20;
+    obj.rectangle1.grid["padding-left"] = 20;
+    obj.rectangle1.grid["padding-right"] = 20;
+    obj.rectangle1.grid["padding-bottom"] = 20;
 
-    obj.label28 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label28:setParent(obj.layout33);
-    obj.label28.grid.role = "col";
-    obj.label28.grid.width = 8;
-    obj.label28:setHorzTextAlign("leading");
-    obj.label28:setText("Nome");
-    obj.label28:setName("label28");
-    obj.label28:setFontColor("#9e9e9e");
-
-    obj.label29 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label29:setParent(obj.layout33);
-    obj.label29.grid.role = "col";
-    obj.label29.grid.width = 2;
-    obj.label29:setHorzTextAlign("center");
-    obj.label29:setText("Pts.");
-    obj.label29:setName("label29");
-    obj.label29:setFontColor("#9e9e9e");
-
-    obj.button12 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button12:setParent(obj.layout33);
-    obj.button12.grid.role = "col";
-    obj.button12.grid.width = 2;
-    obj.button12:setText("➕");
-    obj.button12:setName("button12");
-
-    obj.rclVantDesv = GUI.fromHandle(_obj_newObject("recordList"));
-    obj.rclVantDesv:setParent(obj.layout33);
-    obj.rclVantDesv:setName("rclVantDesv");
-    obj.rclVantDesv:setField("vantDesv");
-    obj.rclVantDesv:setTemplateForm("frmVantDesv");
-    obj.rclVantDesv.grid.role = "col";
-    obj.rclVantDesv.grid.width = 12;
-    obj.rclVantDesv.grid["min-height"] = 300;
-    obj.rclVantDesv.grid["margin-top"] = 10;
-
-    obj.layout34 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout34:setParent(obj.layout1);
-    obj.layout34.grid.width = 3;
-    obj.layout34.grid["min-height"] = 200;
-    obj.layout34.grid["margin-right"] = 20;
-    obj.layout34.grid["margin-left"] = 20;
-    obj.layout34.grid["margin-bottom"] = 5;
-    obj.layout34:setName("layout34");
-    obj.layout34.grid.role = "col";
-    obj.layout34.grid["auto-height"] = true;
-
-    obj.layout35 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout35:setParent(obj.layout34);
-    obj.layout35.grid.width = 12;
-    obj.layout35.grid["margin-bottom"] = 5;
-    obj.layout35.grid["min-height"] = 150;
-    obj.layout35:setName("layout35");
-    obj.layout35.grid.role = "col";
-    obj.layout35.grid["auto-height"] = true;
-
-    obj.layout36 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout36:setParent(obj.layout35);
-    obj.layout36.grid.width = 12;
-    obj.layout36.grid["cnt-vert-align"] = "center";
-    obj.layout36.grid["margin-bottom"] = 20;
-    obj.layout36.grid["margin-top"] = 20;
-    obj.layout36:setName("layout36");
-    obj.layout36.grid.role = "col";
-    obj.layout36.grid["auto-height"] = true;
-
-    obj.horzLine11 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine11:setParent(obj.layout36);
-    obj.horzLine11.grid.role = "col";
-    obj.horzLine11.grid.width = 12;
-    obj.horzLine11:setName("horzLine11");
-    obj.horzLine11:setStrokeColor("#999999");
-
-    obj.label30 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label30:setParent(obj.layout36);
-    obj.label30.grid.role = "col";
-    obj.label30.grid.width = 12;
-    obj.label30:setFontSize(20);
-    obj.label30:setText("SAÚDE E ARMADURA");
-    obj.label30:setHorzTextAlign("center");
-    obj.label30.grid["margin-top"] = 5;
-    obj.label30:setName("label30");
-    obj.label30:setFontColor("#9e9e9e");
+    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit8:setParent(obj.rectangle1);
+    obj.edit8:setField("pv");
+    obj.edit8.grid.role = "col";
+    obj.edit8.grid.width = 12;
+    obj.edit8:setFontSize(20);
+    obj.edit8:setHorzTextAlign("center");
+    obj.edit8:setVertTextAlign("center");
+    obj.edit8:setName("edit8");
+    obj.edit8:setTransparent(true);
 
     obj.rectangle2 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle2:setParent(obj.layout35);
+    obj.rectangle2:setParent(obj.layout31);
     obj.rectangle2.grid.role = "col";
-    obj.rectangle2.grid.width = 6;
+    obj.rectangle2.grid.width = 4;
     obj.rectangle2.grid["cnt-vert-align"] = "center";
+    obj.rectangle2.grid["break-line-after"] = true;
     obj.rectangle2:setName("rectangle2");
     lfm_setPropAsString(obj.rectangle2, "corners", "topLeft topRight bottomRight bottomLeft");
     obj.rectangle2:setCornerType("round");
@@ -2285,22 +2272,64 @@ local function constructNew_frmFichaRedStar()
     obj.rectangle2.grid["padding-right"] = 20;
     obj.rectangle2.grid["padding-bottom"] = 20;
 
-    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit8:setParent(obj.rectangle2);
-    obj.edit8:setField("pv");
-    obj.edit8.grid.role = "col";
-    obj.edit8.grid.width = 12;
-    obj.edit8:setFontSize(20);
-    obj.edit8:setHorzTextAlign("center");
-    obj.edit8:setVertTextAlign("center");
-    obj.edit8:setName("edit8");
-    obj.edit8:setTransparent(true);
+    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit9:setParent(obj.rectangle2);
+    obj.edit9:setField("Defesa");
+    obj.edit9.grid.role = "col";
+    obj.edit9.grid.width = 12;
+    obj.edit9:setFontSize(20);
+    obj.edit9:setHorzTextAlign("center");
+    obj.edit9:setVertTextAlign("center");
+    obj.edit9:setName("edit9");
+    obj.edit9:setTransparent(true);
+
+    obj.label28 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label28:setParent(obj.layout31);
+    obj.label28.grid.role = "col";
+    obj.label28.grid.width = 6;
+    obj.label28:setHorzTextAlign("center");
+    obj.label28:setText("Pontos de Vida");
+    obj.label28:setName("label28");
+    obj.label28:setFontColor("#ffffff");
+    obj.label28:setFontSize(15);
+
+    obj.label29 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label29:setParent(obj.layout31);
+    obj.label29.grid.role = "col";
+    obj.label29.grid.width = 6;
+    obj.label29:setHorzTextAlign("center");
+    obj.label29:setText("Defesa");
+    obj.label29:setName("label29");
+    obj.label29:setFontColor("#ffffff");
+    obj.label29:setFontSize(15);
+
+    obj.layout33 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout33:setParent(obj.layout30);
+    obj.layout33.grid.width = 12;
+    obj.layout33.grid["min-height"] = 200;
+    obj.layout33.grid["margin-right"] = 20;
+    obj.layout33.grid["margin-left"] = 20;
+    obj.layout33.grid["margin-bottom"] = 5;
+    obj.layout33:setName("layout33");
+    obj.layout33.grid.role = "col";
+    obj.layout33.grid["auto-height"] = true;
+
+    obj.layout34 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout34:setParent(obj.layout33);
+    obj.layout34.grid.width = 12;
+    obj.layout34.grid["margin-bottom"] = 5;
+    obj.layout34.grid["cnt-horz-align"] = "center";
+    obj.layout34:setName("layout34");
+    obj.layout34.grid.role = "col";
+    obj.layout34.grid["auto-height"] = true;
 
     obj.rectangle3 = GUI.fromHandle(_obj_newObject("rectangle"));
-    obj.rectangle3:setParent(obj.layout35);
+    obj.rectangle3:setParent(obj.layout34);
     obj.rectangle3.grid.role = "col";
-    obj.rectangle3.grid.width = 6;
-    obj.rectangle3.grid["cnt-vert-align"] = "center";
+    obj.rectangle3.grid.width = 12;
+    obj.rectangle3.grid["auto-height"] = true;
+    obj.rectangle3.grid["min-height"] = 300;
+    obj.rectangle3.grid["max-width"] = 250;
     obj.rectangle3:setName("rectangle3");
     lfm_setPropAsString(obj.rectangle3, "corners", "topLeft topRight bottomRight bottomLeft");
     obj.rectangle3:setCornerType("round");
@@ -2314,106 +2343,88 @@ local function constructNew_frmFichaRedStar()
     obj.rectangle3.grid["padding-right"] = 20;
     obj.rectangle3.grid["padding-bottom"] = 20;
 
-    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit9:setParent(obj.rectangle3);
-    obj.edit9:setField("Defesa");
-    obj.edit9.grid.role = "col";
-    obj.edit9.grid.width = 12;
-    obj.edit9:setFontSize(20);
-    obj.edit9:setHorzTextAlign("center");
-    obj.edit9:setVertTextAlign("center");
-    obj.edit9:setName("edit9");
-    obj.edit9:setTransparent(true);
+    obj.image2 = GUI.fromHandle(_obj_newObject("image"));
+    obj.image2:setParent(obj.rectangle3);
+    obj.image2:setEditable(true);
+    obj.image2.grid.role = "col";
+    obj.image2.grid.width = 12;
+    obj.image2:setStyle("autoFit");
+    obj.image2:setField("imgPers");
+    obj.image2.grid["vert-tile"] = true;
+    obj.image2:setName("image2");
+
+    obj.layout35 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout35:setParent(obj.layout33);
+    obj.layout35.grid.width = 12;
+    obj.layout35.grid["cnt-vert-align"] = "center";
+    obj.layout35.grid["margin-bottom"] = 20;
+    obj.layout35.grid["margin-top"] = 20;
+    obj.layout35:setName("layout35");
+    obj.layout35.grid.role = "col";
+    obj.layout35.grid["auto-height"] = true;
+
+    obj.horzLine11 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine11:setParent(obj.layout35);
+    obj.horzLine11.grid.role = "col";
+    obj.horzLine11.grid.width = 12;
+    obj.horzLine11:setName("horzLine11");
+    obj.horzLine11:setStrokeColor("#999999");
+
+    obj.label30 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label30:setParent(obj.layout35);
+    obj.label30.grid.role = "col";
+    obj.label30.grid.width = 12;
+    obj.label30:setFontSize(20);
+    obj.label30:setText("VANTAGENS E DESVANTAGENS");
+    obj.label30:setHorzTextAlign("center");
+    obj.label30.grid["margin-top"] = 5;
+    obj.label30:setName("label30");
+    obj.label30:setFontColor("#ffffff");
+
+    obj.layout36 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout36:setParent(obj.layout33);
+    obj.layout36.grid.width = 12;
+    obj.layout36.grid.gutter = 10;
+    obj.layout36:setName("layout36");
+    obj.layout36.grid.role = "col";
+    obj.layout36.grid["auto-height"] = true;
 
     obj.label31 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label31:setParent(obj.layout35);
+    obj.label31:setParent(obj.layout36);
     obj.label31.grid.role = "col";
-    obj.label31.grid.width = 6;
-    obj.label31:setHorzTextAlign("center");
-    obj.label31:setText("Pontos de Vida");
+    obj.label31.grid.width = 8;
+    obj.label31:setHorzTextAlign("leading");
+    obj.label31:setText("Nome");
     obj.label31:setName("label31");
-    obj.label31:setFontColor("#9e9e9e");
+    obj.label31:setFontColor("#ffffff");
+    obj.label31:setFontSize(15);
 
     obj.label32 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label32:setParent(obj.layout35);
+    obj.label32:setParent(obj.layout36);
     obj.label32.grid.role = "col";
-    obj.label32.grid.width = 6;
+    obj.label32.grid.width = 2;
     obj.label32:setHorzTextAlign("center");
-    obj.label32:setText("Defesa");
+    obj.label32:setText("Pts.");
     obj.label32:setName("label32");
-    obj.label32:setFontColor("#9e9e9e");
+    obj.label32:setFontColor("#ffffff");
+    obj.label32:setFontSize(15);
 
-    obj.layout37 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout37:setParent(obj.layout34);
-    obj.layout37.grid.width = 12;
-    obj.layout37.grid["cnt-vert-align"] = "center";
-    obj.layout37.grid["margin-bottom"] = 20;
-    obj.layout37.grid["margin-top"] = 20;
-    obj.layout37:setName("layout37");
-    obj.layout37.grid.role = "col";
-    obj.layout37.grid["auto-height"] = true;
+    obj.button18 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button18:setParent(obj.layout36);
+    obj.button18.grid.role = "col";
+    obj.button18.grid.width = 2;
+    obj.button18:setText("➕");
+    obj.button18:setName("button18");
 
-    obj.horzLine12 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine12:setParent(obj.layout37);
-    obj.horzLine12.grid.role = "col";
-    obj.horzLine12.grid.width = 12;
-    obj.horzLine12:setName("horzLine12");
-    obj.horzLine12:setStrokeColor("#999999");
-
-    obj.label33 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label33:setParent(obj.layout37);
-    obj.label33.grid.role = "col";
-    obj.label33.grid.width = 12;
-    obj.label33:setFontSize(20);
-    obj.label33:setText("INFECTOS");
-    obj.label33:setHorzTextAlign("center");
-    obj.label33.grid["margin-top"] = 5;
-    obj.label33:setName("label33");
-    obj.label33:setFontColor("#9e9e9e");
-
-    obj.textEditor1 = GUI.fromHandle(_obj_newObject("textEditor"));
-    obj.textEditor1:setParent(obj.layout34);
-    obj.textEditor1.grid.role = "col";
-    obj.textEditor1.grid.width = 12;
-    obj.textEditor1.grid["min-height"] = 200;
-    obj.textEditor1:setField("infectos");
-    obj.textEditor1:setName("textEditor1");
-
-    obj.layout38 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout38:setParent(obj.layout34);
-    obj.layout38.grid.width = 12;
-    obj.layout38.grid["cnt-vert-align"] = "center";
-    obj.layout38.grid["margin-bottom"] = 20;
-    obj.layout38.grid["margin-top"] = 20;
-    obj.layout38:setName("layout38");
-    obj.layout38.grid.role = "col";
-    obj.layout38.grid["auto-height"] = true;
-
-    obj.horzLine13 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine13:setParent(obj.layout38);
-    obj.horzLine13.grid.role = "col";
-    obj.horzLine13.grid.width = 12;
-    obj.horzLine13:setName("horzLine13");
-    obj.horzLine13:setStrokeColor("#999999");
-
-    obj.label34 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label34:setParent(obj.layout38);
-    obj.label34.grid.role = "col";
-    obj.label34.grid.width = 12;
-    obj.label34:setFontSize(20);
-    obj.label34:setText("ANOTÇÕES");
-    obj.label34:setHorzTextAlign("center");
-    obj.label34.grid["margin-top"] = 5;
-    obj.label34:setName("label34");
-    obj.label34:setFontColor("#9e9e9e");
-
-    obj.textEditor2 = GUI.fromHandle(_obj_newObject("textEditor"));
-    obj.textEditor2:setParent(obj.layout34);
-    obj.textEditor2.grid.role = "col";
-    obj.textEditor2.grid.width = 12;
-    obj.textEditor2.grid["min-height"] = 200;
-    obj.textEditor2:setField("anotacoes");
-    obj.textEditor2:setName("textEditor2");
+    obj.rclVantDesv = GUI.fromHandle(_obj_newObject("recordList"));
+    obj.rclVantDesv:setParent(obj.layout36);
+    obj.rclVantDesv:setName("rclVantDesv");
+    obj.rclVantDesv:setField("vantDesv");
+    obj.rclVantDesv:setTemplateForm("frmVantDesv");
+    obj.rclVantDesv.grid.role = "col";
+    obj.rclVantDesv.grid.width = 12;
+    obj.rclVantDesv.grid["min-height"] = 300;
+    obj.rclVantDesv.grid["margin-top"] = 10;
 
     obj.tab2 = GUI.fromHandle(_obj_newObject("tab"));
     obj.tab2:setParent(obj.tabControl1);
@@ -2431,22 +2442,137 @@ local function constructNew_frmFichaRedStar()
     obj.scrollBox2:setAlign("client");
     obj.scrollBox2:setName("scrollBox2");
 
+    obj.layout37 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout37:setParent(obj.scrollBox2);
+    obj.layout37.grid.width = 12;
+    obj.layout37.grid["min-width"] = 800;
+    obj.layout37.grid["padding-bottom"] = 50;
+    obj.layout37.grid["padding-top"] = 50;
+    obj.layout37.grid["padding-left"] = 200;
+    obj.layout37.grid["padding-right"] = 200;
+    obj.layout37:setName("layout37");
+    obj.layout37.grid.role = "col";
+    obj.layout37.grid["auto-height"] = true;
+
+    obj.layout38 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout38:setParent(obj.layout37);
+    obj.layout38.grid.width = 12;
+    obj.layout38.grid["padding-right"] = 50;
+    obj.layout38:setName("layout38");
+    obj.layout38.grid.role = "col";
+    obj.layout38.grid["auto-height"] = true;
+
     obj.layout39 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout39:setParent(obj.scrollBox2);
-    obj.layout39.grid.width = 12;
-    obj.layout39.grid["min-width"] = 800;
-    obj.layout39.grid["padding-bottom"] = 50;
-    obj.layout39.grid["padding-top"] = 50;
-    obj.layout39.grid["padding-left"] = 200;
-    obj.layout39.grid["padding-right"] = 200;
-    obj.layout39:setName("layout39");
+    obj.layout39:setParent(obj.layout38);
     obj.layout39.grid.role = "col";
+    obj.layout39.grid.width = 12;
     obj.layout39.grid["auto-height"] = true;
+    obj.layout39.grid["margin-bottom"] = 5;
+    obj.layout39:setName("layout39");
+
+    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit10:setParent(obj.layout39);
+    obj.edit10.grid.role = "col";
+    obj.edit10.grid.width = 12;
+    obj.edit10:setHorzTextAlign("leading");
+    obj.edit10:setTransparent(true);
+    obj.edit10:setField("info_ARMAS");
+    obj.edit10:setType("text");
+    obj.edit10:setFontSize(20);
+    obj.edit10:setName("edit10");
+
+    obj.horzLine12 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine12:setParent(obj.layout39);
+    obj.horzLine12.grid.role = "col";
+    obj.horzLine12.grid.width = 12;
+    obj.horzLine12:setName("horzLine12");
+    obj.horzLine12:setStrokeColor("#999999");
+
+    obj.label33 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label33:setParent(obj.layout39);
+    obj.label33.grid.role = "col";
+    obj.label33.grid.width = 12;
+    obj.label33:setHorzTextAlign("leading");
+    obj.label33:setText("ARMAS");
+    obj.label33:setVertTextAlign("trailing");
+    obj.label33:setName("label33");
+    obj.label33:setFontColor("#ffffff");
+    obj.label33:setFontSize(15);
+
+    obj.label34 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label34:setParent(obj.layout38);
+    obj.label34.grid.role = "col";
+    obj.label34.grid.width = 2;
+    obj.label34:setText("Arma");
+    obj.label34:setName("label34");
+    obj.label34:setFontColor("#ffffff");
+    obj.label34:setFontSize(15);
+
+    obj.label35 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label35:setParent(obj.layout38);
+    obj.label35.grid.role = "col";
+    obj.label35.grid.width = 2;
+    obj.label35:setText("Dificuldade");
+    obj.label35:setName("label35");
+    obj.label35:setFontColor("#ffffff");
+    obj.label35:setFontSize(15);
+
+    obj.label36 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label36:setParent(obj.layout38);
+    obj.label36.grid.role = "col";
+    obj.label36.grid.width = 1;
+    obj.label36:setText("Dano");
+    obj.label36:setName("label36");
+    obj.label36:setFontColor("#ffffff");
+    obj.label36:setFontSize(15);
+
+    obj.label37 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label37:setParent(obj.layout38);
+    obj.label37.grid.role = "col";
+    obj.label37.grid.width = 2;
+    obj.label37:setText("Alcance");
+    obj.label37:setName("label37");
+    obj.label37:setFontColor("#ffffff");
+    obj.label37:setFontSize(15);
+
+    obj.label38 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label38:setParent(obj.layout38);
+    obj.label38.grid.role = "col";
+    obj.label38.grid.width = 2;
+    obj.label38:setText("Pente");
+    obj.label38:setName("label38");
+    obj.label38:setFontColor("#ffffff");
+    obj.label38:setFontSize(15);
+
+    obj.label39 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label39:setParent(obj.layout38);
+    obj.label39.grid.role = "col";
+    obj.label39.grid.width = 2;
+    obj.label39:setText("Cdt");
+    obj.label39:setName("label39");
+    obj.label39:setFontColor("#ffffff");
+    obj.label39:setFontSize(15);
+
+    obj.addArma = GUI.fromHandle(_obj_newObject("button"));
+    obj.addArma:setParent(obj.layout38);
+    obj.addArma:setName("addArma");
+    obj.addArma.grid.role = "col";
+    obj.addArma.grid.width = 1;
+    obj.addArma:setText("➕");
+
+    obj.rclArmas = GUI.fromHandle(_obj_newObject("recordList"));
+    obj.rclArmas:setParent(obj.layout38);
+    obj.rclArmas:setName("rclArmas");
+    obj.rclArmas:setField("armas");
+    obj.rclArmas:setTemplateForm("frmArma");
+    obj.rclArmas.grid.role = "col";
+    obj.rclArmas.grid.width = 12;
+    obj.rclArmas.grid["min-height"] = 300;
+    obj.rclArmas.grid["margin-top"] = 10;
 
     obj.layout40 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout40:setParent(obj.layout39);
-    obj.layout40.grid.width = 8;
-    obj.layout40.grid["padding-right"] = 50;
+    obj.layout40:setParent(obj.layout38);
+    obj.layout40.grid.width = 12;
     obj.layout40:setName("layout40");
     obj.layout40.grid.role = "col";
     obj.layout40.grid["auto-height"] = true;
@@ -2459,116 +2585,8 @@ local function constructNew_frmFichaRedStar()
     obj.layout41.grid["margin-bottom"] = 5;
     obj.layout41:setName("layout41");
 
-    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit10:setParent(obj.layout41);
-    obj.edit10.grid.role = "col";
-    obj.edit10.grid.width = 12;
-    obj.edit10:setHorzTextAlign("leading");
-    obj.edit10:setTransparent(true);
-    obj.edit10:setField("info_ARMAS");
-    obj.edit10:setType("text");
-    obj.edit10:setFontSize(20);
-    obj.edit10:setName("edit10");
-
-    obj.horzLine14 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine14:setParent(obj.layout41);
-    obj.horzLine14.grid.role = "col";
-    obj.horzLine14.grid.width = 12;
-    obj.horzLine14:setName("horzLine14");
-    obj.horzLine14:setStrokeColor("#999999");
-
-    obj.label35 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label35:setParent(obj.layout41);
-    obj.label35.grid.role = "col";
-    obj.label35.grid.width = 12;
-    obj.label35:setHorzTextAlign("leading");
-    obj.label35:setText("ARMAS");
-    obj.label35:setVertTextAlign("trailing");
-    obj.label35:setName("label35");
-    obj.label35:setFontColor("#9e9e9e");
-
-    obj.label36 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label36:setParent(obj.layout40);
-    obj.label36.grid.role = "col";
-    obj.label36.grid.width = 2;
-    obj.label36:setText("Arma");
-    obj.label36:setName("label36");
-    obj.label36:setFontColor("#9e9e9e");
-
-    obj.label37 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label37:setParent(obj.layout40);
-    obj.label37.grid.role = "col";
-    obj.label37.grid.width = 2;
-    obj.label37:setText("Dificuldade");
-    obj.label37:setName("label37");
-    obj.label37:setFontColor("#9e9e9e");
-
-    obj.label38 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label38:setParent(obj.layout40);
-    obj.label38.grid.role = "col";
-    obj.label38.grid.width = 1;
-    obj.label38:setText("Dano");
-    obj.label38:setName("label38");
-    obj.label38:setFontColor("#9e9e9e");
-
-    obj.label39 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label39:setParent(obj.layout40);
-    obj.label39.grid.role = "col";
-    obj.label39.grid.width = 2;
-    obj.label39:setText("Alcance");
-    obj.label39:setName("label39");
-    obj.label39:setFontColor("#9e9e9e");
-
-    obj.label40 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label40:setParent(obj.layout40);
-    obj.label40.grid.role = "col";
-    obj.label40.grid.width = 2;
-    obj.label40:setText("Pente");
-    obj.label40:setName("label40");
-    obj.label40:setFontColor("#9e9e9e");
-
-    obj.label41 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label41:setParent(obj.layout40);
-    obj.label41.grid.role = "col";
-    obj.label41.grid.width = 2;
-    obj.label41:setText("Cdt");
-    obj.label41:setName("label41");
-    obj.label41:setFontColor("#9e9e9e");
-
-    obj.addArma = GUI.fromHandle(_obj_newObject("button"));
-    obj.addArma:setParent(obj.layout40);
-    obj.addArma:setName("addArma");
-    obj.addArma.grid.role = "col";
-    obj.addArma.grid.width = 1;
-    obj.addArma:setText("➕");
-
-    obj.rclArmas = GUI.fromHandle(_obj_newObject("recordList"));
-    obj.rclArmas:setParent(obj.layout40);
-    obj.rclArmas:setName("rclArmas");
-    obj.rclArmas:setField("armas");
-    obj.rclArmas:setTemplateForm("frmArma");
-    obj.rclArmas.grid.role = "col";
-    obj.rclArmas.grid.width = 12;
-    obj.rclArmas.grid["min-height"] = 300;
-    obj.rclArmas.grid["margin-top"] = 10;
-
-    obj.layout42 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout42:setParent(obj.layout39);
-    obj.layout42.grid.width = 4;
-    obj.layout42:setName("layout42");
-    obj.layout42.grid.role = "col";
-    obj.layout42.grid["auto-height"] = true;
-
-    obj.layout43 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout43:setParent(obj.layout42);
-    obj.layout43.grid.role = "col";
-    obj.layout43.grid.width = 12;
-    obj.layout43.grid["auto-height"] = true;
-    obj.layout43.grid["margin-bottom"] = 5;
-    obj.layout43:setName("layout43");
-
     obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit11:setParent(obj.layout43);
+    obj.edit11:setParent(obj.layout41);
     obj.edit11.grid.role = "col";
     obj.edit11.grid.width = 12;
     obj.edit11:setHorzTextAlign("leading");
@@ -2578,56 +2596,60 @@ local function constructNew_frmFichaRedStar()
     obj.edit11:setFontSize(20);
     obj.edit11:setName("edit11");
 
-    obj.horzLine15 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine15:setParent(obj.layout43);
-    obj.horzLine15.grid.role = "col";
-    obj.horzLine15.grid.width = 12;
-    obj.horzLine15:setName("horzLine15");
-    obj.horzLine15:setStrokeColor("#999999");
+    obj.horzLine13 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine13:setParent(obj.layout41);
+    obj.horzLine13.grid.role = "col";
+    obj.horzLine13.grid.width = 12;
+    obj.horzLine13:setName("horzLine13");
+    obj.horzLine13:setStrokeColor("#999999");
+
+    obj.label40 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label40:setParent(obj.layout41);
+    obj.label40.grid.role = "col";
+    obj.label40.grid.width = 12;
+    obj.label40:setHorzTextAlign("leading");
+    obj.label40:setText("ARMADURA");
+    obj.label40:setVertTextAlign("trailing");
+    obj.label40:setName("label40");
+    obj.label40:setFontColor("#ffffff");
+    obj.label40:setFontSize(15);
+
+    obj.label41 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label41:setParent(obj.layout40);
+    obj.label41.grid.role = "col";
+    obj.label41.grid.width = 4;
+    obj.label41:setText("Armadura");
+    obj.label41:setName("label41");
+    obj.label41:setFontColor("#ffffff");
+    obj.label41:setFontSize(15);
 
     obj.label42 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label42:setParent(obj.layout43);
+    obj.label42:setParent(obj.layout40);
     obj.label42.grid.role = "col";
-    obj.label42.grid.width = 12;
-    obj.label42:setHorzTextAlign("leading");
-    obj.label42:setText("ARMADURA");
-    obj.label42:setVertTextAlign("trailing");
+    obj.label42.grid.width = 3;
+    obj.label42:setText("Resistência");
     obj.label42:setName("label42");
-    obj.label42:setFontColor("#9e9e9e");
+    obj.label42:setFontColor("#ffffff");
+    obj.label42:setFontSize(15);
 
     obj.label43 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label43:setParent(obj.layout42);
+    obj.label43:setParent(obj.layout40);
     obj.label43.grid.role = "col";
-    obj.label43.grid.width = 4;
-    obj.label43:setText("Armadura");
+    obj.label43.grid.width = 3;
+    obj.label43:setText("Especial");
     obj.label43:setName("label43");
-    obj.label43:setFontColor("#9e9e9e");
-
-    obj.label44 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label44:setParent(obj.layout42);
-    obj.label44.grid.role = "col";
-    obj.label44.grid.width = 3;
-    obj.label44:setText("Resistência");
-    obj.label44:setName("label44");
-    obj.label44:setFontColor("#9e9e9e");
-
-    obj.label45 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label45:setParent(obj.layout42);
-    obj.label45.grid.role = "col";
-    obj.label45.grid.width = 3;
-    obj.label45:setText("Especial");
-    obj.label45:setName("label45");
-    obj.label45:setFontColor("#9e9e9e");
+    obj.label43:setFontColor("#ffffff");
+    obj.label43:setFontSize(15);
 
     obj.addArmadura = GUI.fromHandle(_obj_newObject("button"));
-    obj.addArmadura:setParent(obj.layout42);
+    obj.addArmadura:setParent(obj.layout40);
     obj.addArmadura:setName("addArmadura");
     obj.addArmadura.grid.role = "col";
     obj.addArmadura.grid.width = 2;
     obj.addArmadura:setText("➕");
 
     obj.rclArmadura = GUI.fromHandle(_obj_newObject("recordList"));
-    obj.rclArmadura:setParent(obj.layout42);
+    obj.rclArmadura:setParent(obj.layout40);
     obj.rclArmadura:setName("rclArmadura");
     obj.rclArmadura:setField("armadura");
     obj.rclArmadura:setTemplateForm("frmArmadura");
@@ -2636,8 +2658,80 @@ local function constructNew_frmFichaRedStar()
     obj.rclArmadura.grid["min-height"] = 300;
     obj.rclArmadura.grid["margin-top"] = 10;
 
+    obj.layout42 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout42:setParent(obj.layout40);
+    obj.layout42.grid.width = 12;
+    obj.layout42.grid["cnt-vert-align"] = "center";
+    obj.layout42.grid["margin-bottom"] = 20;
+    obj.layout42.grid["margin-top"] = 20;
+    obj.layout42:setName("layout42");
+    obj.layout42.grid.role = "col";
+    obj.layout42.grid["auto-height"] = true;
+
+    obj.horzLine14 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine14:setParent(obj.layout42);
+    obj.horzLine14.grid.role = "col";
+    obj.horzLine14.grid.width = 12;
+    obj.horzLine14:setName("horzLine14");
+    obj.horzLine14:setStrokeColor("#999999");
+
+    obj.label44 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label44:setParent(obj.layout42);
+    obj.label44.grid.role = "col";
+    obj.label44.grid.width = 12;
+    obj.label44:setFontSize(20);
+    obj.label44:setText("ANOTÇÕES");
+    obj.label44:setHorzTextAlign("center");
+    obj.label44.grid["margin-top"] = 5;
+    obj.label44:setName("label44");
+    obj.label44:setFontColor("#ffffff");
+
+    obj.textEditor1 = GUI.fromHandle(_obj_newObject("textEditor"));
+    obj.textEditor1:setParent(obj.layout40);
+    obj.textEditor1.grid.role = "col";
+    obj.textEditor1.grid.width = 12;
+    obj.textEditor1.grid["min-height"] = 200;
+    obj.textEditor1:setField("anotacoes");
+    obj.textEditor1:setName("textEditor1");
+
+    obj.layout43 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout43:setParent(obj.layout38);
+    obj.layout43.grid.width = 12;
+    obj.layout43.grid["cnt-vert-align"] = "center";
+    obj.layout43.grid["margin-bottom"] = 20;
+    obj.layout43.grid["margin-top"] = 20;
+    obj.layout43:setName("layout43");
+    obj.layout43.grid.role = "col";
+    obj.layout43.grid["auto-height"] = true;
+
+    obj.horzLine15 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine15:setParent(obj.layout43);
+    obj.horzLine15.grid.role = "col";
+    obj.horzLine15.grid.width = 12;
+    obj.horzLine15:setName("horzLine15");
+    obj.horzLine15:setStrokeColor("#999999");
+
+    obj.label45 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label45:setParent(obj.layout43);
+    obj.label45.grid.role = "col";
+    obj.label45.grid.width = 12;
+    obj.label45:setFontSize(20);
+    obj.label45:setText("INFECTOS");
+    obj.label45:setHorzTextAlign("center");
+    obj.label45.grid["margin-top"] = 5;
+    obj.label45:setName("label45");
+    obj.label45:setFontColor("#ffffff");
+
+    obj.textEditor2 = GUI.fromHandle(_obj_newObject("textEditor"));
+    obj.textEditor2:setParent(obj.layout38);
+    obj.textEditor2.grid.role = "col";
+    obj.textEditor2.grid.width = 12;
+    obj.textEditor2.grid["min-height"] = 200;
+    obj.textEditor2:setField("infectos");
+    obj.textEditor2:setName("textEditor2");
+
     obj.layout44 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout44:setParent(obj.layout39);
+    obj.layout44:setParent(obj.layout37);
     obj.layout44.grid.width = 12;
     obj.layout44.grid["min-height"] = 800;
     obj.layout44.grid["cnt-horz-align"] = "center";
@@ -2672,7 +2766,7 @@ local function constructNew_frmFichaRedStar()
     obj.label46:setHorzTextAlign("center");
     obj.label46.grid["margin-top"] = 5;
     obj.label46:setName("label46");
-    obj.label46:setFontColor("#9e9e9e");
+    obj.label46:setFontColor("#ffffff");
 
     obj.layout46 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout46:setParent(obj.layout44);
@@ -2697,23 +2791,53 @@ local function constructNew_frmFichaRedStar()
     obj.layout47.grid.role = "col";
     obj.layout47.grid["auto-height"] = true;
 
-    obj.button13 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button13:setParent(obj.layout47);
-    obj.button13:setText(" Red Star por Eric S.A. Araújo (Hobbit)");
-    obj.button13.grid.role = "col";
-    obj.button13.grid.width = 6;
-    obj.button13.grid["break-line-after"] = true;
-    obj.button13.grid["margin-bottom"] = 5;
-    obj.button13:setName("button13");
+    obj.button19 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button19:setParent(obj.layout47);
+    obj.button19:setText(" Red Star por Eric S.A. Araújo (Hobbit)");
+    obj.button19.grid.role = "col";
+    obj.button19.grid.width = 6;
+    obj.button19.grid["break-line-after"] = true;
+    obj.button19.grid["margin-bottom"] = 5;
+    obj.button19:setName("button19");
 
-    obj.button14 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button14:setParent(obj.layout47);
-    obj.button14:setText("Ficha - Xerém Destrói O RPG de Mesa");
-    obj.button14.grid.role = "col";
-    obj.button14.grid.width = 6;
-    obj.button14:setName("button14");
+    obj.button20 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button20:setParent(obj.layout47);
+    obj.button20:setText("Ficha - Xerém Destrói O RPG de Mesa");
+    obj.button20.grid.role = "col";
+    obj.button20.grid.width = 6;
+    obj.button20:setName("button20");
 
     obj._e_event0 = obj.button1:addEventListener("onClick",
+        function (event)
+            rolarTesteCar('Força', sheet.valfor or 0);
+        end);
+
+    obj._e_event1 = obj.button2:addEventListener("onClick",
+        function (event)
+            rolarTesteCar('Constituição', sheet.valcon or 0);
+        end);
+
+    obj._e_event2 = obj.button3:addEventListener("onClick",
+        function (event)
+            rolarTesteCar('Destreza', sheet.valdes or 0);
+        end);
+
+    obj._e_event3 = obj.button4:addEventListener("onClick",
+        function (event)
+            rolarTesteCar('Percepção', sheet.valper or 0);
+        end);
+
+    obj._e_event4 = obj.button5:addEventListener("onClick",
+        function (event)
+            rolarTesteCar('Inteligência', sheet.valint or 0);
+        end);
+
+    obj._e_event5 = obj.button6:addEventListener("onClick",
+        function (event)
+            rolarTesteCar('Força de Vontade', sheet.valfdv or 0);
+        end);
+
+    obj._e_event6 = obj.button7:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -2751,7 +2875,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event1 = obj.button2:addEventListener("onClick",
+    obj._e_event7 = obj.button8:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -2789,7 +2913,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event2 = obj.button3:addEventListener("onClick",
+    obj._e_event8 = obj.button9:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -2827,7 +2951,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event3 = obj.button4:addEventListener("onClick",
+    obj._e_event9 = obj.button10:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -2865,7 +2989,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event4 = obj.button5:addEventListener("onClick",
+    obj._e_event10 = obj.button11:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -2903,7 +3027,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event5 = obj.button6:addEventListener("onClick",
+    obj._e_event11 = obj.button12:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -2941,7 +3065,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event6 = obj.button7:addEventListener("onClick",
+    obj._e_event12 = obj.button13:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -2979,7 +3103,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event7 = obj.button8:addEventListener("onClick",
+    obj._e_event13 = obj.button14:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -3017,7 +3141,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event8 = obj.button9:addEventListener("onClick",
+    obj._e_event14 = obj.button15:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -3055,7 +3179,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event9 = obj.button10:addEventListener("onClick",
+    obj._e_event15 = obj.button16:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -3093,7 +3217,7 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event10 = obj.button11:addEventListener("onClick",
+    obj._e_event16 = obj.button17:addEventListener("onClick",
         function (event)
             Dialogs.choose("Escolha a Característica", {'Força', 'Constituição', 'Destreza', 'Percepção', 'Inteligência', 'Força de Vontade'},
                                     function(selected, seletedIndex, car)
@@ -3131,27 +3255,33 @@ local function constructNew_frmFichaRedStar()
                                     end);
         end);
 
-    obj._e_event11 = obj.button12:addEventListener("onClick",
+    obj._e_event17 = obj.button18:addEventListener("onClick",
         function (event)
             self.rclVantDesv:append();
         end);
 
-    obj._e_event12 = obj.addArma:addEventListener("onClick",
+    obj._e_event18 = obj.addArma:addEventListener("onClick",
         function (event)
             self.rclArmas:append();
         end);
 
-    obj._e_event13 = obj.addArmadura:addEventListener("onClick",
+    obj._e_event19 = obj.addArmadura:addEventListener("onClick",
         function (event)
             self.rclArmadura:append();
         end);
 
-    obj._e_event14 = obj.button14:addEventListener("onClick",
+    obj._e_event20 = obj.button20:addEventListener("onClick",
         function (event)
             GUI.openInBrowser('https://open.spotify.com/show/0cO3SWlsJw7nfoRePJjyzV?si=4e8678590abf405c')
         end);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event20);
+        __o_rrpgObjs.removeEventListenerById(self._e_event19);
+        __o_rrpgObjs.removeEventListenerById(self._e_event18);
+        __o_rrpgObjs.removeEventListenerById(self._e_event17);
+        __o_rrpgObjs.removeEventListenerById(self._e_event16);
+        __o_rrpgObjs.removeEventListenerById(self._e_event15);
         __o_rrpgObjs.removeEventListenerById(self._e_event14);
         __o_rrpgObjs.removeEventListenerById(self._e_event13);
         __o_rrpgObjs.removeEventListenerById(self._e_event12);
@@ -3217,10 +3347,10 @@ local function constructNew_frmFichaRedStar()
         if self.horzLine3 ~= nil then self.horzLine3:destroy(); self.horzLine3 = nil; end;
         if self.label39 ~= nil then self.label39:destroy(); self.label39 = nil; end;
         if self.edit3 ~= nil then self.edit3:destroy(); self.edit3 = nil; end;
-        if self.radioButton76 ~= nil then self.radioButton76:destroy(); self.radioButton76 = nil; end;
-        if self.radioButton91 ~= nil then self.radioButton91:destroy(); self.radioButton91 = nil; end;
-        if self.layout20 ~= nil then self.layout20:destroy(); self.layout20 = nil; end;
         if self.button8 ~= nil then self.button8:destroy(); self.button8 = nil; end;
+        if self.radioButton76 ~= nil then self.radioButton76:destroy(); self.radioButton76 = nil; end;
+        if self.layout20 ~= nil then self.layout20:destroy(); self.layout20 = nil; end;
+        if self.radioButton91 ~= nil then self.radioButton91:destroy(); self.radioButton91 = nil; end;
         if self.radioButton110 ~= nil then self.radioButton110:destroy(); self.radioButton110 = nil; end;
         if self.tab1 ~= nil then self.tab1:destroy(); self.tab1 = nil; end;
         if self.radioButton35 ~= nil then self.radioButton35:destroy(); self.radioButton35 = nil; end;
@@ -3238,12 +3368,13 @@ local function constructNew_frmFichaRedStar()
         if self.label9 ~= nil then self.label9:destroy(); self.label9 = nil; end;
         if self.layout15 ~= nil then self.layout15:destroy(); self.layout15 = nil; end;
         if self.radioButton47 ~= nil then self.radioButton47:destroy(); self.radioButton47 = nil; end;
-        if self.radioButton78 ~= nil then self.radioButton78:destroy(); self.radioButton78 = nil; end;
         if self.button6 ~= nil then self.button6:destroy(); self.button6 = nil; end;
-        if self.label33 ~= nil then self.label33:destroy(); self.label33 = nil; end;
+        if self.radioButton78 ~= nil then self.radioButton78:destroy(); self.radioButton78 = nil; end;
+        if self.button18 ~= nil then self.button18:destroy(); self.button18 = nil; end;
         if self.Geral ~= nil then self.Geral:destroy(); self.Geral = nil; end;
         if self.layout7 ~= nil then self.layout7:destroy(); self.layout7 = nil; end;
         if self.radioButton103 ~= nil then self.radioButton103:destroy(); self.radioButton103 = nil; end;
+        if self.label33 ~= nil then self.label33:destroy(); self.label33 = nil; end;
         if self.radioButton40 ~= nil then self.radioButton40:destroy(); self.radioButton40 = nil; end;
         if self.layout2 ~= nil then self.layout2:destroy(); self.layout2 = nil; end;
         if self.radioButton106 ~= nil then self.radioButton106:destroy(); self.radioButton106 = nil; end;
@@ -3251,6 +3382,7 @@ local function constructNew_frmFichaRedStar()
         if self.layout42 ~= nil then self.layout42:destroy(); self.layout42 = nil; end;
         if self.radioButton54 ~= nil then self.radioButton54:destroy(); self.radioButton54 = nil; end;
         if self.label7 ~= nil then self.label7:destroy(); self.label7 = nil; end;
+        if self.button16 ~= nil then self.button16:destroy(); self.button16 = nil; end;
         if self.horzLine16 ~= nil then self.horzLine16:destroy(); self.horzLine16 = nil; end;
         if self.radioButton67 ~= nil then self.radioButton67:destroy(); self.radioButton67 = nil; end;
         if self.tabControl1 ~= nil then self.tabControl1:destroy(); self.tabControl1 = nil; end;
@@ -3291,11 +3423,13 @@ local function constructNew_frmFichaRedStar()
         if self.layout12 ~= nil then self.layout12:destroy(); self.layout12 = nil; end;
         if self.label34 ~= nil then self.label34:destroy(); self.label34 = nil; end;
         if self.button5 ~= nil then self.button5:destroy(); self.button5 = nil; end;
+        if self.button19 ~= nil then self.button19:destroy(); self.button19 = nil; end;
         if self.layout6 ~= nil then self.layout6:destroy(); self.layout6 = nil; end;
         if self.radioButton102 ~= nil then self.radioButton102:destroy(); self.radioButton102 = nil; end;
         if self.radioButton41 ~= nil then self.radioButton41:destroy(); self.radioButton41 = nil; end;
         if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
         if self.button12 ~= nil then self.button12:destroy(); self.button12 = nil; end;
+        if self.button20 ~= nil then self.button20:destroy(); self.button20 = nil; end;
         if self.layout1 ~= nil then self.layout1:destroy(); self.layout1 = nil; end;
         if self.radioButton105 ~= nil then self.radioButton105:destroy(); self.radioButton105 = nil; end;
         if self.radioButton13 ~= nil then self.radioButton13:destroy(); self.radioButton13 = nil; end;
@@ -3303,6 +3437,7 @@ local function constructNew_frmFichaRedStar()
         if self.layout41 ~= nil then self.layout41:destroy(); self.layout41 = nil; end;
         if self.radioButton53 ~= nil then self.radioButton53:destroy(); self.radioButton53 = nil; end;
         if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
+        if self.button17 ~= nil then self.button17:destroy(); self.button17 = nil; end;
         if self.horzLine11 ~= nil then self.horzLine11:destroy(); self.horzLine11 = nil; end;
         if self.radioButton20 ~= nil then self.radioButton20:destroy(); self.radioButton20 = nil; end;
         if self.radioButton60 ~= nil then self.radioButton60:destroy(); self.radioButton60 = nil; end;
@@ -3356,9 +3491,9 @@ local function constructNew_frmFichaRedStar()
         if self.radioButton101 ~= nil then self.radioButton101:destroy(); self.radioButton101 = nil; end;
         if self.radioButton57 ~= nil then self.radioButton57:destroy(); self.radioButton57 = nil; end;
         if self.label2 ~= nil then self.label2:destroy(); self.label2 = nil; end;
-        if self.horzLine15 ~= nil then self.horzLine15:destroy(); self.horzLine15 = nil; end;
-        if self.addArma ~= nil then self.addArma:destroy(); self.addArma = nil; end;
         if self.button13 ~= nil then self.button13:destroy(); self.button13 = nil; end;
+        if self.addArma ~= nil then self.addArma:destroy(); self.addArma = nil; end;
+        if self.horzLine15 ~= nil then self.horzLine15:destroy(); self.horzLine15 = nil; end;
         if self.radioButton104 ~= nil then self.radioButton104:destroy(); self.radioButton104 = nil; end;
         if self.radioButton64 ~= nil then self.radioButton64:destroy(); self.radioButton64 = nil; end;
         if self.radioButton12 ~= nil then self.radioButton12:destroy(); self.radioButton12 = nil; end;
@@ -3366,10 +3501,10 @@ local function constructNew_frmFichaRedStar()
         if self.layout40 ~= nil then self.layout40:destroy(); self.layout40 = nil; end;
         if self.radioButton52 ~= nil then self.radioButton52:destroy(); self.radioButton52 = nil; end;
         if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
-        if self.horzLine10 ~= nil then self.horzLine10:destroy(); self.horzLine10 = nil; end;
+        if self.button14 ~= nil then self.button14:destroy(); self.button14 = nil; end;
         if self.radioButton130 ~= nil then self.radioButton130:destroy(); self.radioButton130 = nil; end;
         if self.radioButton21 ~= nil then self.radioButton21:destroy(); self.radioButton21 = nil; end;
-        if self.button14 ~= nil then self.button14:destroy(); self.button14 = nil; end;
+        if self.horzLine10 ~= nil then self.horzLine10:destroy(); self.horzLine10 = nil; end;
         if self.layout38 ~= nil then self.layout38:destroy(); self.layout38 = nil; end;
         if self.radioButton61 ~= nil then self.radioButton61:destroy(); self.radioButton61 = nil; end;
         if self.radioButton15 ~= nil then self.radioButton15:destroy(); self.radioButton15 = nil; end;
@@ -3427,9 +3562,10 @@ local function constructNew_frmFichaRedStar()
         if self.layout47 ~= nil then self.layout47:destroy(); self.layout47 = nil; end;
         if self.radioButton51 ~= nil then self.radioButton51:destroy(); self.radioButton51 = nil; end;
         if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
-        if self.horzLine13 ~= nil then self.horzLine13:destroy(); self.horzLine13 = nil; end;
+        if self.button15 ~= nil then self.button15:destroy(); self.button15 = nil; end;
         if self.radioButton131 ~= nil then self.radioButton131:destroy(); self.radioButton131 = nil; end;
         if self.radioButton22 ~= nil then self.radioButton22:destroy(); self.radioButton22 = nil; end;
+        if self.horzLine13 ~= nil then self.horzLine13:destroy(); self.horzLine13 = nil; end;
         if self.layout39 ~= nil then self.layout39:destroy(); self.layout39 = nil; end;
         if self.radioButton62 ~= nil then self.radioButton62:destroy(); self.radioButton62 = nil; end;
         if self.radioButton14 ~= nil then self.radioButton14:destroy(); self.radioButton14 = nil; end;
@@ -3450,8 +3586,8 @@ local function constructNew_frmFichaRedStar()
         if self.horzLine2 ~= nil then self.horzLine2:destroy(); self.horzLine2 = nil; end;
         if self.label38 ~= nil then self.label38:destroy(); self.label38 = nil; end;
         if self.radioButton92 ~= nil then self.radioButton92:destroy(); self.radioButton92 = nil; end;
-        if self.radioButton77 ~= nil then self.radioButton77:destroy(); self.radioButton77 = nil; end;
         if self.button9 ~= nil then self.button9:destroy(); self.button9 = nil; end;
+        if self.radioButton77 ~= nil then self.radioButton77:destroy(); self.radioButton77 = nil; end;
         if self.layout21 ~= nil then self.layout21:destroy(); self.layout21 = nil; end;
         if self.scrollBox2 ~= nil then self.scrollBox2:destroy(); self.scrollBox2 = nil; end;
         if self.radioButton113 ~= nil then self.radioButton113:destroy(); self.radioButton113 = nil; end;
@@ -3467,8 +3603,8 @@ local function constructNew_frmFichaRedStar()
         if self.radioButton46 ~= nil then self.radioButton46:destroy(); self.radioButton46 = nil; end;
         if self.layout14 ~= nil then self.layout14:destroy(); self.layout14 = nil; end;
         if self.label32 ~= nil then self.label32:destroy(); self.label32 = nil; end;
-        if self.button7 ~= nil then self.button7:destroy(); self.button7 = nil; end;
         if self.radioButton79 ~= nil then self.radioButton79:destroy(); self.radioButton79 = nil; end;
+        if self.button7 ~= nil then self.button7:destroy(); self.button7 = nil; end;
         self:_oldLFMDestroy();
     end;
 

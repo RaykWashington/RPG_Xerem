@@ -3,7 +3,7 @@
 
     <scrollBox  align='client'>
         <layout g-width = '12' g-min-width='800' g-padding-bottom= '50' g-padding-top= '50' g-padding-left= '200' g-padding-right= '200'>  
-            <layout g-width='8' g-padding-right='50'>
+            <layout g-width='12' g-padding-right='50'>
                 <info infoNome= 'ARMAS' largura='12'/>    
                 <label g='col' g-width='2' text='Arma' />
                 <label g='col' g-width='2' text='Dificuldade' />
@@ -16,18 +16,23 @@
                 <recordList name='rclArmas' field= 'armas' templateForm = 'frmArma' g='col' g-width='12' g-min-height='300' g-margin-top='10'>
                 </recordList>
 
-            </layout>
+                <layout g-width='12'>
+                    <info infoNome= 'ARMADURA' largura='12'/>    
+                    <label g='col' g-width='4' text='Armadura' />
+                    <label g='col' g-width='3' text='Resistência' />
+                    <label g='col' g-width='3' text='Especial' />
+        
+                    <button name='addArmadura' g='col' g-width='2' onClick='self.rclArmadura:append();' text='➕'/>
 
-             <layout g-width='4'>
-                <info infoNome= 'ARMADURA' largura='12'/>    
-                <label g='col' g-width='4' text='Armadura' />
-                <label g='col' g-width='3' text='Resistência' />
-                <label g='col' g-width='3' text='Especial' />
-      
-                <button name='addArmadura' g='col' g-width='2' onClick='self.rclArmadura:append();' text='➕'/>
+                    <recordList name='rclArmadura' field= 'armadura' templateForm = 'frmArmadura' g='col' g-width='12' g-min-height='300' g-margin-top='10'>
+                    </recordList>
 
-                <recordList name='rclArmadura' field= 'armadura' templateForm = 'frmArmadura' g='col' g-width='12' g-min-height='300' g-margin-top='10'>
-                </recordList>
+                    <titulo2 titulo='ANOTÇÕES'/>
+                    <textEditor g='col' g-width='12' g-min-height='200' field='anotacoes'/>
+                </layout>
+
+                <titulo2 titulo='INFECTOS'/>
+                <textEditor g='col' g-width='12' g-min-height='200' field='infectos'/>
             </layout>
 
             <layout g-width = '12' g-min-height= '800' g-cnt-horz-align='center' g-cnt-vert-align='center'>

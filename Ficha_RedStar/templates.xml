@@ -2,6 +2,17 @@
 <group>
     
     <script>
+        local function rolarTesteCar(texto, dados)
+            local mesa =  Firecast.getMesaDe(sheet)
+            local rolagem = Firecast.interpretarRolagem( dados .. ("d10"));
+
+           mesa.chat:rolarDados(rolagem)
+
+            mesa.chat:asyncSendStd('teste de '..texto);
+
+        end;
+
+
         local function rolarTeste(texto, dados, habilidade, dificuldade)
             local mesa =  Firecast.getMesaDe(sheet)
             local sucessos = 0;
@@ -14,7 +25,7 @@
                 elseif string.sub(dificuldade,1,1) == "-" then
                     dif = dif - tonumber(string.sub(dificuldade,2))
                 else
-                    dif = dif + tonumber(string.sub(dificuldade,2))
+                    dif = dif + tonumber(string.sub(dificuldade,1))
             end;
 
             local promessa = mesa.chat:asyncRoll(rolagem)
@@ -58,7 +69,7 @@
 
     <template name='caracteristica'>
         <layout g='col' g-width='12' g-auto-height='true' g-margin-bottom='5' g-cnt-horz-align='center'>
-            <label g='col' g-width='3' horzTextAlign='Leading' text ='$(texto)' vertTextAlign='trailing'/>
+            <label g='col' g-width='2' horzTextAlign='Leading' text ='$(texto)' vertTextAlign='trailing'/>
             <marca grupo= '$(car)' valor = '1'/>
             <marca grupo= '$(car)' valor = '2'/>
             <marca grupo= '$(car)' valor = '3'/>
@@ -67,6 +78,13 @@
             <marca grupo= '$(car)' valor = '6'/>
             <marca grupo= '$(car)' valor = '7'/>
             <marca grupo= '$(car)' valor = '8'/>
+
+            <button g='col' g-width='2' text='🎲'>
+                <event name='onClick'>
+                    rolarTesteCar('$(texto)', sheet.val$(car) or 0);
+                </event>
+            </button>
+
         </layout>
     </template>
 

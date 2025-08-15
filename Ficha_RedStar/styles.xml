@@ -18,7 +18,8 @@
             g-padding-bottom: 20;
             }
         label { 
-           fontColor : #9e9e9e;
+           fontColor : #ffffff;
+           fontSize : 15;
         }
         layout {
             g: col;
